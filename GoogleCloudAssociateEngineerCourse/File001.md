@@ -79,5 +79,32 @@ example certificate -
 
 ![alt text](image-2.png)
 
+## Global Infrastructure
+
+* The head office is located in Montreal, Canada (the * main database for the CRM and POS systems)
+* The company has two major offices one in London covering the EU and the other in the West Coast US specifically Los Angeles
+* Major offices are also retail locations that consume IT services from the headquarters in Montreal.
+Fashion business bowtie Inc. employees a large amount of sales people and the managers that support them
+
+* Employees operate the POS systems, so are constantly looking to have the website sales and the inventory updated at all times
+* Each sales person has access to email and files for updated forecasts on various new bowtie designs
+* Voice over IP phone and chat programs through their mobile phone
+* managers provide sales predictions
+
+## Current Issues
+* Legacy on-premises hardware is out of warranty
+* Performance issues from store to store - POS systems
+* Lack of HA and Scalability
+* Tape backups are slow and offsite storage is costly
+* Outdated IT skills -a lot of manual intervention
+* Rush to open stores to supply demand globally
+
+## Favourable Results
+* Reliable and stable connection between stores
+* Fast and cost-effective cloud backup
+* Deploy into new regions quickly when required
+* Base infrastructure is scalable and low cost
+* No manual intervention - Automation
+
 
 
