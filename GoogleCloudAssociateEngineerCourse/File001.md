@@ -70,4 +70,14 @@ example certificate -
 * ~300 employees globally with 100 in Sales
 * In-store staff, IT, marketing, manufacturing, finance, ...
 * Sales people, managers, sewers, etc...
+* Offices/stores in Montreal, London, Los Angeles
+* 2 racks in each on-premises location
+* Global inventory updated upon sales and new stock
+* POS systems in each store/office location
+* All office/store infrasturucture connected and backed up to tape in Montreal HQ
+* Management is extremely thrifty but have finally come to terms with spending money
+
+![alt text](image-2.png)
+
+
 
