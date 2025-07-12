@@ -136,3 +136,14 @@ other users
   * we expect to use few tinxe adding nodes. Hope to spend no time if possible
 * **Performnance**
   * Parallel cornputing can be considered a subset of distr ibuted connputing
+
+## Why Distributed Computing?
+* Nature of application
+* Performance
+  * Computing intensive
+    * The task could consume a lot of time on computing. For example, Computation of Pi value using Monte Carlo simulation
+  * Data intensive
+    * The task that deals with a large amount or large size of files. For example, Facebook. LHC(Large Hadron Collider) experimental data processing
+  * Robustness
+    * No SPOF(Single Point of Failure)
+    * Other nodes can execute the same task executed on failed node
