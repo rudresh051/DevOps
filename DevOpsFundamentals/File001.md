@@ -113,3 +113,7 @@ copy the webapp.war file inside the `webapps` of folder `..\apache-tomcat-9.0.10
 Link - https://aws.amazon.com/devops/continuous-integration/
 
 ![alt text](image-4.png)
+
+## 9. Create Amazon AWS Account to launch Linux Servers
+## 10. Caution on AWS Charges
+## 11. What is SSH Client and how to connect to AWS Linux servers
