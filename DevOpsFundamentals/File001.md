@@ -1,3 +1,5 @@
+# Devops Fundamentals - CI/CD with AWS +Docker+Ansible+Jenkins
+
 # https://www.udemy.com/course/devops-fundamentals-aws
 
 # What is DevOps?
@@ -88,6 +90,7 @@ mvn clean install
 ![alt text](image.png)
 
 2. Open project in eclipse
+   1. GitHub - https://github.com/rahulshettyacademy/MavenHelloWorld
 3. mvn clean install from proper inside the directory where pom file is located
 
 copy the webapp.war file inside the `webapps` of folder `..\apache-tomcat-9.0.107-windows-x64\apache-tomcat-9.0.107\webapps`
@@ -101,3 +104,5 @@ copy the webapp.war file inside the `webapps` of folder `..\apache-tomcat-9.0.10
 
 
 ![alt text](image-3.png)
+
+# 6. Spin up Jenkins Instance in Windows for Deployment
