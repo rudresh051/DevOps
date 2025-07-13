@@ -63,10 +63,10 @@ All the Best 😊
 ## Getting Started with Deployment Basics
 1. Continuous Integration(CI)
 
-Continuous Integration (CI) is the process of automating the build and testing of code everytime a team member commits changes to version control
+Continuous Integration (CI) is the process of **automating the build and testing of code everytime a team member commits changes** to version control
 2. Continous Delivery(CD)
 
-Continuous Delivery(CD) is the process to build, test, configure and deploy from a build to a production environment.
+Continuous Delivery(CD) is the process to **build, test, configure and deploy** from a build to a production environment.
 
 * **What are Application servers**
   * An application/web server is a server specifically desined to run applications(or) It is server to host applications.
@@ -91,11 +91,12 @@ mvn clean install
 
 2. Open project in eclipse
    1. GitHub - https://github.com/rahulshettyacademy/MavenHelloWorld
-3. mvn clean install from proper inside the directory where pom file is located
+3. `mvn clean install` inside the directory where pom file is located
+
+![alt text](image-1.png)
 
 copy the webapp.war file inside the `webapps` of folder `..\apache-tomcat-9.0.107-windows-x64\apache-tomcat-9.0.107\webapps`
 
-![alt text](image-1.png)
 
 1. Go to bin directory and double click `startup.bat` file. Then go to browser `localhost:8080`
 
@@ -105,4 +106,10 @@ copy the webapp.war file inside the `webapps` of folder `..\apache-tomcat-9.0.10
 
 ![alt text](image-3.png)
 
-# 6. Spin up Jenkins Instance in Windows for Deployment
+## 6. Spin up Jenkins Instance in Windows for Deployment
+
+## 7. What is Continuous Integration & Continuous Delivery
+
+Link - https://aws.amazon.com/devops/continuous-integration/
+
+![alt text](image-4.png)
