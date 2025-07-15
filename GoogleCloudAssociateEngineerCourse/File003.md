@@ -167,6 +167,10 @@ You're almost there, Rudreshwar! Here's a refined version of your analogy to bet
 * **SaaS** – *You dine at a restaurant and eat a ready-made pizza.*
   → Everything is done for you — just consume the service.
 
+
+
+# Google Cloud Fundamentals
+
 ## Google Cloud Global Infrastructure
 
 ![alt text](image-4.png)
@@ -179,7 +183,25 @@ You're almost there, Rudreshwar! Here's a refined version of your analogy to bet
 
 ![alt text](image-8.png)
 
-* **Zone** - A zone is a deployment area for Google Cloud resources within a region. The smallest entity in Google's global network.
+* **Zone** - A zone is a **deployment area** for Google Cloud resources **within a region.** The smallest entity in Google's global infrastructure
 
 A  single failure domain within a region Deploy closer to users for optimal latency
 
+* **Region** - Regions are independent geographic areas that are **sub-divided into zones**
+
+* **Multi-Region** - Multi-Regions are large geographic areas, that contains **two or more regions**
+
+## Compute Service Options
+
+![alt text](image-9.png)
+
+### Compute Engine
+* Virtual Machines (VMs) called instances, Choose region and zone to deploy , You decide the operating system and the software you decide to put on it
+* Use public or private images to create instances
+* Pre-configured images and software packages available in Google Cloud Marketplace
+* Manage multiple instances using instance groups
+* Add/remove capacity using autoscaling with instance groups
+* Attach/detach disks as needed
+* Can be used with Google Cloud Storage
+* Use SSH to connect directly
+* Considered to be IaaS
