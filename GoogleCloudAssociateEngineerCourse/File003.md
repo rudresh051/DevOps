@@ -235,7 +235,7 @@ A  single failure domain within a region Deploy closer to users for optimal late
 * Your code executes in a fully managed environment
 * No need to provision any infrastructure
 * Cloud Functions can be written using JavaScript, Python 3, Go, or Java runtimes
-* **Use Cases - **
+* **Use Cases** - 
   * Data processing or ETL operations(Video trancoding)
   * Webhooks to respond to HTTP triggers
   * APIs that compose loosely coupled logic
@@ -251,3 +251,108 @@ A  single failure domain within a region Deploy closer to users for optimal late
 * Considered Function as a service(FaaS)
 
 ## 3. Storage & Databases
+
+### Cloud Storage
+* Consistent, scalable, large-capacity, highly durable object storage
+* 11 9’s Durability (99.999999999%)
+* Unlimited storage with no minimum object size
+* Use Cloud Storage for content delivery, data lakes, and backup
+* Available in different storage classes and availability
+* Storage Classes
+  * Standard
+    * Maximum availability and no limitations
+  * Nearline
+    * Low-cost archival storage
+    * Accessed <1/quarter
+  * Coldline
+    * Even lower-cost archival storage
+    * Accessed <1/quarter
+  * Archive
+    * Lowest-cost archival storage
+    * Accessed <1/year
+* Region 
+  * Single Region
+  * Dual Region
+    * Pair of regions
+  * Multi Region
+    * Large geographic area
+
+### Filestore
+* Fully managed NFS file server
+* NFSv3 compliant
+* Store data from running applications
+* Use with VM instances and Kubernetes clusters
+
+### Persistent Disks
+* Durable **block storage** for instances
+* Standard – Regular standard storage at a reasonable price
+* Solid State (SSD) - Lower latency/higher IOPS
+
+### Database Options
+
+1. SQL/Relational
+   1. Cloud SQL
+      1. Fully Managed database service
+      2. PostgreSQL, MySQL, and SQL Server
+      3. High availability across zones
+   2. Cloud Spanner
+      1. Scalable relational database service
+      2. Support transactions, strong consistency and synchronous replication
+      3. High availability across regions and globally
+
+2. NoSQL
+   1. Bigtable
+      1. Fully managed, scalable NoSQL database
+      2. High throughput with low latency
+      3. Cluster resizing without downtime
+   2. Datastore
+      1. Fast, fully managed, serverless, NoSQL document database
+      2. For mobile, web and IoT apps
+      3. Multi-region replication
+      4. ACID transactions
+   3. Firestore
+      1. NoSQL, realtime database
+      2. Optimized for offline use
+      3. Cluster resizing without downtime
+   4. Memorystore
+      1. Highly available in-memory service for Redis and Memcached
+      2. Fully Managed
+   
+
+### Networking Services
+1. VPC (Virtual Private Cloud)
+   1. Virtualized network within Google Cloud
+   2. Core networking service
+   3. Global resource
+   4. Each VPC contains a default network
+   5. Additional networks can be created in your project, but networks cannot be shared between projects.
+
+2. Firewalls and Routes
+   1. Firewall Rules
+      1. Govern traffic coming into instances on a network
+      2. Default network has a default set of firewall rules
+      3. custom rules can be created
+   2. Routes
+      1. Advanced networking functions for your instances
+      2. Specifies how packets leaving an instance should be directed
+
+### Load Balancing
+Distributing Workloads across multiple instances
+1. HTTP(S) Load Balancing
+   1. Distribute traffic across regions to ensure that requests are routed to the closest region or, in the event of a failure or over-capacity, to a healthy instance in the next closest region
+   2. Distribute traffic based on content type
+2. Network Load Balancing
+   1. Distribute traffic among server instances in the same region based on incoming IP protocol data, such as address, port, and protocol
+
+### Cloud DNS
+* Publish and maintain DNS records by using the same infrastructure that Google uses.
+* Work with managed zones and DNS records through the CLI, API, or SDK
+* Advanced Connectivity
+  * Cloud VPN
+    * Connect your existing network to your VPC through an IPsec connection
+  * Direct Interconnect
+    * Connect an existing network to your VPC using a highly available, low-latency, enterprise-grade connection
+  * Direct Peering
+    * Exchange internet traffic between your business network and Google at one of Google's broad-reaching edge network locations
+  * Carrier Peering
+    * Connect your infrastructure to Google's network edge through highly available, lower-latency connections by using service providers
