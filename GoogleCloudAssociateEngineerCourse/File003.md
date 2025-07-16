@@ -169,9 +169,10 @@ You're almost there, Rudreshwar! Here's a refined version of your analogy to bet
 
 
 
-# Google Cloud Fundamentals
+# Section 3 - Google Cloud Fundamentals(Overview)
+Later we will dive deep into all of these
 
-## Google Cloud Global Infrastructure
+## 1. Google Cloud Global Infrastructure
 
 ![alt text](image-4.png)
 
@@ -191,7 +192,7 @@ A  single failure domain within a region Deploy closer to users for optimal late
 
 * **Multi-Region** - Multi-Regions are large geographic areas, that contains **two or more regions**
 
-## Compute Service Options
+## 2. Compute Service Options
 
 ![alt text](image-9.png)
 
@@ -205,3 +206,48 @@ A  single failure domain within a region Deploy closer to users for optimal late
 * Can be used with Google Cloud Storage
 * Use SSH to connect directly
 * Considered to be IaaS
+
+### Google Kubernetes Engine(GKE)
+* Container-orchestration system for automating deploying, scaling, and managing containers
+* Built on open-source Kubernetes
+* Flexibility to integrate with on-premise Kubernetes
+* Uses Compute Engine instances as nodes in a cluster.
+* A cluster is a group of nodes or Compute Engine instances
+* Considered Container as a Service (CaaS)
+
+```txt
+1. Think of GKE as an automated factory manager for running many small machines (apps). You tell it what each machine needs — like how much power, how many workers — and it takes care of organizing and running them without you needing to do it all by hand. It's built by Google to make running big software systems easier.
+
+2. Google Kubernetes Engine (GKE) is a managed Kubernetes service by Google Cloud. It abstracts the complexity of manually setting up a Kubernetes cluster by handling provisioning, scaling, upgrading, and securing the underlying infrastructure. You deploy containers, and GKE schedules, scales, and manages them for you — including networking, storage, and monitoring integration.
+```
+
+### App Engine
+* Fully managed, serverless platform for developing and hosting web applications at scale (PaaS)
+* Provisions servers and scales your app instances based on demand
+* Build your app in Go, Java, .NET, Node.js, PHP, Python, or Ruby
+* Connect with other Google services seamlessly
+* Integrates with Web Security Scanner to identify threats
+
+### Cloud Functions
+* Serverless execution environment for building and connecting cloud services
+* Simple, single-purpose functions that are attached to events
+* Triggered when an event being watched is fired
+* Your code executes in a fully managed environment
+* No need to provision any infrastructure
+* Cloud Functions can be written using JavaScript, Python 3, Go, or Java runtimes
+* **Use Cases - **
+  * Data processing or ETL operations(Video trancoding)
+  * Webhooks to respond to HTTP triggers
+  * APIs that compose loosely coupled logic
+  * Mobile backend functions
+  * FaaS - Function as a service
+
+### Cloud Run
+* Fully managed compute platform for deploying and scaling containerized applications quickly and securely
+* Built upon an open standard Knative
+* Abstracts away all infrastructure management
+* Known as serverless for containers
+* Any language, any library, any binary
+* Considered Function as a service(FaaS)
+
+## 3. Storage & Databases
