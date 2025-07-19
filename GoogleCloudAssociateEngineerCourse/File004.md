@@ -12,19 +12,25 @@ In Google Cloud Platform (GCP), the resource hierarchy helps organize and manage
    ↓
 4. Resources (e.g., Compute VMs, Cloud Storage, Cloud SQL, etc.)
 
-1. Service-level resources
+1. **Service-level resources**
    1. Compute Instance VM's
    2. Cloud Storage buckets
    3. Cloud SQL databases
 
-2. Account-level resources
+2. **Account-level resources**
    1. Organization
    2. Folders
    3. Projects
 
 * Configure and grant access to the various resources
 * Resource Hierarchy Structure
+
+![alt text](image-10.png)
+
 * Resources are organized hierarchically using a parent/child relationship
+
+![alt text](image-11.png)
+
 * Designed to map organizational structure to Google Cloud
 * Better management of permissions and access control
 * Policies controlled by IAM
