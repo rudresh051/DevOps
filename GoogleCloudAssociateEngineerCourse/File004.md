@@ -43,3 +43,5 @@ In Google Cloud Platform (GCP), the resource hierarchy helps organize and manage
 ## Create Free Tier Account
 
 ![alt text](image-13.png)
+
+Link - https://console.cloud.google.com/freetrial
