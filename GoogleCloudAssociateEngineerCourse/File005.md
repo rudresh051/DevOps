@@ -1,0 +1,26 @@
+# Cloud IAM
+
+## Identity And Access Management(IAM)
+You manage access control by defining who (identity) has what access (role) for which resource. This also includes organizations, folders, and projects.
+
+A **policy** is a collection of bindings, audit configuration, and metadata.
+
+A **binding** specifies how access should be granted on resources. It binds one or more members with a single role and any context-specific conditions that change how and when the role is granted.
+
+The **metadata** includes additional information about the policy, such as an etag and version to facilitate policy management.
+
+The **AuditConfig** field specifies the configuration data for how access attempts should be audited.
+
+**Google Account** - Any email address that's associated with a Google Account, including gmail.com or other domains.
+
+**Service Account** - An account for an application instead of an individual end user.
+
+**Google Groups** - A named collection of Google Accounts and service accounts
+
+**G Suite Domain** - Google Accounts that have been created in an organization's G Suite account
+
+**Cloud Identity Domain** - Google Accounts in an organization that are not tied to any G Suite applications or features
+
+**AllAuthenticatedUsers** - A special identifier that represents all service accounts and all users on the internet who have authenticated with a Google Account
+
+**AllUsers** - A special identifier that represents anyone who is on the internet, including authenticated and unauthenticated users
