@@ -24,3 +24,14 @@ The **AuditConfig** field specifies the configuration data for how access attemp
 **AllAuthenticatedUsers** - A special identifier that represents all service accounts and all users on the internet who have authenticated with a Google Account
 
 **AllUsers** - A special identifier that represents anyone who is on the internet, including authenticated and unauthenticated users
+
+**Roles** -  
+* This is a named collection of permissions that grant access to perform actions on Google Cloud resources.
+* You cannot grant a permission to the user directly
+* You grant a role to a user and all the permissions that the role contains.
+
+**Permissions** - 
+* Determines what operations are allowed on a resource
+* Correspond one-to-one with REST API methods
+* Not granted to users directly
+* E.g., compute.instances.list
