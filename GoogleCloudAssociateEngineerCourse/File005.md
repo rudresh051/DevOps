@@ -35,3 +35,24 @@ The **AuditConfig** field specifies the configuration data for how access attemp
 * Correspond one-to-one with REST API methods
 * Not granted to users directly
 * E.g., compute.instances.list
+
+**Primitive** - Roles historically available in the Google Cloud
+    * Owner
+    * Editor
+    * Viewer
+    * Avoid using these roles if possible
+
+**Predefined** - Finer-grained access control than the primitive roles
+
+**Custom** - Tailor permissions to the needs of your organization
+
+**Conditions** - 
+* Used to define and enforce conditional, attribute-based access control for Google Cloud resources.
+* Conditions allow you to choose granting resource access to identities only if configured conditions are met
+* When a condition exists, the access request is only granted if the condition expression = true
+
+**Metadata**  
+To help prevent a race condition when updating the policy, IAM supports concurrency control through the use of an etag field in the policy
+
+**Audit Config**  
+* Determines which permission types are logged, and what identities, if any, are exempted from logging
