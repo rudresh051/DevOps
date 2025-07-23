@@ -50,3 +50,9 @@ Link - https://console.cloud.google.com/freetrial
 
 
 ![alt text](image-15.png)
+
+## Securing Your Account 
+
+* Security Key, Google Authenticator, Text, voice, Google prompt by 2 step verification
+* Username + passwod + 2 Step verification
+* Demo
