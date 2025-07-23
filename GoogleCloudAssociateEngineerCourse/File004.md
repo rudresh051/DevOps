@@ -45,3 +45,8 @@ In Google Cloud Platform (GCP), the resource hierarchy helps organize and manage
 ![alt text](image-13.png)
 
 Link - https://console.cloud.google.com/freetrial
+
+![alt text](image-14.png)
+
+
+![alt text](image-15.png)
