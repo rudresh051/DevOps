@@ -87,3 +87,14 @@ When you log in to your email:
 ### 🚀 Why Use 2FA?
 
 Even if a hacker steals your password, they **can’t access your account without the second factor**, making it a simple but powerful way to secure your online identity.
+
+## GCP Console Overview
+The GCP Console (https://console.cloud.google.com) is a web-based graphical user interface provided by Google to manage cloud resources and services. It allows users to create, configure, monitor, and manage everything from virtual machines and databases to AI models and billing.
+
+* Components
+  * Dashboard
+  * Resource Management
+  * IAM & Admin
+  * Billing
+  * APIs & Services
+  * Cloud Shell & Cloud Editor 
