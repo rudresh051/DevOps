@@ -98,3 +98,6 @@ The GCP Console (https://console.cloud.google.com) is a web-based graphical user
   * Billing
   * APIs & Services
   * Cloud Shell & Cloud Editor 
+
+## Cloud Billing
+
