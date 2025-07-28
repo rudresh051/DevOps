@@ -100,4 +100,19 @@ The GCP Console (https://console.cloud.google.com) is a web-based graphical user
   * Cloud Shell & Cloud Editor 
 
 ## Cloud Billing
-
+* Defines who pays for a given set of Google Cloud resources
+* Tracks all costs incurred by Google Cloud usage
+* Linked to a Payments profile
+* Can be linked to one or more projects
+* Billing specific roles and permissions to control access.
+* Self-service(online) or Invoiced (offline) payments available
+* Sub-accounts can be used for resellers
+* Billing account can pay for projects in a different organization
+* Projects that are not linked to a cloud billing account cannot use paid Google Cloud services
+  
+### Payments Profile
+* Processes payments for all Google services
+* Stores all payments methods
+* Single pane of glass for viewing invoices and payment history
+* Controls who can view and receive invoices
+* Individual or Business profile types - cannot be changed
