@@ -109,10 +109,47 @@ The GCP Console (https://console.cloud.google.com) is a web-based graphical user
 * Sub-accounts can be used for resellers
 * Billing account can pay for projects in a different organization
 * Projects that are not linked to a cloud billing account cannot use paid Google Cloud services
-  
+
+```txt
+creating, editing and closing a new billing account
+Linking and Unlinking a project - to and from a different billing account
+
+```
+
 ### Payments Profile
 * Processes payments for all Google services
 * Stores all payments methods
 * Single pane of glass for viewing invoices and payment history
 * Controls who can view and receive invoices
 * Individual or Business profile types - cannot be changed
+
+## Cost Management and Budget Alerts
+1. **Committed Use Discounts(CUD's)**
+   1. Discounted prices when you commit to using a minimum level of resource for a specified term
+   2. 1- or 3-year Commitment
+
+2. **Commitment Types** - The commitment fee is billed monthly
+3. **Spend-based commitment**
+   1. Discount for a commitment to spend a minimum amount for a service (hours) in a particular region
+   2. 25% discount for 1 year – 52% discount on a 3 year
+   3. Available for Cloud SQL database instances and Google Cloud VMWare Engine
+   4. Applies only to CPU and memory usage
+
+4. **Resource-based commitment**
+   1. Discount for commitment to spend a minimum amount for Compute Engine resource in a particular region.
+   2. Available for vCPU, Memory, GPU and Local SSD
+   3. 57% discount for most resources
+   4. 70% for memory-optimized machine types
+   5. For use across Projects
+
+5. **Sustained-use discounts**
+   1. Automatic discounts of running Compute Engine resources a significant portion of the billing month
+   2. Applies to VCPUs and memory for most Compute Engine instance types
+   3. Includes VM’s created by GKE
+   4. Does not apply to App Engine flexible, Dataflow and E2 machine types
+
+**GCP Pricing Calculator** - Quick estimate of what your usage will cost on Google Cloud
+
+* **Cloud Billing Budgets**
+  * Enables you to track your actual Google Cloud spend against your planned spend
+  * Budget alert threshold rules that are used to trigger email notifications to help you stay informed about your spending
