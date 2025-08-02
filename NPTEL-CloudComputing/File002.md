@@ -38,3 +38,30 @@ Here's the information from the image in a table format.
 | :--- | :--- |
 | Users (or electrical appliances) get access to electricity through **wall sockets** with no care or consideration for where or how the electricity is actually generated. | Users (or client applications) gain access to **computing resources** (processors, storage, data, applications, and so on) as needed with little or no knowledge of where those resources are located or what the underlying technologies, hardware, operating system, and so on are. |
 | **"The power grid"** links together power plants of many different kinds. | **"The Grid"** links together computing resources (PCs, workstations, servers, storage elements) and provides the mechanism needed to access them. |
+
+## Grid Computing
+
+1. Share more than information: Data, computing power, applications in dynamic environment, multi-institutional, virtual organizations.
+2. Efficient use of resources at many institutes. People from many institutions working to solve a common problem (virtual organisation) .
+3. Join local conununities.
+Interactions with the underneath lavers
+4. Interactions be transparent and seamless to the user.
+
+### Need of Grid Computing?
+
+### Who uses Grid computing?
+
+### Types of Grids
+
+### Grid Components
+
+## What is Cluster computing?
+
+### Types of Cluster
+
+###  Cluster components
+
+### Key operational benefits of clustering
+
+## Utiliting Computing
+### Utility Computing example
