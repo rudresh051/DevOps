@@ -65,3 +65,8 @@ Interactions with the underneath lavers
 
 ## Utiliting Computing
 ### Utility Computing example
+### Utility Solution - Your perspective
+### Utility Computing Payment Models
+### Risks in a Utility Computing world
+
+## Cloud Computing
