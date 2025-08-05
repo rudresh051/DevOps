@@ -93,7 +93,15 @@ The GCP Console (https://console.cloud.google.com) is a web-based graphical user
 
 * Components
   * Dashboard
-  * Resource Management
+  * Services
+    * Compute
+    * Resource Management
+  * Search bar - Use to find any services e.g. sql
+  * Google cloud logo
+  * Select a project
+  * Preferences
+  * Notifications
+   ![alt text](image-16.png)
   * IAM & Admin
   * Billing
   * APIs & Services
