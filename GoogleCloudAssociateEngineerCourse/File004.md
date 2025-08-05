@@ -99,24 +99,26 @@ The GCP Console (https://console.cloud.google.com) is a web-based graphical user
   * Search bar - Use to find any services e.g. sql
   * Google cloud logo
   * Select a project
+   ![alt text](image-16.png)
   * Preferences
   * Notifications
-   ![alt text](image-16.png)
   * IAM & Admin
   * Billing
   * APIs & Services
   * Cloud Shell & Cloud Editor 
 
 ## Cloud Billing
-* Defines who pays for a given set of Google Cloud resources
-* Tracks all costs incurred by Google Cloud usage
-* Linked to a Payments profile
-* Can be linked to one or more projects
-* Billing specific roles and permissions to control access.
-* Self-service(online) or Invoiced (offline) payments available
-* Sub-accounts can be used for resellers
-* Billing account can pay for projects in a different organization
-* Projects that are not linked to a cloud billing account cannot use paid Google Cloud services
+
+![alt text](image-17.png)
+* Defines **who pays** for a given set of Google Cloud resources
+* Tracks all **costs incurred** by Google Cloud usage
+* Linked to a **Payments profile**
+* Can be **linked to one or more projects**
+* Billing specific **roles and permissions** to control access.
+* **Self-service**(online) or **Invoiced** (offline) payments available
+* **Sub-accounts** can be used for resellers
+* Billing account can **pay for projects** in a **different organization**
+* Projects that are **not linked** to a cloud billing account **cannot use paid Google Cloud services**
 
 ```txt
 creating, editing and closing a new billing account
@@ -125,11 +127,20 @@ Linking and Unlinking a project - to and from a different billing account
 ```
 
 ### Payments Profile
-* Processes payments for all Google services
-* Stores all payments methods
-* Single pane of glass for viewing invoices and payment history
-* Controls who can view and receive invoices
-* Individual or Business profile types - cannot be changed
+* **Processes payments** for all Google services
+* **Stores** all **payments methods**
+* Single pane of glass for **viewing invoices** and **payment history**
+* **Controls who can** view and receive invoices
+* **Individual** or **Business** profile types - **cannot be changed**
+  * Business profile gives more flexibility
+  * Once a profile type is selected, it cannot be changed afterwards
+
+* Create a new billing account, edit that billing account, close a billing account
+
+![alt text](image-18.png)
+Question - What are the different functions of roles present in billing 
+
+![alt text](image-19.png)
 
 ## Cost Management and Budget Alerts
 1. **Committed Use Discounts(CUD's)**
