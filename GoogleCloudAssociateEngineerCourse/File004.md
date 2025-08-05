@@ -227,3 +227,6 @@ automate cost management tasks
 * Monitoring 
 
 ![alt text](image-31.png)
+
+## Export billing data
+
