@@ -230,3 +230,9 @@ automate cost management tasks
 
 ## Export billing data
 
+* Billing export enables **granular billing data** (such as
+usage, cost details, and pricing data) to be **exported
+automatically to BigQuery** for detailed analysis
+* Not retroactive
+
+![alt text](image-32.png)
