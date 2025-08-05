@@ -142,33 +142,88 @@ Question - What are the different functions of roles present in billing
 
 ![alt text](image-19.png)
 
-## Cost Management and Budget Alerts
-1. **Committed Use Discounts(CUD's)**
-   1. Discounted prices when you commit to using a minimum level of resource for a specified term
-   2. 1- or 3-year Commitment
+* Navigate to hamburger menu >> billing >> scroll down to bottom of sidebar >> account management
+  * First unlink the project and then close the billing account
+* Google also gives option for reopen the billing account if you accidently close it.
 
-2. **Commitment Types** - The commitment fee is billed monthly
+![alt text](image-20.png)
+
+## Controlling, Cost Management and Budget Alerts
+1. **Committed Use Discounts(CUD's)**
+   1. **Discounted prices** when you commit to using a **minimum level of resource for a specified term**
+   2. **1 or 3** year Commitment
+
+2. **Commitment Types** - 
+   1. **Spend**-based
+   2. **Resource**-based
+   The commitment fee is **billed monthly**
 3. **Spend-based commitment**
-   1. Discount for a commitment to spend a minimum amount for a service (hours) in a particular region
-   2. 25% discount for 1 year – 52% discount on a 3 year
-   3. Available for Cloud SQL database instances and Google Cloud VMWare Engine
-   4. Applies only to CPU and memory usage
+   1. **Discount** for a commitment to **spend a minimum amount for a service** (hours) in a particular **region**
+   2. **25% discount** for 1 year – **52% discount** on a 3 year
+   Available for 
+      1. Cloud SQL database instances and 
+      2. Google Cloud VMWare Engine
+   3. Applies only to **CPU** and **memory usage**
 
 4. **Resource-based commitment**
-   1. Discount for commitment to spend a minimum amount for Compute Engine resource in a particular region.
+   1. **Discount** for commitment to **spend a minimum amount for Compute Engine resource** in a particular **region**.
    2. Available for vCPU, Memory, GPU and Local SSD
-   3. 57% discount for most resources
-   4. 70% for memory-optimized machine types
-   5. For use across Projects
+   3. **57% discount** for most resources
+   4. **70% for memory-optimized** machine types
+   5. For use **across Projects**
 
 5. **Sustained-use discounts**
-   1. Automatic discounts of running Compute Engine resources a significant portion of the billing month
-   2. Applies to VCPUs and memory for most Compute Engine instance types
-   3. Includes VM’s created by GKE
-   4. Does not apply to App Engine flexible, Dataflow and E2 machine types
+   1. **Automatic discounts** of running Compute Engine resources a significant portion of the billing month
+   2. **Applies to VCPUs and memory** for most Compute Engine instance types
+   3. Includes VM’s created by **GKE**
+   4. **Does not apply** to App Engine flexible, Dataflow and E2 machine types
 
 **GCP Pricing Calculator** - Quick estimate of what your usage will cost on Google Cloud
 
-* **Cloud Billing Budgets**
-  * Enables you to track your actual Google Cloud spend against your planned spend
-  * Budget alert threshold rules that are used to trigger email notifications to help you stay informed about your spending
+![alt text](image-21.png)
+* It gives a pretty good idea of what the architecture will cost.
+
+URL - https://cloud.google.com/products/calculator
+
+### **Cloud Billing Budgets**  
+
+![alt text](image-22.png)
+
+* Enables you to **track your actual Google Cloud spend** against your planned spend
+* Budget alert threshold rules that are used to **trigger email notifications** to help you stay informed about your spending
+* Define the scope of the budget
+  * Spend of billing account or more granular
+* Budget amount can be set to a **specified total**, or based on **previous month's spend**
+* **Alert emails** are sent to billing account admins and specific users when **costs exceed a percentage** of the budget
+* Email recipients can be customized by using Cloud
+Monitoring to specify other people to receive budget
+alert emails
+![alt text](image-23.png)
+* Use Pub/Sub for programmatic notifications or to
+automate cost management tasks
+![alt text](image-24.png)
+
+![alt text](image-25.png)
+* Demo - for committed use discounts, budget alerts and editing budget alerts, adding automation to budget alerts
+
+* Compute engine >> Committed use discounts
+
+![alt text](image-26.png)
+
+* Purchase a committed use discount
+
+![alt text](image-28.png)
+
+![alt text](image-27.png)
+
+* Create a reservation
+
+![alt text](image-29.png)
+
+* Create a budget 
+
+![alt text](image-30.png)
+
+* Monitoring 
+
+![alt text](image-31.png)
