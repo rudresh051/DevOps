@@ -229,10 +229,49 @@ automate cost management tasks
 ![alt text](image-31.png)
 
 ## Export billing data
-
+* Navigation - Menu >> Billing >> Billing export
 * Billing export enables **granular billing data** (such as
 usage, cost details, and pricing data) to be **exported
 automatically to BigQuery** for detailed analysis
 * Not retroactive
 
 ![alt text](image-32.png)
+
+![alt text](image-33.png)
+* What is BigQuery dataset - It is where the billing data is going to be stored
+* Billing export will work once BigQuery data transfer Service API is enabled 
+
+![alt text](image-34.png)
+
+![alt text](image-35.png)
+
+## Cloud APIs
+* Navigation - Menu >> APIs & Services
+* Google Cloud Platform is pretty much run on the APIs whether it's in the console or the SDK
+* API Library - 
+
+![alt text](image-36.png)
+* In order to use any service in Google cloud, we must enable the API 
+
+## Adding an Admin User
+* Super Admin account
+  * Irrevocable admin permissions
+  * Grant Organization Admin role(or any other role)
+  * Recover accounts at the domain level
+
+* Admin user account architecture
+![alt text](image-37.png)
+
+## Cloud SDK and CLI
+* Set of command line tools that allow you to manage resources through the terminal
+  * gcloud
+  * gsutil
+  * bq
+  * kubectl
+
+![alt text](image-38.png)
+
+![alt text](image-39.png)
+
+* Installation
+  * Guide - https://cloud.google.com/sdk/docs/
