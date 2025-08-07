@@ -304,3 +304,46 @@ Finish Installation -
 * After authentication is completed
 
 ![alt text](image-44.png)
+
+## Managing the Cloud SDK
+
+### Commands
+1. `gauth cloud list` - 
+
+![alt text](image-45.png)
+
+2. gcloud config set account `ACCOUNT`
+
+`gcloud config set account tonybowtieace@gmail.com`
+
+3. `gcloud auth revoke`
+4. `gcloud info`
+
+![alt text](image-46.png)
+
+5. `gcloud config list`
+
+![alt text](image-47.png)
+
+6. `gcloud config configurations activate default`
+
+![alt text](image-49.png)
+
+7. `gcloud config configurations describe default`
+
+![alt text](image-48.png)
+
+8. `gcloud config set compute/zone`
+
+9. `gcloud components list`
+
+![alt text](image-50.png)
+
+![alt text](image-51.png)
+
+10. `gcloud components install beta`
+It will auto suggestion and information with commands. It can be used with any commands.
+
+![alt text](image-52.png)
+
+## Cloud Shell and Editor
