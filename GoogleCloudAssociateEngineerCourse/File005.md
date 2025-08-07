@@ -120,23 +120,35 @@ To help prevent a race condition when updating the policy, IAM supports concurre
 ### Policy versions
 ![alt text](image-74.png)
 
-**Policy Limitations**  
+### Policy Limitations
 
-1 policy per resource (including organizations, folders, projects)  
-1500 members or 250 Google groups per policy  
-Up to 7 minutes for policy changes to fully propagate across GCP  
-Limit of 100 conditional role bindings per policy
+* 1 policy per resource (including organizations, folders, projects)  
+* 1500 members or 250 Google groups per policy  
+* Up to 7 minutes for policy changes to fully propagate across GCP  
+* Limit of 100 conditional role bindings per policy
 Conditions - Condition attributes are either based on resource or based on details about the request (timestamp, originating/destination IP address)  
 
-**Condition Limitations**
+### Condition Limitations**
 
-Limited to specific services  
-Primitive roles are unsupported  
-Members cannot be allUsers or allAuthenticatedUsers  
-Limit of 100 conditional role bindings per policy  
-20 role bindings for same role and same member  
+* Limited to specific services  
+* Primitive roles are unsupported  
+* Members cannot be allUsers or allAuthenticatedUsers  
+* Limit of 100 conditional role bindings per policy  
+* 20 role bindings for same role and same member  
 
-**AuditConfig Logs**  
+![alt text](image-75.png)
+
+* Time based conditions
+
+![alt text](image-76.png)
+
+* Resource based conditions
+
+![alt text](image-77.png)
+
+* AuditConfig Logs 
+
+![alt text](image-78.png)
 
 Specifies the audit configuration for a service. The configuration determines which permission types are logged, and what identities, if any, are exempted from logging. An AuditConfig must have one or more AuditLogConfigs.
 
