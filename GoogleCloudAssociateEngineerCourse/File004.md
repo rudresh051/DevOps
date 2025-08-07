@@ -379,3 +379,43 @@ It will auto suggestion and information with commands. It can be used with any c
 * Cloud Shell Quota
 
 ![alt text](image-59.png)
+
+## Creating and Managing Projects
+* Navigation
+  * Cloud Overview >> Dashboard
+  * Edit
+
+![alt text](image-62.png)
+
+* Using Shell
+  * `gcloud projects create catbowties2020`
+
+* To view project list
+  * `gcloud projects list`
+
+* `gcloud projects describe catbowties2020`
+
+* Shutdown a project
+
+![alt text](image-63.png)
+
+## Limits and Quotas
+* Google cloud enforces quotas on resource usage for project owners, setting a hard limit on how much of a particular Google cloud resource your project can use.
+* API request per day - Resets after specified time
+* Allocation quota - Must be explicitly released
+* Enforcement of Quotas
+  * Protection
+  * Resource Management
+  * Countable
+* Monitoring and alerting on Quotas
+* Viewing your quota
+  * using UI
+  * using API
+
+* Navigation to view quotas
+
+![alt text](image-60.png)
+
+* using API & Services
+
+![alt text](image-61.png)
