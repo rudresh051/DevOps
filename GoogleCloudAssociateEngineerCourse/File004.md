@@ -263,15 +263,44 @@ automatically to BigQuery** for detailed analysis
 ![alt text](image-37.png)
 
 ## Cloud SDK and CLI
-* Set of command line tools that allow you to manage resources through the terminal
+* Set of **command line tools** that allow you to manage resources through the terminal
   * gcloud
   * gsutil
   * bq
   * kubectl
+
+* A user account is a Google account that allows end-users to authenticate directly to your application. For most common use cases on a single machine, using a user account is best practice.
+
+* A service account is a Google account associated with your GCP project and not a specific user. A service account can be used by providing a service account key to your application and is recommended to script Cloud SDK tools for use on multiple machines.
+
+* **Gcloud Init** - Authorizes access and performs other common Cloud SDK setup steps.
+* **gcloud auth login** - Authorize access for gcloud with Google user credentials
+* **Gcloud config** - Allows you to configure accounts and projects
+* **gcloud components** - Allow you to install, update and delete the components of the sdk
+
+* Cloud SDK allows to do everything that the console can do, yet it has more options than the console.
+  * Infrastructure as Code
+  * Autocompletion
+  * Powershell
 
 ![alt text](image-38.png)
 
 ![alt text](image-39.png)
 
 * Installation
-  * Guide - https://cloud.google.com/sdk/docs/
+  * Guide - https://cloud.google.com/sdk/docs/install-sdk#windows
+
+![alt text](image-40.png)
+
+Finish Installation - 
+![alt text](image-41.png) 
+
+![alt text](image-42.png)
+
+**Pick a project** - 
+
+![alt text](image-43.png)
+
+* After authentication is completed
+
+![alt text](image-44.png)
