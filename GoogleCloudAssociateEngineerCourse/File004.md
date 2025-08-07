@@ -263,6 +263,7 @@ automatically to BigQuery** for detailed analysis
 ![alt text](image-37.png)
 
 ## Cloud SDK and CLI
+* CLI guide - https://cloud.google.com/sdk/gcloud
 * Set of **command line tools** that allow you to manage resources through the terminal
   * gcloud
   * gsutil
@@ -347,3 +348,34 @@ It will auto suggestion and information with commands. It can be used with any c
 ![alt text](image-52.png)
 
 ## Cloud Shell and Editor
+* It is a browser based shell called cloud shell
+* cloud shell is a virtual machine that is loaded with development tools and offers a persistent 5 gigabyte home directory
+* cloud shell provides command line access to google cloud resources within the console.
+* Cloud shell also comes with a built in code editor.
+* Icon
+
+![alt text](image-53.png)
+
+![alt text](image-54.png)
+
+* cloud shell provisions on e2 google compute engine instance running on a Debian based Linux operating system. 
+* Cloud shell instances are provisioned on a per user per session basis.
+* The instance persists while your cloud shell session is active and after an hour of inactivity the session terminates and the VM is discared.
+
+![alt text](image-55.png)
+* To know where Cloud shell is currently running
+
+`curl metadata/computeMetadata/v1/instance/zone`
+
+![alt text](image-56.png)
+* Cloud shell has pre installed tools that come with it such as Cloud SDK, bash, Vim, Helm, Git, Docker
+* * It support programming languages like - Java, Go, Python, Node, JS, Ruby and .Net
+
+![alt text](image-57.png)
+
+* Installing terraform using Cloud shell editor
+![alt text](image-58.png)
+
+* Cloud Shell Quota
+
+![alt text](image-59.png)
