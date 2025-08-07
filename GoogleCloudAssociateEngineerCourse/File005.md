@@ -1,5 +1,10 @@
 # Cloud IAM
 
+## Principle of Least privilege
+* A user, program, or process should have only the bare
+minimum privileges necessary to perform its function
+![alt text](image-64.png)
+
 ## Cloud Identity
 **Cloud Identity** is an Identity as a Service (IDaaS) solution that centrally manages users and groups. This would be the sole system for authentication and that provides a single sign-on experience for all employees of an organization to be used for all your internal and external applications.
 
@@ -16,16 +21,23 @@
 **Google Cloud Directory Sync** is a free Google-provided tool that implements the synchronization process and can be run either on Google Cloud or in your on-premises environment. Synchronization is one-way so that Active Directory remains the source of truth.
 
 ## Identity And Access Management(IAM)
+### Policy Architecture
+![alt text](image-70.png)
+
+![alt text](image-65.png)
+
 You manage access control by defining who (identity) has what access (role) for which resource. This also includes organizations, folders, and projects.
 
-A **policy** is a collection of bindings, audit configuration, and metadata.
+* A **policy** is a collection of bindings, audit configuration, and metadata.
+  * A policy is attached to a resource and is used to enforce access control whenever that resource is accessed
 
-A **binding** specifies how access should be granted on resources. It binds one or more members with a single role and any context-specific conditions that change how and when the role is granted.
+* A **binding** specifies how access should be granted on resources. It binds one or more members with a single role and any context-specific conditions that change how and when the role is granted.
 
 The **metadata** includes additional information about the policy, such as an etag and version to facilitate policy management.
 
 The **AuditConfig** field specifies the configuration data for how access attempts should be audited.
-
+### The Who
+![alt text](image-66.png)
 **Google Account** - Any email address that's associated with a Google Account, including gmail.com or other domains.
 
 **Service Account** - An account for an application instead of an individual end user.
@@ -40,16 +52,21 @@ The **AuditConfig** field specifies the configuration data for how access attemp
 
 **AllUsers** - A special identifier that represents anyone who is on the internet, including authenticated and unauthenticated users
 
-**Roles** -  
-* This is a named collection of permissions that grant access to perform actions on Google Cloud resources.
-* You cannot grant a permission to the user directly
-* You grant a role to a user and all the permissions that the role contains.
+### Roles -  
+* This is a named **collection of permissions** that grant access to perform actions on Google Cloud resources.
+* You **cannot grant** a permission to the user **directly**
+* You **grant a role** to a user and a**ll the permissions that the role contains.**
+
+![alt text](image-68.png)
 
 **Permissions** - 
-* Determines what operations are allowed on a resource
-* Correspond one-to-one with REST API methods
-* Not granted to users directly
-* E.g., compute.instances.list
+* Determines what **operations are allowed** on a resource
+* Correspond one-to-one with **REST API** methods
+* **Not granted** to users **directly**
+* You grant roles which contain one or more permissions
+* E.g., `compute.instances.list`
+
+![alt text](image-67.png)
 
 **Primitive** - Roles historically available in the Google Cloud
     * Owner
@@ -61,18 +78,48 @@ The **AuditConfig** field specifies the configuration data for how access attemp
 
 **Custom** - Tailor permissions to the needs of your organization
 
-**Conditions** - 
-* Used to define and enforce conditional, attribute-based access control for Google Cloud resources.
-* Conditions allow you to choose granting resource access to identities only if configured conditions are met
+![alt text](image-69.png)
+
+* Launch Stages
+  * alpha - in testing
+  * beta - tested and awaiting approval
+  * ga - generally available 
+### Conditions - 
+* Further constraints binding
+* Used to **define** and **enforce conditional, attribute-based access control** for Google Cloud resources.
+* Conditions allow you to choose **granting resource access to identities only if configured conditions are met**
 * When a condition exists, the access request is only granted if the condition expression = true
 
-**Metadata**  
+### Metadata
+* etags - Concurrency control
+* version - Specifies schema version
+
+
 To help prevent a race condition when updating the policy, IAM supports concurrency control through the use of an etag field in the policy
 
-**Audit Config**  
+### Audit Config
+* Used to configure audit logging
 * Determines which permission types are logged, and what identities, if any, are exempted from logging
 
+* Resource Hierarchy
+
+![alt text](image-71.png)
+
 ## Policies and Conditions
+
+### Policy Statement
+![alt text](image-72.png)
+
+* Using cloud shell
+![alt text](image-73.png)
+* Commands
+  * `gcloud projects get-iam-policy <project-id>`
+  * `gcloud resource-manager folders get-iam-policy <folder-id>`
+  * `gcloud organizations get-iam-policy <organization-id>`
+
+### Policy versions
+![alt text](image-74.png)
+
 **Policy Limitations**  
 
 1 policy per resource (including organizations, folders, projects)  
