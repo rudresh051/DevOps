@@ -267,18 +267,6 @@ for that service
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 ## ✅ **Cloud IAM Best Practices**
 
 ### 🔒 1. **Principle of Least Privilege (PoLP)**
@@ -286,6 +274,9 @@ for that service
 * **Grant only the minimum permissions** required to perform a task.
 * Avoid using broad roles like `Editor` or `Owner` unless absolutely necessary.
 * Instead, use **predefined roles** or create **custom roles** for precision.
+* Child resources cannot restrict access granted on it's parent
+* Restrict who can create and manage service accounts
+* Be cautious with owner roles
 
 ---
 
@@ -331,14 +322,23 @@ for that service
 * Give **each application/service a unique service account**.
 * **Do not use user accounts** for automation.
 * Apply minimal permissions to service accounts and **use Workload Identity Federation** if you want to avoid long-lived keys.
-
+* When using service accounts, treat each app as a separate trust boundary
+* **Do not delete service accounts** that are in use by running services
+* Rotate user managed service account keys
+* Name service account keys to reflect use and permissions
+* Restrict service account access
+* Don't check in service account keys into source code
 ---
 
 ### 🧾 8. **Enable and Monitor Audit Logs**
 
 * Enable **Cloud Audit Logs** (Admin Activity logs are always on).
 * Monitor logs for **suspicious activity**, such as unexpected permission grants or denied requests.
-
+* Use Cloud Audit Logs to regularly audit IAM policy changes
+* Audit who can edit IAM policies on projects
+* Export audit logs to Cloud Storage for long-term retention
+* Regularly audit service account key access
+* Restrict log access with logging roles
 ---
 
 ### 📦 9. **Use Custom Roles Carefully**
@@ -355,6 +355,23 @@ for that service
 
   * Alert on changes to IAM policies
   * Alert on use of high-risk permissions (like `resourcemanager.projects.delete`)
+
+
+### 11. Resource Hierarchy
+* Mirror your Google Cloud resource hierarchy structure to your organization structure
+* Use projects to group resources that share the same trust boundary
+* Set policies at the organization level and at the project level rather than at the
+resource level
+* Use the security principle of least privilege to grant IAM roles
+* Grant roles for users or groups at the folder level instead of setting it at the
+project level, if spanning across multiple projects
+
+### 12. Policy Management
+* To grant access to all projects in your Organization, use an organization-level
+policy
+* Grant roles to a Google group instead of individual users where possible
+* When granting multiple roles to a particular task, create a Google group
+instead
 
 ---
 
