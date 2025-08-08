@@ -233,11 +233,37 @@ Specifies the audit configuration for a service. The configuration determines wh
 * Based on enabled API's
 
 
+### Best Practices
 
+* **Audit service accounts and keys** using either
+the serviceAccount.keys.list() method or the Logs Viewer page in the console.
+* **Delete service account external keys** if you don't need them
+* Grant the service account only the **minimum set of permissions** required to
+achieve their goal
+* **Create service accounts for each service** with only the permissions required
+for that service
+* Take advantage of the IAM service account API to **implement key rotation**
 
+### Service Accounts - Follow Along
 
+## Cloud Identity
+**Cloud Identity** is an Identity as a Service (IDaaS) solution that centrally manages users and groups. This would be the sole system for authentication and that provides a single sign-on experience for all employees of an organization to be used for all your internal and external applications.
 
+**Device management** - lets people in any organization access their work accounts from mobile devices while keeping the organization's data more secure.
+![alt text](image-89.png)
 
+**Security** - Helps by applying security best practices along with being able to deploy 2SV for the whole company along with enforcement controls and can also manage passwords to make sure they are meeting the enforced password requirements automatically.
+![alt text](image-88.png)
+
+**Single Sign-on** - With single sign-on (SSO), users can access many applications without having to enter their username and password for each application
+
+**Reporting** - This covers audit logs for logins, groups, devices and even tokens. You are even able to export these logs to BigQuery for analysis. You can then create reports from these logs that cover security, applications and activity.
+
+**Directory Management** - Provides profile information for users in your organization, email and group addresses, and shared external contacts in the Directory. Using Google Cloud Directory Sync (GCDS), you can synchronize the data in your Google Account with your Microsoft Active Directory or LDAP server. GCDS doesn't migrate any content (such as email messages, calendar events, or files) to your Google Account. You use GCDS to synchronize all your users, groups, and shared contacts to match the information in your LDAP server.
+![alt text](image-90.png)
+
+**Google Cloud Directory Sync** is a free Google-provided tool that implements the synchronization process and can be run either on Google Cloud or in your on-premises environment. Synchronization is one-way so that Active Directory remains the source of truth.
+![alt text](image-91.png)
 
 
 
