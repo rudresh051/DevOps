@@ -108,33 +108,54 @@ To help prevent a race condition when updating the policy, IAM supports concurre
 ## Policies and Conditions
 
 ### Policy Statement
+![alt text](image-79.png)
+
+example of policy statement shown below in JSON format- 
 ![alt text](image-72.png)
+
+YAML format -(Shorter and cleaner format)
+![alt text](image-80.png)
 
 * Using cloud shell
 ![alt text](image-73.png)
-* Commands
+
+* Commands to use
   * `gcloud projects get-iam-policy <project-id>`
   * `gcloud resource-manager folders get-iam-policy <folder-id>`
   * `gcloud organizations get-iam-policy <organization-id>`
 
-### Policy versions
+### 1. Policy versions
+* Version 1, Version 2, Version 3
+
 ![alt text](image-74.png)
 
-### Policy Limitations
+### 2. Policy Limitations
 
 * 1 policy per resource (including organizations, folders, projects)  
-* 1500 members or 250 Google groups per policy  
-* Up to 7 minutes for policy changes to fully propagate across GCP  
-* Limit of 100 conditional role bindings per policy
-Conditions - Condition attributes are either based on resource or based on details about the request (timestamp, originating/destination IP address)  
+* **1500 members or 250 Google groups per policy**  
+* **Up to 7 minutes for policy changes to fully propagate across GCP**  
+* Limit of **100** conditional role bindings **per policy**
 
-### Condition Limitations**
 
-* Limited to specific services  
-* Primitive roles are unsupported  
-* Members cannot be allUsers or allAuthenticatedUsers  
-* Limit of 100 conditional role bindings per policy  
-* 20 role bindings for same role and same member  
+### 3. Conditions - 
+Condition attributes are either based on resource or based on details about the request (timestamp, originating/destination IP address)  
+![alt text](image-81.png)
+
+* **Time based conditions**
+
+![alt text](image-82.png)
+
+* **Resource based conditions**
+
+![alt text](image-83.png)
+
+### 4. Condition Limitations
+
+* Limited to **specific services**  
+* **Primitive roles are unsupported**  
+* **Members cannot be allUsers or allAuthenticatedUsers**  
+* Limit of **100** conditional role bindings **per policy**  
+* **20** role bindings for **same role and same member**
 
 ![alt text](image-75.png)
 
@@ -146,11 +167,24 @@ Conditions - Condition attributes are either based on resource or based on detai
 
 ![alt text](image-77.png)
 
-* AuditConfig Logs 
+### 5. AuditConfig Logs 
+* It specifies the audit configuration for a service. The configuration determines which permission types are logged and what identities if any are exempted from logging.
+
 
 ![alt text](image-78.png)
 
 Specifies the audit configuration for a service. The configuration determines which permission types are logged, and what identities, if any, are exempted from logging. An AuditConfig must have one or more AuditLogConfigs.
+
+## Cloud IAM - Follow along
+* Labels - Labels are a key value pair that helps you organize and then filter your resources based on their roles.
+
+* Good rule of thumb - Label all of your resources
+
+* Settings - Google personnel take when they're accessing your content for troubleshooting
+
+## Service Accounts
+
+
 
 
 ## ✅ **Cloud IAM Best Practices**
