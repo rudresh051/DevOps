@@ -1,11 +1,48 @@
+# Cloud Computing Course - Overview
+1. Introduction to cloud computing
+   1. Overview of computing
+   2. Cloud computing(NIST Model)
+   3. Properties, Characteristics & Disadvantages
+   4. Role of Open Standards
+2. Cloud computing Architecture
+   1. Cloud computing stack
+   2. Service Models(Xaas)
+      1. Infrastructure as a service(IaaS)
+      2. Platform as a service(PaaS)
+      3. Software as a service(SaaS)
+   3. Deployment Models
+3. Service Management in Cloud computing
+   1. Service Level Agreements(SLAs)
+   2. Cloud Economics
+4. Resource Management in cloud computing
+5. Data managment in Cloud computing
+   1. Looking at Data, Scalability & Cloud Services
+   2. Database & Data Stores in cloud
+   3. Large Scale Data Processing
+6. Cloud Security
+   1. Infrastructure Security
+   2. Data Security and Storage
+   3. Identiy and Access Management
+   4. Access Control, Trust, Reputation, Risk
+7. Case Study on Open Source and Commercial Clouds, Cloud Simulator
+8. Research trend in cloud computing, Fog computing
+
+# BOOKS AND REFERENCES
+1. Cloud Computing: Principles and Paradigms, Editors: Rajkumar Buyya, James Broberg, Andrzej M. Goscinski, Wiley,2011
+
+2. Enterprise Cloud Computing - Technology, Architecture, Applications, Gautam Shroff, Cambridge University Press, 2010
+
+3. Cloud Computing Bible, Barrie Sosinsky, Wiley-India, 2010
+
+4. Cloud Security: A Comprehensive Guide to Secure Cloud Computing, Ronald L. Krutz, Russell Dean Vines, Wiley- India,2010
+
+
 # Introduction
 
-## Cloud Computing - Overview
 * The ACM Computing Curricula 2005 defined "computing" as
 
-```txt
-In a general way, we can define computing, to mean any goal -
-oriented activity requiring, benefiting from, or creating computers.
+In a general way, we can define **computing, to mean any goal -
+oriented activity requiring,** benefiting from, or creating computers.
 Thus, computing includes designing and building hardware and
 software systenms for a wide range of purposes; processing,
 structuring, and managing various kinds of information; doing
@@ -14,7 +51,6 @@ behave intelligently; creating and using communications and
 entertainment media; finding and gathering information relevant
 any particular purpose, and so on. The list is virtually endless
 the possibilities are vast.
-```
 
 ### Examples
 1. Buying a car for 20 km | 50 km once a month
@@ -27,37 +63,6 @@ the possibilities are vast.
 * CPU - Processor
 * RAM
 * Network Connectivity
-
-
-
-## Topics
-1. Introduction to Cloud Computing
-   1. Overview of Computing
-   2. Cloud Computing(NIST Model)
-   3. Properties, Characteristics & Disadvantages
-   4. Role of Open Standards
-2. Cloud Computing Architecture
-   1. Cloud computing stack
-   2. Service Models(XaaS)
-      1. Infrastructure as a Service(IaaS)
-      2. Platform as a Service(PaaS)
-      3. Software as a Service(SaaS)
-   3. Deployment Models
-3. Service Management in Cloud Computing
-   1. Service Level Agreements(SLAs)
-   2. Cloud Economics
-4. Resource Management in Cloud Computing
-5. Data Management in Cloud Computing
-   1. Looking at Data, Scalability & Cloud Services
-   2. Database & Data Stores in Cloud
-   3. Large Scale Data Processing
-6. Cloud Security
-   1. Infrastructure Security
-   2. Data security and Storage
-   3. Identity and Access Management
-   4. Access Control, Trust, Reputation, Risk
-7. Case Study on Open source and Commercial clouds, Cloud Simulator
-8. Research trend in Cloud Computing, Fog Computing
 
 ```txt
 e.g. dropbox
@@ -85,6 +90,7 @@ general citizens
 It is not a suddenly new stuff emerged
 ```
 
+## 1. Distributed Computing
 ### Centralized vs Distributed Computing
 Early computing was performed on a single processor. Uni-processor computing can be called centralized computing
 
@@ -112,14 +118,14 @@ Distributed Computing - Distributed in different geography
 * Internet
 * ATM(Bank) machines
 * Intranets/workgroups
-* Computing landscape will soon consist of ubiquitous network-connected devices
+* Computing landscape will soon consist of **ubiquitous** network-connected devices
 
-## Computers in a Distributed System
+### Computers in a Distributed System
 1. **Workstations** - Computers used by end-users to perform computing
 2. **Server Systems** - Computers which provide resources and services
 3. **Personal Assistance Devices** - Handheld computers connected to the system via a wireless communication link.
 
-## Common properties of Distributed Computing
+### Common properties of Distributed Computing
 * **Fault tolerance**
   * When one or some nodes fails,
 the whole can still work fine except performance
@@ -137,7 +143,7 @@ other users
 * **Performnance**
   * Parallel cornputing can be considered a subset of distr ibuted connputing
 
-## Why Distributed Computing?
+### Why Distributed Computing?
 * Nature of application
 * Performance
   * Computing intensive
