@@ -183,6 +183,72 @@ Specifies the audit configuration for a service. The configuration determines wh
 * Settings - Google personnel take when they're accessing your content for troubleshooting
 
 ## Service Accounts
+* A service account is a special kind of account used by an application or a virtual machine (VM) instance, not a person.
+* An application uses the service account to authenticate between the application and GCP services so that the users aren't directly involved
+* A special type of Google account intended to represent a non-human user that needs to authenticate and be authorized to access data in Google APIs.
+
+### Service Account types
+* Service accounts play a powerful part in google cloud and can allow a different approach for application interaction with the resources in Google cloud
+* Service account is a special kind of account that is used by an application or a virtual machine instance and not a person.
+* It is a special type of Google account intended to represent a non human user that needs to authenticate and be authorized to access data in Google APIs.
+* Note - Service account is identified by its email address which is unique to the account.
+
+
+* **User-managed**
+  * User created 
+  * You choose the name
+
+* **Default**
+  * Using some GCP services create user-managed service accounts
+  * Automatically granted the Editor role for the project
+  * When using certain GCP services, default service accounts are automatically created. These are user-managed service accounts.
+  * These default service accounts are automatically granted the Editor role for the project
+* **Google-managed**
+  * Managed by Google, and they are used by Google services
+  * Some are visible, some hidden
+  * Name ends with "Service Agent" or "Service Account"
+
+![alt text](image-84.png)
+
+
+### Service Account Keys
+* Google managed
+  * **Key Management** - None, All handled by Google
+* User managed
+  * **Key Management** - Key storage, Key distribution, Key revocation, Key rotation, Protecting the keys from unauthorized users, Key recovery
+
+### Service Account Permissions
+![alt text](image-85.png)
+
+### Use of Service Accounts
+![alt text](image-87.png)
+
+### Access scopes
+![alt text](image-86.png)
+
+* Service Account scopes are the legacy method of specifying permissions for your instance
+* And they are used in substitution of IAM roles
+* These are used specifically for default
+* Or automatically created service accounts
+* Based on enabled API's
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
