@@ -1,7 +1,9 @@
 # Section 2 - ☁️ Cloud Computing Fundamentals
 # What is Cloud Computing
 Noun - 
-The delivery of a shared pool of on-demand computing services over the public internet, that can be rapidly provisioned and released with minimal management effort or service provider interaction.
+The delivery of a **shared pool** of **on-demand computing services** over the **public internet**, that can be **rapidly provisioned and released** with **minimal** management effort or service provider **interaction**.
+
+**NIST link** - https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-145.pdf
 
 ## The 5 Characteristics of Cloud
 
@@ -22,11 +24,21 @@ The delivery of a shared pool of on-demand computing services over the public in
 * **Public Cloud** - 1 public cloud
 * **Multi-Cloud** - 2 or more public clouds
 * **Private Cloud** - on-premise cloud
-* **Hybrid Cloud** - private cloud + public cloud
+* **Hybrid Cloud** - **private** cloud + **public** cloud
 * **Hybrid Environment** - on-premise data center + public cloud
+
+![alt text](image-94.png)
 
 ## Cloud Service Models and Concepts
 Referred as XaaS - Anything as a Service
+
+* Precloud
+
+![alt text](image-95.png)
+
+* Before cloud computing became big - another model called as DC hosted(Data center hosted)
+
+![alt text](image-96.png)
 
 ## 🔧 What Are Cloud Service Models?
 
@@ -37,6 +49,8 @@ There are **3 main cloud service models**:
 ---
 
 ## 1. **IaaS (Infrastructure as a Service)**
+
+![alt text](image-97.png)
 
 ### 🔍 What it means:
 
@@ -71,6 +85,7 @@ You rent **basic IT infrastructure** – servers, storage, and networking – fr
 ---
 
 ## 2. **PaaS (Platform as a Service)**
+![alt text](image-98.png)
 
 ### 🔍 What it means:
 
@@ -104,6 +119,8 @@ You rent a **ready-made platform** to develop, run, and manage applications. No 
 ---
 
 ## 3. **SaaS (Software as a Service)**
+
+![alt text](image-99.png)
 
 ### 🔍 What it means:
 
@@ -152,8 +169,6 @@ You use **ready-made software** over the internet. You don’t worry about how i
 | SaaS          | You order a pizza (Cloud does everything)                 |
 
 ![alt text](image-3.png)
-
-You're almost there, Rudreshwar! Here's a refined version of your analogy to better align with the actual **IaaS, PaaS, and SaaS** concepts:
 
 ---
 
