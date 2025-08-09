@@ -1,3 +1,4 @@
+# Section 1 - Introduction
 # Google Cloud Associate Cloud Engineer Course - Pass the Exam!
 
 ## Associate Cloud Engineer
@@ -145,8 +146,61 @@ https://services.google.com/fh/files/misc/associate_cloud_engineer_exam_guide_en
 
 >> Now above is a typical scenario that you will face as a cloud engineer and cloud architect. The key to this scenario is the fact that there are areas that are lacking in detail and areas that are fully comprehensible and this will trigger knowing when and where to ask relevant questions. Especially in your day to day role as an engineer. It will allow you to fill the gaps so that you're able to figure out what services you will need And what type of architecture to use. This is also extremely helpful when it comes to the exam as in the exam you will be faced with questions that pertain to real life scenarios that will test you in a similar manner. Knowing wat servies and archtecture to use based on the information given will alwways give you the keys to the door with the right answer. And lastly when it comes to demos, this scenario used throughtout the course will help put things in perspective as we will come to resolve a lot of these common issues. Real world scenarios can give you a better perspective on learning as it is tied to something that makes it easy to comprehend. And again Bow tie inc. is the scenrio that I will be using throughout the course to help you grasp these concepts.
 
-## Preview of Practice Exam
+## Preview of Practice Exam(!Imp)
+
 * Note - you should generally not attempt the practice exam unless you have completed all the lecture content including the follow alongs.
 * And so I always recommend to use the practice exam as a serious attempt and not just a way to get to the final exam at a faster pace. Taking your time with the course will allow you to really **prevail** through these practice exams and allow for a for **a way better pass rate** on the final exam. 
+<!-- ------------------------------------------ -->
+
+```txt
+## Bowtie Inc.
+
+#### ✅ Purpose:
+
+The instructor is setting the stage for the course by explaining a **realistic company scenario** that will be used to:
+
+* Demonstrate GCP architecture
+* Explain cloud migration
+* Design solutions based on business needs
+* Link theory to practice
+
+---
+
+### 🏢 **About the Company: Bow Tie Inc.**
+
+* A **global bow tie manufacturing company**
+* Has **factories**, **retail stores**, and **wholesale channels**
+* Offices in **Montreal (HQ)**, **London**, and **Los Angeles**
+* Deals with **commerce, big data, and security**
+
+---
+
+### ⚙️ **Current Tech Challenges:**
+
+* Their IT infrastructure is **outdated** and **underfunded**
+* All their store systems are connected via **VPN**
+* **Inventory updates** depend on **point-of-sale (POS) systems**
+* **Backups are done on tape** at HQ and stored offsite
+* There's **technical debt** and poor scalability
+
+---
+
+### 🧠 **Why Is This Scenario Important?**
+
+Throughout the course, this Bow Tie Inc. setup will:
+
+* Be the **basis for cloud migration discussions**
+* Help you design GCP architecture to solve **real business problems**
+* Simulate challenges like **availability, data syncing, security**, etc.
+
+---
+
+### 🔄 What You'll Likely Do in the Course:
+
+* Migrate Bow Tie Inc.'s infrastructure to GCP
+* Use **GCP services like Compute Engine, Cloud Storage, BigQuery**
+* Build **resilient, scalable, and global systems**
+* Improve backup, security, and real-time inventory updates
+```
 
 
