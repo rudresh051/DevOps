@@ -440,4 +440,14 @@ All of these you mentioned work at the **Application Layer** of the OSI Model (L
 | **SSH**    | Secure remote login  | TCP 22     | High       | Server admin        |
 | **Telnet** | Remote login         | TCP 23     | None       | Legacy admin        |
 
-
+## Virtual Private Cloud - Follow Along
+* **Virtualized network** within Google cloud
+* A VPC is a **Global resource**
+* Encapsulated **within a Project**
+* VPC's **do not have any IP address ranges** associated with them
+* **Firewall rules** control traffic flowing in and out of the VPC
+* Resources within a VPC **can communicate with one
+another** by using internal (private) IPv4 addresses
+* Support **only for IPv4** addresses
+* Each VPC contains a **default network**
+* 2 Network types: **Auto Mode** or **Custom Mode**
