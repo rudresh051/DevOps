@@ -517,3 +517,76 @@ Imagine you’re running a web application:
 💡 **In short**:
 A **VPC in Google Cloud** is your **custom, secure, and flexible virtual network** for running resources — with full control over IP ranges, routing, and access.
 
+
+##  VPC Network Subnets
+In **Google Cloud**, a **VPC Network** is your private, virtual network, and **subnets** are subdivisions of that network that organize and isolate resources.
+
+Think of it like this:
+
+* **VPC Network** = The entire building (your global private network).
+* **Subnets** = Separate rooms inside the building (regional private networks).
+
+---
+
+## **1. VPC Network**
+
+* **Global scope** in Google Cloud — one VPC can span multiple regions.
+* Contains:
+
+  * **Subnets** (regional)
+  * **Routes**
+  * **Firewall rules**
+* Can connect to the internet, on-premises networks, or other VPCs.
+
+---
+
+## **2. Subnets**
+
+* **Definition:** A subnet is a **range of IP addresses** within a VPC, assigned to a specific region.
+* Each subnet belongs to exactly **one region** but can have resources (VMs, load balancers, etc.) in multiple zones of that region.
+* You decide the **IP range** (CIDR block) when creating it — e.g., `10.0.0.0/24`.
+* Subnets **do not overlap** within the same VPC.
+
+---
+
+## **3. Types of Subnets in Google Cloud**
+
+1. **Auto mode**
+
+   * Automatically creates one subnet per region.
+   * Uses predefined IP ranges.
+   * Easier for beginners but less flexible.
+
+2. **Custom mode**
+
+   * You manually create subnets and choose IP ranges.
+   * Allows complex network architectures.
+   * Preferred for production workloads.
+
+---
+
+## **4. How Subnets Work**
+
+* Resources in the **same subnet** can communicate using private internal IPs.
+* Resources in **different subnets** of the same VPC can still communicate unless blocked by firewall rules (because VPC networking is global in scope).
+* Firewall rules apply at the VPC level but can be targeted to specific subnets.
+
+---
+
+## **5. Example**
+
+**VPC Network:** `corp-network`
+
+* **Subnet 1:** `frontend-subnet` in `us-central1` with `10.0.1.0/24` (web servers)
+* **Subnet 2:** `backend-subnet` in `asia-southeast1` with `10.0.2.0/24` (databases)
+
+Both subnets are in the same VPC, but they’re in different regions, with separate IP ranges.
+
+---
+
+💡 **In short:**
+
+* **VPC Network** = The whole private network (global).
+* **Subnets** = Regional IP ranges inside that network to organize and isolate resources.
+
+
