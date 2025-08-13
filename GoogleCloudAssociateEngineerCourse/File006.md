@@ -589,4 +589,72 @@ Both subnets are in the same VPC, but they’re in different regions, with separ
 * **VPC Network** = The whole private network (global).
 * **Subnets** = Regional IP ranges inside that network to organize and isolate resources.
 
+## Firewall and Firewall Rules
+A **firewall** is like a security guard for your network — it decides what traffic (data) is allowed in and out based on a set of rules you configure.
+
+It’s used to **protect networks, devices, and applications** from unauthorized access, malware, and other threats by filtering network packets.
+
+---
+
+## **1. What is a Firewall?**
+
+* **Definition:**
+  A network security system (hardware, software, or both) that monitors and controls incoming and outgoing network traffic based on predetermined **security rules**.
+
+* **Purpose:**
+
+  * Block unwanted or harmful traffic.
+  * Allow only approved communications.
+  * Prevent hackers from exploiting vulnerabilities.
+
+* **Types of Firewalls:**
+
+  1. **Packet-Filtering Firewall** – checks packets based on IP, port, and protocol.
+  2. **Stateful Inspection Firewall** – tracks active connections and context of traffic.
+  3. **Proxy Firewall** – acts as an intermediary between user and internet.
+  4. **Next-Gen Firewall (NGFW)** – includes deep packet inspection, intrusion prevention, application control.
+
+---
+
+## **2. What are Firewall Rules?**
+
+* Firewall rules are **instructions** that tell the firewall what to do with certain network traffic.
+* Each rule specifies **conditions** and an **action**.
+
+---
+
+### **Basic Components of a Firewall Rule**
+
+1. **Source** – where the traffic is coming from (IP address or range).
+2. **Destination** – where the traffic is going.
+3. **Protocol** – type of communication (TCP, UDP, ICMP, etc.).
+4. **Port** – network port number (e.g., 80 for HTTP, 443 for HTTPS).
+5. **Action** – Allow, Deny, or Drop the packet.
+6. **Direction** – Inbound (coming into your network) or Outbound (going out).
+
+---
+
+### **Example Firewall Rules**
+
+| Rule # | Direction | Source IP    | Destination IP | Protocol | Port | Action |
+| ------ | --------- | ------------ | -------------- | -------- | ---- | ------ |
+| 1      | Inbound   | Any          | 192.168.1.10   | TCP      | 22   | Allow  |
+| 2      | Outbound  | 192.168.1.10 | Any            | TCP      | 80   | Allow  |
+| 3      | Inbound   | Any          | Any            | Any      | Any  | Deny   |
+
+---
+
+💡 **Example in Real Life:**
+
+* Imagine your house as a network.
+* The firewall is your gatekeeper.
+* The **rules** are like:
+
+  * Let friends in (allow specific IPs).
+  * Don’t let strangers in (deny unknown IPs).
+  * Allow pizza delivery (allow specific ports).
+  * Block anyone carrying dangerous stuff (block malicious traffic).
+
+
+
 
