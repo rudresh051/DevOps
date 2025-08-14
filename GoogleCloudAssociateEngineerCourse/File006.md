@@ -656,5 +656,57 @@ It’s used to **protect networks, devices, and applications** from unauthorized
   * Block anyone carrying dangerous stuff (block malicious traffic).
 
 
+## VPC Network peering
+**VPC Network Peering** is a way to connect two **Virtual Private Cloud (VPC)** networks so they can communicate with each other **privately** using **internal IP addresses**, without sending traffic over the public internet.
+
+Think of it like creating a **private bridge** between two separate neighborhoods so that residents can visit each other without going through a public highway.
+
+---
+
+## **Key Points**
+
+* Works **within the same project** or **across different projects** (and even different organizations in some cases).
+* Uses **Google’s internal backbone network** → low latency, high security.
+* Traffic between peered VPCs **never goes through the public internet**.
+* **One-to-one relationship** – each peering connection is between two VPCs.
+
+---
+
+## **When to Use VPC Peering**
+
+* You have multiple projects/environments (e.g., *dev*, *test*, *prod*) and need them to talk to each other securely.
+* Different teams manage their own VPCs but need shared access to resources.
+* You want to avoid **VPN or public IP costs**.
+
+---
+
+## **How it Works**
+
+1. You request peering from VPC **A** to VPC **B**.
+2. The other side accepts the request.
+3. Both networks update their **routes** to allow internal communication.
+4. Now instances in VPC A can talk to instances in VPC B using **private IPs**.
+
+---
+
+## **Limitations**
+
+* **No transitive peering**: If A is peered with B, and B is peered with C, **A cannot talk to C** unless A and C also peer directly.
+* Overlapping IP ranges are **not allowed**.
+* No centralized firewall rules – each VPC manages its own.
+
+---
+
+## **Example**
+
+Let’s say:
+
+* VPC **Prod**: 10.0.0.0/16
+* VPC **Analytics**: 192.168.0.0/16
+
+If you set up **VPC Peering**:
+
+* A VM in **Prod** with IP `10.0.1.5` can directly connect to a VM in **Analytics** with IP `192.168.2.7` without using a public IP.
+
 
 
