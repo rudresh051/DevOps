@@ -31,3 +31,18 @@ of remembering things?
 * (Recommended) Have Fun!
 
 ![alt text](image-1.png)
+
+## Before the cloud - Example 1 - Online shopping App
+## Before the Cloud - Example 2 - Startup
+## Before the Cloud - Challenges
+## Silver Lining in the Cloud
+## Cloud - Advantages
+## Google Cloud Platform(GCP)
+## Best Path to learn GCP
+## Maximizing Learning Efficiency with Playback Speed
+
+## Regions and Zones
+* High Latency
+* Multiple data centers
+
+
