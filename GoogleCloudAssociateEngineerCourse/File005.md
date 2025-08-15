@@ -3,6 +3,7 @@
 ## Principle of Least privilege
 * A user, program, or process should have only the bare
 minimum privileges necessary to perform its function
+
 ![alt text](image-64.png)
 
 ## Cloud Identity
@@ -21,12 +22,14 @@ minimum privileges necessary to perform its function
 **Google Cloud Directory Sync** is a free Google-provided tool that implements the synchronization process and can be run either on Google Cloud or in your on-premises environment. Synchronization is one-way so that Active Directory remains the source of truth.
 
 ## Identity And Access Management(IAM)
-### Policy Architecture
-![alt text](image-70.png)
-
 ![alt text](image-65.png)
 
 You manage access control by defining who (identity) has what access (role) for which resource. This also includes organizations, folders, and projects.
+
+### Policy Architecture
+![alt text](image-70.png)
+
+
 
 * A **policy** is a collection of bindings, audit configuration, and metadata.
   * A policy is attached to a resource and is used to enforce access control whenever that resource is accessed
