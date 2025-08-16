@@ -20,6 +20,7 @@ Virtual Machines
   * Distribute load with Load Balancers
 
 ## Create your first VM
+Link - https://scribehow.com/viewer/Creating_your_first_Virtual_Machine_in_GCP__dF2VjMksT5en6PowYws7lQ
 
 ![alt text](image-2.png)
 
@@ -90,3 +91,31 @@ Here are the key actions for managing a Google Cloud VM instance and their billi
   - All charges for the VM and its disks are stopped.
 
 To **stop all charges**, you can directly **choose to Delete** the instance without needing to Stop it first.
+
+## Commands
+sudo su
+apt update 
+apt install apache2
+ls /var/www/html
+echo "Hello World!"
+echo "Hello World!" > /var/www/html/index.html
+echo $(hostname)
+echo $(hostname -i)
+echo "Hello World from $(hostname)"
+echo "Hello World from $(hostname) $(hostname -i)"
+echo "Hello world from $(hostname) $(hostname -i)" > /var/www/html/index.html
+sudo service apache2 start
+
+
+![alt text](image-3.png)
+
+## Reserving and deleting Static IP address
+
+**Link** - https://www.youtube.com/watch?v=_K-TofKAYcs
+
+* Delete the instance and delete the static IP address
+
+![alt text](image-4.png)
+
+![alt text](image-5.png)
+
