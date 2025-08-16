@@ -119,3 +119,21 @@ sudo service apache2 start
 
 ![alt text](image-5.png)
 
+## Startup Script
+
+```txt
+#!/bin/bash
+apt update 
+apt -y install apache2
+echo "Hello world from $(hostname) $(hostname -I)" > /var/www/html/index.html
+```
+
+![alt text](image-6.png)
+
+## Reducing Launch time with custom image
+
+![alt text](image-7.png)
+
+![alt text](image-8.png)
+
+![alt text](image-9.png)
