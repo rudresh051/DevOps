@@ -137,3 +137,9 @@ echo "Hello world from $(hostname) $(hostname -I)" > /var/www/html/index.html
 ![alt text](image-8.png)
 
 ![alt text](image-9.png)
+
+## Scenarios - Compute Engine
+
+![alt text](image-10.png)
+
+## Quick Review
