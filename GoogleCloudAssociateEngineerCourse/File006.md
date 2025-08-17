@@ -708,5 +708,71 @@ If you set up **VPC Peering**:
 
 * A VM in **Prod** with IP `10.0.1.5` can directly connect to a VM in **Analytics** with IP `192.168.2.7` without using a public IP.
 
+## DNS Fundamentals
+DNS fundamentals are the **basics of the Domain Name System (DNS)**, which is like the “phonebook of the internet.” Instead of remembering long numerical IP addresses (like `142.250.183.14`), DNS lets us use human-friendly names (like `www.google.com`).
+
+Here’s a breakdown of the key fundamentals:
+
+---
+
+### 🔑 **What is DNS?**
+
+* DNS (Domain Name System) is a **distributed, hierarchical naming system** that maps domain names to IP addresses.
+* Without DNS, we’d have to type in IP addresses to visit websites instead of names.
+
+---
+
+### ⚙️ **How DNS Works (Step by Step)**
+
+1. **User enters a domain name** (e.g., `www.example.com`) in the browser.
+2. **DNS Resolver (usually your ISP or Google DNS 8.8.8.8)** checks if it already knows the IP address (cache).
+3. If not, it queries the DNS hierarchy:
+
+   * **Root Server** → directs query to the right TLD (Top-Level Domain) server (`.com`, `.org`, `.net`, etc.).
+   * **TLD Server** → directs query to the authoritative DNS server for that domain.
+   * **Authoritative DNS Server** → responds with the correct IP address (e.g., `93.184.216.34`).
+4. The resolver sends the IP back to the browser.
+5. Browser connects to the website using the IP address.
+
+---
+
+### 🏗️ **DNS Components**
+
+* **Domain Names** → Human-readable names (`example.com`).
+* **IP Address** → Machine-readable address (IPv4: `192.0.2.1`, IPv6: `2001:db8::1`).
+* **Resolvers** → Do the DNS lookups on behalf of clients.
+* **Root Servers** → Top of the hierarchy, know where TLD servers are.
+* **TLD Servers** → Manage `.com`, `.org`, `.in`, etc.
+* **Authoritative Name Servers** → Contain actual domain records.
+
+---
+
+### 📂 **Common DNS Record Types**
+
+* **A Record** → Maps domain name → IPv4 address.
+* **AAAA Record** → Maps domain name → IPv6 address.
+* **CNAME Record** → Alias (e.g., `mail.example.com` → `example.com`).
+* **MX Record** → Mail exchange (email servers).
+* **NS Record** → Nameservers for a domain.
+* **TXT Record** → Misc. text info (often for security like SPF, DKIM).
+
+---
+
+### 🕒 **Caching**
+
+* DNS responses are cached at multiple levels (browser, OS, ISP).
+* **TTL (Time to Live)** determines how long a record is cached before it expires.
+
+---
+
+### 🔐 **Security**
+
+* **DNS Spoofing/Cache Poisoning** → Attackers give false DNS info.
+* **DNSSEC (DNS Security Extensions)** → Adds authentication and integrity to DNS responses.
+
+---
+
+✅ **In short**:
+DNS is the backbone of the internet’s addressing system. It’s hierarchical, distributed, and designed to translate human-friendly names into machine-friendly IP addresses quickly and reliably.
 
 
