@@ -89,3 +89,37 @@ The Unhealthy Threshold is a parameter used in health checks to determine how ma
 ## What is the Initial delay?
 
 Initial Delay refers to the time duration that a load balancer or health checker waits before starting to perform health checks on a newly registered or newly created instance. It allows the instance to complete initialization tasks, such as starting up services or loading applications before it is subjected to health checks. Setting an initial delay ensures that instances are fully operational and ready to handle requests before they are included in the pool of available resources, thereby improving the reliability and stability of the system.
+
+### Instance Groups
+
+![alt text](image-13.png)
+
+## Updating a Managed Instance Group(MIG)
+* Rolling update - Gradual
+  * Specifiy new template
+  * Specify how you want the update to be done
+    * when should the update happen?
+    * how should the update happen?
+      * Maximum surge
+      * Maximum unavailable
+* Rolling Restart/replace
+  * No change in template but replace/restart existing VMs
+
+
+![alt text](image-14.png)
+
+## Instance Groups Commands
+
+```txt
+gcloud compute instances create my-test-vm --source-instance-template=my-instance-template-with-custom-image
+gcloud compute instance-groups managed list
+gcloud compute instance-groups managed delete my-managed-instance-group
+gcloud compute instance-groups managed create my-mig --zone us-central1-a --template my-instance-template-with-custom-image --size 1
+gcloud compute instance-groups managed set-autoscaling my-mig --max-num-replicas=2 --zone us-central1-a
+gcloud compute instance-groups managed stop-autoscaling my-mig --zone us-central1-a
+gcloud compute instance-groups managed resize my-mig --size=1 --zone=us-central1-a
+gcloud compute instance-groups managed recreate-instances my-mig --instances=my-mig-85fb --zone us-central1-a
+gcloud compute instance-groups managed delete my-managed-instance-group --region=us-central1
+```
+
+update - `gcloud compute instances create my-test-vm --source-instance-template=https://compute.googleapis.com/compute/v1/projects/<<PROJECT_ID>>/regions/<<REGION>>/instanceTemplates/<<INSTANCE_TEMPLATE_NAME>>`
