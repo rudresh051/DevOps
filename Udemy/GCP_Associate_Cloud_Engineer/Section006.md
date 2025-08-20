@@ -110,6 +110,8 @@ Initial Delay refers to the time duration that a load balancer or health checker
 
 ## Instance Groups Commands
 
+`gcloud config set project [Project ID]`
+
 ```txt
 gcloud compute instances create my-test-vm --source-instance-template=my-instance-template-with-custom-image
 gcloud compute instance-groups managed list
@@ -123,3 +125,5 @@ gcloud compute instance-groups managed delete my-managed-instance-group --region
 ```
 
 update - `gcloud compute instances create my-test-vm --source-instance-template=https://compute.googleapis.com/compute/v1/projects/<<PROJECT_ID>>/regions/<<REGION>>/instanceTemplates/<<INSTANCE_TEMPLATE_NAME>>`
+
+![alt text](image-15.png)
