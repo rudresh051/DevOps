@@ -43,3 +43,9 @@ gcloud container clusters delete my-cluster --zone us-central1-c
 ### Set the billing account
 
 ![alt text](image-21.png)
+
+## Commands
+
+```txt
+kubectl create deployment hello-world-rest-api --image=in28min/hello-world-rest-api:0.0.1.RELEASE
+```
