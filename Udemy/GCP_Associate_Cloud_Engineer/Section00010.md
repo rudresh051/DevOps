@@ -1,4 +1,15 @@
 # Google Kubernetes Engine
+* Most popular open source containerorchestration solution
+* Provides Cluster (including upgrades) Management
+  * Each cluster can have different types of
+ virtual machines
+ * Provides all important container
+ orchestration features:
+    * Auto Scaling
+ Service Discovery
+ Load Balancer
+ Self Healing
+ Zero Downtime Deployments
 
 ## Commands
 
@@ -49,3 +60,8 @@ gcloud container clusters delete my-cluster --zone us-central1-c
 ```txt
 kubectl create deployment hello-world-rest-api --image=in28min/hello-world-rest-api:0.0.1.RELEASE
 ```
+
+## Create a Kubernetes cluster
+![alt text](image-22.png)
+
+## GKE Remember
