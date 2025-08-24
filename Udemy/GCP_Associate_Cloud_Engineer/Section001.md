@@ -41,8 +41,5 @@ of remembering things?
 ## Best Path to learn GCP
 ## Maximizing Learning Efficiency with Playback Speed
 
-## Regions and Zones
-* High Latency
-* Multiple data centers
 
 
