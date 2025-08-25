@@ -45,3 +45,28 @@ virtual servers
 ## Taking Snapshots for Persistent Disks
 
 ## Persistent Disks - Snapshots - Recommendations
+
+## Disk
+* by default Balanced persistent disk is used
+
+![alt text](image-28.png)
+
+## Playing with Machine Images
+
+## comparison
+
+|Scenarios|Machine Image|Persistent disk snapshot|Custom Image|Instance template|
+|--|--|--|--|--|
+|Single disk backup|yes|yes|yes|no|
+|Multiple disk backup|yes|No|No|No|
+|Differential backup|Yes|Yes|No|No|
+|Instance cloning and replication|yes|no|yes|yes|
+
+e.g. can I use Machine image for VM instance configuration? - yes
+
+## Command Line
+
+```txt
+gcloud compute disks list
+
+```
