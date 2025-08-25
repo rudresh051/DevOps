@@ -70,3 +70,13 @@ e.g. can I use Machine image for VM instance configuration? - yes
 gcloud compute disks list
 
 ```
+
+## Cloud Filestore
+
+* Shared cloud file storage
+  * Supports NFSv3 protocol
+  * Provisional capacity
+* Suitable for high performance
+  * upto 320 TB with throughput of 16GB/s and 480K IOPS
+* Supports HDD (general purpose) and SSD (performance - critical workloads)
+* Use cases - file share, media workflowsa and content management
