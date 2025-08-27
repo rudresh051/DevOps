@@ -54,3 +54,20 @@ Delete the instance -
   * Backups
   * Supports migration from other sources
   * You can export data from UI
+
+## Cloud Spanner
+* Fully managed, mission critical, relational(SQL), globally distributed database with very high availability(99.999%)
+* Cloud Spanner scales horizontally for reads and writes
+* Regional and Multi-Regional configurations
+* Expensive(compared to Cloud SQL)
+
+## BigQuery - Datawarehouse
+* Exabyte scale modern Datawaarehousing
+  * Relational database
+  * Traditional
+* importing and exporting data
+* Automatically expire data(Configurable Table Expiration)
+* Query external data sources without storing data in BigQuery
+* Access databases using
+
+## Relational Database - Import and Export
