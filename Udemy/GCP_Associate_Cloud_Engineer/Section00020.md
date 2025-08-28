@@ -20,3 +20,24 @@
   * Availability: Publisher (Apps) up even if a subscriber (Logging Service) is down
   * Scalability: Scale consumer instances (Logging Service) under high load
   * Durability: Message is not lost even if subscriber (Logging Service) is down
+
+## Pub/Sub
+* Reliable,scalable, fully-managed 
+
+## Commands
+```txt
+gcloud config set project glowing-furnace-304608
+gcloud pubsub topics create topic-from-gcloud
+gcloud pubsub subscriptions create subscription-gcloud-1 --topic=topic-from-gcloud
+gcloud pubsub subscriptions create subscription-gcloud-2 --topic=topic-from-gcloud
+gcloud pubsub subscriptions pull subscription-gcloud-2
+gcloud pubsub subscriptions pull subscription-gcloud-1
+gcloud pubsub topics publish topic-from-gcloud --message="My First Message"
+gcloud pubsub topics publish topic-from-gcloud --message="My Second Message"
+gcloud pubsub topics publish topic-from-gcloud --message="My Third Message"
+gcloud pubsub subscriptions pull subscription-gcloud-1 --auto-ack
+gcloud pubsub subscriptions pull subscription-gcloud-2 --auto-ack
+gcloud pubsub topics list
+gcloud pubsub topics delete topic-from-gcloud
+gcloud pubsub topics list-subscriptions my-first-topic
+```
