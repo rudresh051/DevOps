@@ -88,3 +88,5 @@ In free trial only Org and projects are available
 * Policy inheritance is transitive
   * Eg. Organization policies are applied at resource level
 * You can't restrict policy at lower level if permission is given at an higher level
+
+## SSHing into Linux VMs - Options
