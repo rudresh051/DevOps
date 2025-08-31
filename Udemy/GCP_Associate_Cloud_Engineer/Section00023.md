@@ -80,7 +80,15 @@ In free trial only Org and projects are available
 ### IAM Members/Identities - Use Cases
 
 ## Organization Policy Service
-
+* How to enable **centralized constraints** on all resources created in an Organization
+  * Configure **Organization policy**
+  * Example - Disable creation of service accounts
+  * Example - Allow/Deny creation of resources in specific regions
+* Needs a role - Organization Policy Administrator
+* (Remember)**IAM** focuses on **Who**
+  * Who can take specific actions on resources
+* (Remember)Organization Policy focuses on **What**
+  * What can be done on specific resources?
 ## Resource Hierarchy & IAM Policy
 * IAM policy can be set at any level of the hierarchy
 * Resources inherit the policies of All Parents
