@@ -1,15 +1,21 @@
 # Google Kubernetes Engine
-* Most popular open source containerorchestration solution
+* Most popular open source container orchestration solution
 * Provides Cluster (including upgrades) Management
   * Each cluster can have different types of
  virtual machines
  * Provides all important container
  orchestration features:
     * Auto Scaling
- Service Discovery
- Load Balancer
- Self Healing
- Zero Downtime Deployments
+    * Service Discovery
+    * Load Balancer
+    * Self Healing
+    * Zero Downtime Deployments
+* Managed Kubernetes service
+* Minimize operations with auto-repair(repair failed nodes) and auto-upgrade(use lates version of K8S always) features
+* Provides **Pod and Cluster Autoscaling**
+* Enable Cloud Logging and Cloud Monitoring with simple configuration
+* Uses Container-Optimized OS, a hardened OS built by Google
+* Provides support for persistent disks and local SSD
 
 ## Commands
 
@@ -50,6 +56,13 @@ kubectl delete service hello-world-rest-api
 kubectl delete deployment hello-world-rest-api
 gcloud container clusters delete my-cluster --zone us-central1-c
 ```
+
+## Autopilot Mode - GKE
+* New mode of operation for GKE
+* Reduce your operational costs in running Kubernetes clusters
+* Provides an hands-off experience
+  * Do NOT worry about managing the cluster infrastructure(nodes, node pools..)
+  * GKE will maange the cluster for you!
 
 ### Set the billing account
 
