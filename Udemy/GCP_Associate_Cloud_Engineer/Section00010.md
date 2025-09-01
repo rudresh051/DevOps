@@ -64,6 +64,31 @@ gcloud container clusters delete my-cluster --zone us-central1-c
   * Do NOT worry about managing the cluster infrastructure(nodes, node pools..)
   * GKE will maange the cluster for you!
 
+## Kubernetes - A Microservice Journey - Getting Started
+
+
+## Google Kubernetes Engine(GKE) Cluster
+* Cluster - Group of Compute Engine instances
+  * Master Node - Manages the cluster
+  * Worker Node - Run your workloads(pods)
+* Master Node(Control Plane) components - 
+  * API Server
+  * Scheduler
+  * Control manager
+  * etcd
+* Worker Node components - 
+  * Runs your pods
+  * Kubelet - Manages communication with master node(s)
+
+## Google Kuberenetes engine cluster Types
+|Type|Description|
+|--|--|
+|Zonal cluster|Single Zone - Single control plane. Nodes running in the same zone|
+||Multi-zonal - Single control plane but nodes running in multiple zones|
+|Regional Cluster|Replicas of the control plane runs in multiple zones of a given region. Nodes also run in same zones where control plane runs|
+|Private cluster|VPC-native cluster. Nodes only have internal IP addresses|
+|Alpha cluster|Clusters with alpha APIs-early feature APIs. Used to test new K8S features|
+
 ### Set the billing account
 
 ![alt text](image-21.png)
