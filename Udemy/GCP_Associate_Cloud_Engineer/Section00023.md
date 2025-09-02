@@ -97,4 +97,25 @@ In free trial only Org and projects are available
   * Eg. Organization policies are applied at resource level
 * You can't restrict policy at lower level if permission is given at an higher level
 
+## Compute Engine Roles
+* Compute Engine IAM Roles
+  * Compute Engine Admin
+  * Compute Instance Admin
+  * Compute Engine Network Admin
+  * Compute Engine Security Admin
+  * Compute Storage Admin
+  * Compute Engine Viewer
+  * Compute OS Admin Login
+  * Compute OS Login
+
+## App Engine Roles
+* App Engine Roles(CRUD - Create, Read, Update, Delete)
+  * App Engine Creator
+  * App Engine Admin
+  * App Engine Viewer
+  * App Engine Code Viewer
+  * App Engine Deployer
+  * App Engine Servie Admin
+
+
 ## SSHing into Linux VMs - Options
