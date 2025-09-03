@@ -117,5 +117,26 @@ In free trial only Org and projects are available
   * App Engine Deployer
   * App Engine Servie Admin
 
+## Google Kubernetes Engine(GKE) IAM Roles
+* **Kubernetes Engine Admin(roles/container.admin)** - Complete Access to Clusters and kubernetes API objects
+* **Kubernetes Engine Cluster Admin** - Provides access to management of clusters(Cannot access Kubernetes API objects - Deployments, Pods etc)
+* **Kubernetes Engine Developer** - Manage Kubernetes API objects(and read cluster info)
+* **Kubernetes Engine Viewer** - get/list cluster and kubernetes api objects
+
+## Cloud Storage - Roles
+* Storage Admin - storage.buckets.*, storage.objects.*
+* Storage Object Admin
+* Storage Object Creator
+* Storage Object Viewer
+* Storage Admin vs Storage Object Admin
+
+## Cloud BigQuery Roles
+* Cloud BigQuery IAM Roles
+  * BigQuery Admin
+  * BigQuery Data Owner
+  * BigQuery Data Editor
+  * BigQuery Data Viewer
+  * BigQuery Job User
+  * BigQuery User
 
 ## SSHing into Linux VMs - Options
