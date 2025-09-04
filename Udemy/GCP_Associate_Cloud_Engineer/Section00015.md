@@ -2,14 +2,17 @@
 # Storage
 ## Storage Types - Block Storage and File Storage
 * What is the type of storage of your hard disk?
-  * Block storage
+  * **Block storage**
 * You've created a file share to share a set of files with your colleagues in a
 enterprise. What type of storage are you using?
-    * File Storage
+    * **File Storage**
 ### Block Storage
 * Use case - Harddisks attached to your computers
-* Typically, ONE Block storage can be connected to one virtual server
-
+* Typically, ONE Block storage can be connected to ONE virtual server
+  * (EXCEPTIONS) You can attach read only block devices with multiple virtual servers and certain cloud providers are exploring multi-writer disks as well!
+* However, you can connect multiple different block storage devices to one virtual server
+* Used as - 
+  * Direct-attached-storage(DAS) - Similar to a harddisk
 
 
 ### File Storage
@@ -21,6 +24,15 @@ share files in a secure and organized
 way
 * These file shares are shared by several
 virtual servers
+
+## GCP - Block Storage and File Storage
+* Block Storage - 
+  * **Persistent Disks** - Network Block Storage
+    * Zonal - Data replicated in one zone
+    * Regional - Data replicated in multiple zone
+  * **Local SSDs** - Local Block Storage
+* **File Storage** - 
+  * **Filestore** - High performance file storage
 
 ## Persistent Disks vs Local SSDs
 
