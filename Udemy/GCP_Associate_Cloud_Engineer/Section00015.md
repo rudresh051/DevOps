@@ -34,6 +34,17 @@ virtual servers
 * **File Storage** - 
   * **Filestore** - High performance file storage
 
+## GCP - Block Storage
+* Two popular types of block storage can be attached to VM instances
+  * Local SSDs
+  * Persistant Disks
+* **Local SSDs** are physically attached to the host of the VM instance
+  * Temporary data
+  * Lifecycle tied to VM instance
+* **Persistant Disks** are network storage
+  * More durable
+  * Lifecycle NOT tied to VM instance
+
 ## Persistent Disks vs Local SSDs
 
 |Feature|Persistent Disks|Local SSDs|
