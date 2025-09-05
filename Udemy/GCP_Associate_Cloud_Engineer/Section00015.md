@@ -45,6 +45,20 @@ virtual servers
   * More durable
   * Lifecycle NOT tied to VM instance
 
+## Local SSDs
+* **Physically attached** to the host of VM instance
+  * Provide very high(IOPS) and very low latency
+  * (BUT) **Ephemeral storage** - Temporary data(Data persists only until instance is running)
+    * **Enable live migration** for data to survive maintenance events
+    * Data automatically encrypted
+      * However, you cannot configure encryption keys!
+    * Lifecycle tied to VM instance
+    * ONLY some machine types support Local SSDs
+    * Supports SCSI and NVMe interfaces
+* Remember :
+  * Choose NVMe-enabled and multi-queue SCSI images for best performance
+  * Larger Local SSDs(more storage), More vCPUs(attached to VM) => Even Better Performance
+
 ## Persistent Disks vs Local SSDs
 
 |Feature|Persistent Disks|Local SSDs|
