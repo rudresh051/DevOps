@@ -72,12 +72,26 @@ virtual servers
 ## Persistent Disks(pd) - Standard vs Balanced vs SSD
 |Feature|Standard|Balanced|SSD|
 |--|--|--|--|
-|Underlying Storage|Hard Disk Drive|Solid State Drive|Solid State Drive|
-|Referred to as|pd-standard|pd-balanced|pd-ssd|
-|Performance - Sequential IOPS(Big Data/Batch)|Good|Good|Very Good|
-|Performance - Random IOPS(Transactional Apps)|Bad|Good|Very Good|
-|Cost|Cheapest|In Between|Expensive|
-|Use cases|Big Data(cost efficient)|Balance between cost and performance|High Performance|
+|**Underlying Storage**|Hard Disk Drive|Solid State Drive|Solid State Drive|
+|**Referred to as**|pd-standard|pd-balanced|pd-ssd|
+|**Performance - Sequential IOPS(Big Data/Batch)**|Good|Good|Very Good|
+|**Performance - Random IOPS(Transactional Apps)**|Bad|Good|Very Good|
+|**Cost**|Cheapest|In Between|Expensive|
+|**Use cases**|Big Data(cost efficient)|Balance between cost and performance|High Performance|
+
+## Persistent Disks - Snapshots
+* Take point-in-time snapshots of your persistent Disks
+* You can also schedule snapshots(configure a scheudle)
+  * You can also auto-delete snapshots after X days
+* Snapshots can be Multi-regional and Regional
+* You can share snapshots across projects
+* You can create new disks and instances from snapshots
+* Snapshots are incremental
+  * Deleteing a snapshots only **deletes data which is NOT needed** by other snapshots
+  * Keep similar data together on a Persistent Disk
+    * Separate your operating system, volatile and parmanent data
+    * Attach multiple disks if needed
+    * This helps to better organize your snapshots and images
 
 ## Taking Snapshots for Persistent Disks
 
