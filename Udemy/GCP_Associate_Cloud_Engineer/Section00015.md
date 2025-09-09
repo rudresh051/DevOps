@@ -87,11 +87,11 @@ virtual servers
 
 |Feature|Persistent Disks|Local SSDs|
 |--|--|--|
-|Attachment to VM instance|As a network drive|Physicallly attached|
-|Lifycycle|Separate from VM instance|Tied with VM instance|
-|I/O Speed|Lower(network latency)|10-100X of PDs|
-|Snapshots(backups)|Supported|Not Supported|
-|Use case|Permanent storage|Ephemeral storage|
+|**Attachment to VM instance**|As a network drive|Physicallly attached|
+|**Lifycycle**|Separate from VM instance|Tied with VM instance|
+|**I/O Speed**|Lower(network latency)|10-100X of PDs|
+|**Snapshots(backups)**|Supported|Not Supported|
+|**Use case**|Permanent storage|Ephemeral storage|
 
 ## Persistent Disks(pd) - Standard vs Balanced vs SSD
 |Feature|Standard|Balanced|SSD|
@@ -104,18 +104,29 @@ virtual servers
 |**Use cases**|Big Data(cost efficient)|Balance between cost and performance|High Performance|
 
 ## Persistent Disks - Snapshots
-* Take point-in-time snapshots of your persistent Disks
+* Take **point-in-time snapshots** of your persistent Disks
 * You can also schedule snapshots(configure a scheudle)
   * You can also auto-delete snapshots after X days
 * Snapshots can be Multi-regional and Regional
 * You can share snapshots across projects
 * You can create new disks and instances from snapshots
-* Snapshots are incremental
+* Snapshots are **incremental**
   * Deleteing a snapshots only **deletes data which is NOT needed** by other snapshots
   * Keep similar data together on a Persistent Disk
     * Separate your operating system, volatile and parmanent data
     * Attach multiple disks if needed
     * This helps to better organize your snapshots and images
+* Avoid taking snapshots more often than once an hour
+* Disk volume is available for use **but Snapshots reduce performance**
+  * (RECOMMENDED) Schedule snapshots during off-peak hours
+* Creating snapshots from disk is faster than creating from images
+  * But creating disks from image is faster than creating from snapshots
+  * (RECOMMENDED) If you are repeatedly creating disks from a snapshot - 
+    * Create an image from snapshot and use the image to create disks
+* Snapshots are **incremental**
+  * BUT you don't lose data by deleting older snapshots
+  * Deleting a snapshot **only deletes data which is NOT needed** by other snapshots
+  * (RECOMMENDED) Do not hesitate to delete unnecessary snapshots
 
 ## Taking Snapshots for Persistent Disks
 
@@ -127,6 +138,17 @@ virtual servers
 ![alt text](image-28.png)
 
 ## Playing with Machine Images
+* (Remember) **Machine image** is different from Image
+* **Multiple disks can be attached** with a VM-
+  * One Boot Disk(Your OS runs from Boot Disk)
+  * Multiple Data Diks
+* An image is created from the boot Persistent Disk
+* HOWEVER, a Machine Image is created from a VM instance - 
+  * Configuration
+  * Metadata
+  * Permissions
+  * Data from one or more disks
+* **Recommended for** disk backups, instance cloning and replication
 
 ## comparison
 
@@ -138,8 +160,9 @@ virtual servers
 |Instance cloning and replication|yes|no|yes|yes|
 
 e.g. can I use Machine image for VM instance configuration? - yes
+https://cloud.google.com/compute/docs/machine-images
 
-## Command Line
+## Playing with Disks - Command Line
 
 ```txt
 gcloud compute disks list
