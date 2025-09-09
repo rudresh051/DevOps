@@ -36,13 +36,13 @@ virtual servers
 
 ## GCP - Block Storage
 * Two popular types of block storage can be attached to VM instances
-  * Local SSDs
-  * Persistant Disks
+  * **Local SSDs**
+  * **Persistant Disks**
 * **Local SSDs** are physically attached to the host of the VM instance
   * Temporary data
   * Lifecycle tied to VM instance
 * **Persistant Disks** are network storage
-  * More durable
+  * More durable(basically data is stored persistently)
   * Lifecycle NOT tied to VM instance
 
 ## Local SSDs
@@ -58,6 +58,30 @@ virtual servers
 * Remember :
   * Choose NVMe-enabled and multi-queue SCSI images for best performance
   * Larger Local SSDs(more storage), More vCPUs(attached to VM) => Even Better Performance
+
+## Local SSDs - Advantages and Disadvantages
+* **Advantages**
+  * Very fast I/O(~10-100x compared to PDs)
+    * Higher throughput and lower latency
+  * Ideal for use cases needing high IOPs while storing **temporary information**
+* **Disadvantages**
+  * **Ephemeral storage**
+    * Lower durability, lower availability, lower flexibility compared to PDs
+    * You **CANNOT detach and attach** it to another VM instance
+
+## Persistent Disks(PD)
+* **Network block storage** attached to your VM instance
+* **Provisioned capacity**
+* Very Flexible - 
+  * **Increase size when you need it** - when attached to VM instance
+  * Performance scales with size
+    * For higher performance, resize or add more PDs
+  * **Independent lifecycle** from VM instance
+    * Attach/Detach from one VM instance to another
+  * Options - Regional and Zonal
+    * Zonal PDs replicated in single zone, Regional PDs replicated in 2 zones in same Region
+    * Typically Regional PDs are 2x the cost of Zonal PDs
+  * **Use Case** - Run your custom database
 
 ## Persistent Disks vs Local SSDs
 
