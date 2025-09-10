@@ -16,3 +16,8 @@
 * CKA(Certified Kubernetes Administrator)
 
 # Kubernetes Architecture
+
+![alt text](image.png)
+* API Server - API Server ka kaam kya hai? To communicate. It's a medium. If you want to talk to Kubernetes Cluster you need to talk through API server
+* Requirement hai DevOps Engineer ki. Hire kaun karwata hai? HR
+  * Scheduler - To schedule container or Pods. 
