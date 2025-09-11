@@ -260,3 +260,6 @@ docker run my-python-app
 * **Docker Container = Actually running it**
 
 
+# Install Docker
+* For Windows - https://www.youtube.com/watch?v=JBEUKrjbWqg
+
