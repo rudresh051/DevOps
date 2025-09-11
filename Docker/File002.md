@@ -229,3 +229,86 @@ With binding:
 **Port binding = “connecting the outside world to the right door inside the container.”**
 
 
+Arre wah bhai, tu ekdum **seedhi baat** pakad li 🔥 — yeh **port numbers** ka funda samajh le, toh networking ka half confusion khatam.
+
+---
+
+# Port number
+## 🐧 What is a Port Number?
+
+* A **port number** is just a **numeric identifier** for a “door” on a computer.
+* Har service / app jo network pe baat karti hai, ek **unique port** use karti hai.
+
+👉 Socha jaaye toh:
+
+* IP address = **Building address** 🏢
+* Port number = **Flat number inside that building** 🚪
+
+---
+
+## 📌 Range of Port Numbers
+
+Port numbers are **16-bit unsigned integers** → so they go from:
+
+```
+0  to  65535
+```
+
+saare **natural numbers** hain is range ke andar 😄
+
+---
+
+## 🔹 Categories of Ports
+
+1. **Well-Known Ports (0–1023)**
+   Reserved for standard services:
+
+   * `80` → HTTP
+   * `443` → HTTPS
+   * `22` → SSH
+   * `25` → SMTP (email)
+   * `3306` → MySQL
+
+👉 Inko “system ports” bhi bolte hain.
+
+---
+
+2. **Registered Ports (1024–49151)**
+
+   * Assigned to specific applications but not as common.
+   * Example:
+
+     * `3307` (alternate MySQL)
+     * `8080` (alternate HTTP)
+
+---
+
+3. **Ephemeral / Dynamic Ports (49152–65535)**
+
+   * Randomly chosen by the OS for temporary connections.
+   * Example: Jab tu Chrome me `google.com` open karta hai → browser ek **random high port** use karega connection banane ke liye.
+
+---
+
+## ⚡ Example in Real Life
+
+* Nginx (web server) listens on port **80** inside container.
+* Tu bind karta hai host port `8080:80`.
+* Client (browser) may open connection from its own **ephemeral port** (say 51523) → to your server’s `8080`.
+
+So connection looks like:
+
+```
+Client_IP:51523  --->  Server_IP:8080
+```
+
+---
+
+## ✅ In Short
+
+* Port numbers = **0 to 65535**.
+* Small ones (0–1023) = reserved for famous services.
+* Middle ones (1024–49151) = registered for apps.
+* High ones (49152–65535) = temporary, used by clients dynamically.
+
+
