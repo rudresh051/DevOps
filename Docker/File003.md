@@ -1,5 +1,7 @@
 # Developing with Docker
 GitHub Link - https://github.com/shradha-khapra/docker-testapp
+1. create a docker network
+2. Setting up mongo & mongo express
 
 # Docker network
 
