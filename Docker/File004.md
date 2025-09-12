@@ -153,3 +153,52 @@ You can send this image to anyone, or push it to Docker Hub, and it will run the
 ✅ **In short:**
 *Dockerizing an app = packaging your app + dependencies into a Docker image → running it anywhere as a container.*
 
+Writing a docker file - https://docs.docker.com/get-started/docker-concepts/building-images/writing-a-dockerfile/
+
+# Publishing Images on Docker hub
+
+# Docker volumes
+
+
+## 📦 What is a Docker Volume?
+
+By default, any data written inside a container (e.g., files, DB data, logs) is **temporary**.
+👉 If the container stops or is removed, the data is lost.
+
+**Docker Volumes** solve this by providing:
+
+* **Persistent storage** → data survives even if the container is deleted.
+* **Sharing** → multiple containers can access the same volume.
+* **Decoupling** → data is stored outside the container’s writable layer, making it safer and more portable.
+
+Example:
+
+```bash
+docker run -v myvolume:/data mongo
+```
+
+Here, all content inside `/data` of the container will be stored in a named volume `myvolume`.
+
+---
+
+## 🍱 Analogy: Tiffin Box + Kitchen
+
+* Think of a **container** like a lunchbox.
+* If you put food directly into the lunchbox and the box breaks, the food is gone.
+* Instead, if you **store food in the kitchen** and only serve it in the lunchbox, the food stays safe even if the lunchbox is replaced.
+
+👉 In this analogy:
+
+* **Container = Lunchbox**
+* **Volume = Kitchen**
+* **Data = Food**
+
+So, containers can come and go, but the data is safely stored in the “kitchen” (volume).
+
+---
+
+### ⚡ In short:
+
+**Docker Volumes are persistent storage areas where container data is safely kept outside the container’s lifecycle.**
+
+

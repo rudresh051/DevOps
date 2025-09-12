@@ -24,6 +24,9 @@
 Got it bhai ✅ Let me rewrite the whole thing in **English** for you:
 
 ---
+# Links
+* https://docs.docker.com/
+* https://hub.docker.com/
 
 ## 🚩 Problems Before Docker
 
