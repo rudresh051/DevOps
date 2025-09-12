@@ -406,6 +406,7 @@ If you want to run 3 apps in Docker:
 ---
 
 ## ⚡ Key Differences: Docker vs VM
+![alt text](image-2.png)
 
 | Feature            | **Virtual Machine** 🖥️                              | **Docker (Container)** 🐳                 |
 | ------------------ | ---------------------------------------------------- | ----------------------------------------- |
