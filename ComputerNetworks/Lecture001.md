@@ -99,28 +99,114 @@
 * Lectures and notes are enough
 
 # Basics of IP Addressing
-2^1 = 2
-2^2 = 4
-2^3 = 8
-2^4 = 16
-.
-.
-.
-2^9=512
-2^10 =1024 = 1K(Kilo)
-2^20 = 1024 * 1024 = 1M(Mega)
-2^30=1024*1024*1024 = 1G(Giga)
-2^40 = 1T(Tera)
-2^50 = 1P(Peta)
-2^60 = 1E(Exa)
-2^70 = 1Z(Zetta)
-2^80 = 1Y(Yotta)
+2^1 = 2  
+2^2 = 4  
+2^3 = 8  
+2^4 = 16  
+.  
+.  
+.  
+2^9=512  
+2^10 =1024 = 1K(Kilo)  
+2^20 = 1024 * 1024 = 1M(Mega)  
+2^30=1024*1024*1024 = 1G(Giga)  
+2^40 = 1T(Tera)  
+2^50 = 1P(Peta)  
+2^60 = 1E(Exa)  
+2^70 = 1Z(Zetta)  
+2^80 = 1Y(Yotta)  
 
-Bita -> b
-Byte -> B
+Bita -> b  
+Byte -> B  
 
-1 Byte = 8bits
-1KB = 1024 Byte
-1MB = 1024KB(Kilo Byte)
-1GB = 1024MB(Mega Byte)
-1TB = 
+1 Byte = 8bits  
+1KB = 1024 Byte  
+1MB = 1024KB(Kilo Byte)  
+1GB = 1024MB(Mega Byte)  
+1TB = 1024GB(Giga Byte)  
+1EB = 1024PB(Peta Byte)  
+1ZB = 1024EB(Exa Byte)  
+1YB = 1024ZB(Zetta Byte)  
+
+* Binary Number to decimal number
+
+Weightage =>128,64,32,16,8,4,2,1,0
+
+00000000=0  
+00000001=1  
+00000011=3(2^2-1)  
+00000111=7(2^3-1)  
+00001111=15(2^4-1)  
+00011111=31(2^5-1)  
+00111111=63(2^6-1)  
+01111111=127(2^7-1)  
+11111111=255(2^8-1)  
+
+* Range pata chal jaayega upar se
+  * e.g 8 bit ka number hai => 0 to 2^8-1
+  * n bit ka number hai=> 0 to 2^n-1
+
+* Binary number to decimal value
+
+10000000=128  
+11000000=192  
+11100000=224  
+11110000=240[255-15]  
+11111000=248[255-7]  
+11111100=252[255-3]  
+11111110=254[255-1]  
+11111111=255  
+
+* 1 bit
+  * 0,1 = 2^1 combination
+* 2 bit
+  * 00,01,10,11 = 2^2 combination banega
+  * 1 fix karne par => 2 parts me address space divide hoga
+* 3 bit
+  * 000,001,010,011,100,101,110,111 =8 = 2^3 combination
+  * 1 bit fix karne par => 2 parts me address space divide hoga
+  * 2 bit fix karne par => 4 parts me address space divide hoga
+* n bit
+  * 2^n combination banega
+
+* Address Space
+  * 1 bit = 2 = 2^1 parts
+  * 2 bits = 4 parts = 2^2 parts
+  * Agar mere paas n bit hai toh aur k bits fix kiya toh => address space 2^k parts me divide hoga
+  * basically 2^n combination ko 2^k parts me divide kar diya
+  * harek parts ka size kitna hota? 2^(n-k) parts
+
+![alt text](image.png)
+  
+
+![alt text](image-1.png)
+
+# Introduction to IP Addressing
+IPv4 Address = 32 bit  
+Total number of IP addresses = 2^32 = 4,294,967,296=> more than 4 billion  
+
+2^32 = 2^2*2^30 = (4G IP Addresses)
+Initially in 1980's  Addresses was divided into two fixed parts
+NID = 8 bit  
+HID = 24 bit  
+* agar 8 bit ki network id hai toh total combination banega = 2^8 networks
+* host id = 24 bits = combination will be 2^24(host/network) = 2^4 * 2^20 = 16M Host/network = approx 1.6 cr Host/network
+
+![alt text](image-2.png)
+
+![alt text](image-3.png)
+
+![alt text](image-4.png)
+
+## Disadvantage
+* There are only 256 Network's, and even a small organization must buy 16M computer (HOST) to purchase one network
+  
+
+## Solution - classful Addressing
+
+# Telephone Networks
+1. 11 digit number
+2. Two parts - STD code and TID code
+3. Unique  
+
+![alt text](image-5.png)
