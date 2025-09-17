@@ -91,3 +91,36 @@ C8:FC:3F:F7
 Note - 
 1. Whenever we have all zeros or all ones, either in the network ID or in the Host ID of any IP addresses. These IP addresses are reserved for some special purpose, so we cannot assign these IP addresses to computer.
 
+
+### **1. 0.0.0.0 as the “default route”**
+
+* In IP routing, `0.0.0.0/0` means **“all possible IP addresses.”**
+* A router uses it as a **catch-all route** → if no specific route matches the destination IP, traffic is sent to this **default route** (usually pointing to a gateway).
+* So `0.0.0.0` here doesn’t mean “this device,” it means **“anywhere.”**
+
+👉 Example:
+If your PC wants to reach `8.8.8.8` (Google DNS), and your routing table doesn’t have a more specific entry, the packet goes via the default route (`0.0.0.0/0` → gateway).
+
+---
+
+### **2. 0.0.0.0 as a DHCP client address**
+
+* Before a computer has an IP address, it uses `0.0.0.0` as its **source IP** when talking to a DHCP server.
+* Why? Because it doesn’t yet know its own IP address.
+* The DHCP discovery message is broadcast with:
+
+  * Source IP = `0.0.0.0`
+  * Destination IP = `255.255.255.255`
+
+👉 Meaning: **“I don’t have an IP, please assign me one.”**
+
+---
+
+### ✅ Summary
+
+* **Default Route (`0.0.0.0/0`)** → “Send traffic anywhere if no better match is found.”
+* **DHCP client (`0.0.0.0`)** → “I don’t know my IP yet, I’m requesting one.”
+
+It’s the same address, but the meaning depends on **context (routing vs DHCP).**
+
+
