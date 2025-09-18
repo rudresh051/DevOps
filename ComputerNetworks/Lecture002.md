@@ -123,4 +123,5 @@ If your PC wants to reach `8.8.8.8` (Google DNS), and your routing table doesnâ€
 
 Itâ€™s the same address, but the meaning depends on **context (routing vs DHCP).**
 
+* 127.X.X.X -> Self Connectivity or Loop Back Testing or Inter Process Communication
 
