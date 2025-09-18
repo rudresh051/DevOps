@@ -283,6 +283,211 @@ Basically, Kubernetes would lose its **autopilot**.
 * Each controller constantly watches the cluster state and fixes mismatches.
 * It’s what makes Kubernetes clusters **self-healing and automated**.
 
+# Kubelet
+
+## 🔹 What is the kubelet?
+
+* The **kubelet** is an **agent** that runs on **every Node** in the cluster.
+* Its job: make sure the **containers (pods)** that Kubernetes wants to run on that node are actually running and healthy.
+
+👉 Think of it as the **node’s caretaker**.
+
+---
+
+## 🔹 What kubelet does
+
+1. **Watches the API Server**
+
+   * It listens for Pod specs (what should run on this Node).
+
+2. **Starts containers**
+
+   * Talks to the container runtime (Docker, containerd, CRI-O, etc.) to actually start the containers.
+
+3. **Monitors containers**
+
+   * Reports back to the control plane if pods are healthy or crashed.
+
+4. **Applies PodSpecs**
+
+   * Ensures containers run with the right config (CPU/memory limits, volumes, networking).
+
+5. **Reports node status**
+
+   * Sends Node health info (CPU, memory, disk, etc.) to the API server.
+
+---
+
+## 🔹 What kubelet does NOT do
+
+* It does **not schedule pods** → that’s the job of the **Scheduler**.
+* It does **not manage pods globally** → that’s the **Controller Manager’s** job.
+* It only takes care of **its own Node**.
+
+---
+
+## 🔹 Simple Analogy
+
+* **Scheduler** = airport traffic controller (decides which plane lands on which runway).
+* **Controller Manager** = operations team ensuring the airport runs smoothly (right number of staff, gates, fuel, etc.).
+* **Kubelet** = ground staff on each runway (makes sure the plane actually lands, gets fuel, passengers board, etc.).
+
+---
+
+✅ **In short:**
+
+* **kubelet = node agent**.
+* Ensures the containers described in PodSpecs are running and healthy on its Node.
+* Reports back to the control plane.
+
+# Service Proxy(Kube Proxy)
+* Runs on every Node.  
+* Makes Services work by routing traffic to the right Pods, even as Pods change dynamically.
+
+# CNI Network: Weave Net, Calico
+Good one 👍 — this is a **foundational concept** in Kubernetes networking. Let’s break it down:
+
+---
+
+## 🔹 What is CNI?
+
+**CNI = Container Network Interface**
+
+* It’s a **standard/specification** that defines **how container runtimes (like Docker, containerd, CRI-O) set up networking for containers**.
+* Instead of Kubernetes inventing its own networking, it relies on **CNI plugins** to handle pod networking.
+
+👉 In short: **CNI is the “plugin system” for container networking.**
+
+---
+
+## 🔹 Why do we need it?
+
+Every Pod in Kubernetes must:
+
+1. Get a unique IP address.
+2. Be able to talk to other Pods (even on different nodes).
+3. Be reachable by Services, Ingress, etc.
+
+Kubernetes doesn’t do the networking itself — it delegates that job to **CNI plugins**.
+
+---
+
+## 🔹 How it works
+
+* When a Pod is created:
+
+  1. Kubelet asks the container runtime to start the Pod.
+  2. The container runtime calls the **CNI plugin**.
+  3. The CNI plugin sets up network interfaces, IP addresses, and routing rules for the Pod.
+
+So, CNI = the script/tool that wires your Pod into the cluster network.
+
+---
+
+## 🔹 Popular CNI Plugins in Kubernetes
+
+* **Flannel** → simple overlay network.
+* **Calico** → advanced networking + network policies.
+* **Weave Net** → easy to set up, automatic discovery.
+* **Cilium** → very advanced, uses eBPF (fast, secure).
+* **Amazon VPC CNI** (for EKS), **Azure CNI**, **GCP CNI** → cloud-native integrations.
+
+---
+
+## 🔹 Example
+
+Let’s say you install **Calico** as your CNI:
+
+* Each Pod gets an IP from the Calico-managed pool.
+* Routing rules are set up so Pods across different nodes can talk directly.
+* If you define **NetworkPolicies** (like firewall rules for Pods), Calico enforces them.
+
+---
+
+✅ **In short:**
+
+* **CNI = networking standard for containers.**
+* Kubernetes uses CNI plugins to give Pods their IPs and connect them.
+* Different plugins (Calico, Flannel, Cilium, etc.) provide different networking features.
+
+---
+
+⚡ Without a CNI plugin, your cluster won’t even schedule Pods with networking properly (they’ll stay in `ContainerCreating` state).
+
+
+# Kubectl
+
+## 🔹 What is `kubectl`?
+
+* **`kubectl`** (pronounced *“cube control”* or sometimes *“cube cuddle”*) is the **command-line tool** for interacting with a Kubernetes cluster.
+* It talks to the **Kubernetes API Server** under the hood.
+
+👉 In short: **`kubectl` is the remote control for your Kubernetes cluster.**
+
+---
+
+## 🔹 What you can do with `kubectl`
+
+1. **View resources**
+
+   ```bash
+   kubectl get pods
+   kubectl get nodes
+   kubectl get services
+   ```
+
+2. **Create resources**
+
+   ```bash
+   kubectl create deployment myapp --image=nginx
+   ```
+
+3. **Update resources**
+
+   ```bash
+   kubectl scale deployment myapp --replicas=5
+   ```
+
+4. **Delete resources**
+
+   ```bash
+   kubectl delete pod mypod
+   ```
+
+5. **Debugging**
+
+   ```bash
+   kubectl logs mypod
+   kubectl exec -it mypod -- /bin/bash
+   ```
+
+---
+
+## 🔹 How does it work?
+
+1. You run a `kubectl` command.
+2. `kubectl` reads your **kubeconfig file** (default: `~/.kube/config`) → contains cluster endpoint, credentials, and context.
+3. It sends an HTTP request to the **Kubernetes API Server**.
+4. The API Server processes it → Controllers, Scheduler, kubelets, etc. do the actual work.
+
+---
+
+## 🔹 Simple Analogy
+
+* **Kubernetes cluster** = a big distributed system.
+* **API Server** = the receptionist / front desk.
+* **kubectl** = your phone or remote control to talk to the receptionist.
+
+---
+
+✅ **In short:**
+
+* `kubectl` = CLI tool for Kubernetes.
+* Talks to the **API Server** to manage/view resources.
+* Without `kubectl`, you’d have to interact with the API manually (ugly JSON/HTTP calls).
+
+
+
 
 
 
