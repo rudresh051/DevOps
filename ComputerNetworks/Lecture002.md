@@ -125,3 +125,9 @@ It’s the same address, but the meaning depends on **context (routing vs DHCP).
 
 * 127.X.X.X -> Self Connectivity or Loop Back Testing or Inter Process Communication
 
+* 2^8 Networks
+  * subtract 2 => 2^7-2 = 126 Networks
+* 2^24 Host/Network
+  * subtract 2 => 2^24-2
+* 10.0.0.0 - cannot be assigned to any computer
+  * 10.255.255.255 - cannot be assigned to any computer
