@@ -131,3 +131,30 @@ It’s the same address, but the meaning depends on **context (routing vs DHCP).
   * subtract 2 => 2^24-2
 * 10.0.0.0 - cannot be assigned to any computer
   * 10.255.255.255 - cannot be assigned to any computer
+
+# Class B
+* IP Address - 2^30
+  * Kitne bits fix hain? 10
+
+![alt text](image-11.png)
+
+![alt text](image-12.png)
+
+# Class C
+
+![alt text](image-13.png)
+
+![alt text](image-14.png)
+* Number of networks - 32*2^16 = 2^21
+
+# Class D
+Note - 
+1. No network id and no host id in class D
+2. class D is used for multicasting
+
+![alt text](image-15.png)
+
+# Class E
+* 2^28
+* No network and no host id in class E
+* Class E is reserved for research and future purpose
