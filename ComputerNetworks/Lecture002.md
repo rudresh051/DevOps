@@ -155,6 +155,16 @@ Note -
 ![alt text](image-15.png)
 
 # Class E
+* 240-255
 * 2^28
 * No network and no host id in class E
 * Class E is reserved for research and future purpose
+
+![alt text](image-16.png)
+
+
+# Short notes
+
+![alt text](image-18.png)
+
+![alt text](image-17.png)
