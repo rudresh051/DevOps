@@ -167,4 +167,6 @@ Note -
 
 ![alt text](image-18.png)
 
+Number of hosts per network
+
 ![alt text](image-17.png)
