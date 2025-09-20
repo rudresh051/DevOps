@@ -94,3 +94,11 @@ Note - In the network mask number of ones indicate network ID part and number of
 Note - IP Address ANDing Network Mask => It gives Network ID
 
 ![alt text](image-34.png)
+
+![alt text](image-35.png)
+
+![alt text](image-36.png)
+
+![alt text](image-37.png)
+
+HW - 6,7,8,9
