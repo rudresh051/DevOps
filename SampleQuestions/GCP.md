@@ -1,3 +1,13 @@
+# Exam Breakdown
+
+| Section | Description | Percentage |
+|---------|-------------|------------|
+| 1 | Setting up a cloud solution environment | 15% |
+| 2 | Planning and configuring a cloud solution | 15% |
+| 3 | Deploying and implementing a cloud solution | 30% |
+| 4 | Ensuring successful operation of a cloud solution | 25% |
+| 5 | Configuring access and security | 15% |
+
 # Question 1
 1. A software development company needs to provide a cost estimate for a Kubernetes cluster using the GCP pricing calculator for Kubernetes. The workload requires high IOPs(Input/output operations per second) and will be using disk snapshots. They start by entering the number of nodes, average hours, and average days.
 
@@ -55,3 +65,11 @@ A **principal** is basically **“who” you are granting access to**. It’s th
 * **Role = what**
 
 By command line - `gcloud projects get-iam-policy   confident-inn-466803-r1`
+
+
+# Question
+You have a virtual machine that is currently configured with 1 vCPU and 2 GB of memory. It has reached the limit of available memory and you need to upgrade the virtual machine to have 4 GB of memory.
+
+What should you do?
+
+![alt text](image.png)
