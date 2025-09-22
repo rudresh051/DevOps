@@ -39,6 +39,98 @@ Cluster management cost is flat ($0.10/hour per cluster), but the question highl
 
 
 # Question 2
+You have a virtual machine that is currently configured with 1 vCPU and 2 GB of memory. It has reached the limit of available memory and you need to upgrade the virtual machine to have 4 GB of memory.
+
+What should you do?
+
+![alt text](image.png)
+
+# Question 3
+You created a Google Cloud Platform project with an **App Engin**e application inside the project.  
+You initially configured the application to be served from the us-central1 region. Now you want the application to be served from the europe-west1 region.  
+What should you do?  
+
+Create a new GCP project and create an App Engine application inside this new project. Specify europe-west1 as the region to serve your application.  
+Change the region property setting in the existing App Engine application from us-central1 to europe-west1  
+Create a second App Engine application in the existing GCP project and specify europe-west1 as the region to serve your application.  
+In an existing GCP project, change the default region property setting to europe-west1.  
+
+```txt
+App Engine is region specific. You CANNOT move it to different region. Create a new project and create new app engine in the new region
+```
+
+# Question 4
+You have a developer laptop with the **Cloud SDK installed** on **Ubuntu**. The Cloud SDK was installed from the Google Cloud Ubuntu package repository.  
+You want to **test your application locally** on your laptop with **Cloud Datastore**.  
+
+What should you do?  
+Install the google-cloud-sdk-datastore-emulator component using the apt get install command  
+Create a Cloud Datastore index using gcloud datastore indexes create  
+Install the cloud-datastore index using the gcloud components install command  
+Export Cloud Datastore data using gcloud datastore export  
+
+```txt
+* Exporting and importing is something you’d do when you need to **back up data** or **move between projects**.
+* For local testing, Google actually gives you a **Datastore emulator** that pretends to be Datastore, so you don’t need to export anything from the cloud.
+
+Here’s the key:
+
+* If the question says *“test your application locally”*, the correct approach is to **start the Datastore emulator** that comes with the Cloud SDK.  
+* Then, you **point your app’s environment variables** to talk to the emulator instead of the real cloud service.
+
+So exporting big datasets isn’t necessary (and yes, it could be huge!).
+
+```
+
+# Question 5
+You need to select and configure compute resources for a set of batch processing jobs. These jobs take about 2 hours to complete and are scheduled for every night. You want to keep your service expenses as low as possible.  
+Which of the following steps will meet the goal?  
+
+	
+Select Compute Engine. Use preemptible VM instances of the appropriate standard machine type  
+Select Google Kubernetes Engine. Use a three-node cluster with micro instance types  
+Select Compute Engine. Use VM instance types that support micro bursting  
+Select Google Kubernetes Engine. Use a single-node cluster with a small instance type  
+
+```txt
+
+**1. Batch processing**
+
+* Think of it as jobs that run on a schedule, crunch through a *batch* of data, and then stop.
+* Example: Every night, process all sales records of the day, generate a report, and save results.
+* Key: You don’t need servers running 24/7. You just need them for the job window (like 2 hours at night).
+
+**2. Preemptible VM (in GCP)**
+
+* These are **very cheap virtual machines** on Compute Engine.
+* BUT: Google can shut them down at *any time*, and they last a max of **24 hours**.
+* Cost: up to 80% cheaper than normal VMs.
+* Use case: great for batch jobs or workloads that can restart or tolerate interruptions.
+
+👉 So if your job takes only 2 hours (well under 24h) and runs nightly, **preemptible VMs are perfect** — they save lots of cost.
+
+---
+
+So now, can you guess why in your options the best answer is:
+**“Select Compute Engine. Use preemptible VM instances of the appropriate standard machine type”**?
+
+```
+
+# IAM Section
+# Question 6
+You are the project owner of a Google Cloud project. You want to give your colleagues read-only access to view **Cloud Storage buckets** and the **objects** inside them, but without allowing them to create, delete, or modify any buckets or objects.  
+Which IAM role should you assign to best follow the principle of least privilege?  
+
+Storage Object Viewer  
+Storage Object Admin  
+Storage Admin  
+Storage Viewer  
+
+Answer - Storage Viewer(Becasue it needs to see buckets as well as objects)  
+Storage Object Viewer - Not correct because it will not give permission to view the buckets  
+
+
+# Question 7
 
 You want to verify the IAM users and roles assigned within a GCP project named exampro-project.
 
@@ -85,82 +177,3 @@ A **principal** is basically **“who” you are granting access to**. It’s th
 * **Role = what**
 
 By command line - `gcloud projects get-iam-policy   confident-inn-466803-r1`
-
-
-# Question 3
-You have a virtual machine that is currently configured with 1 vCPU and 2 GB of memory. It has reached the limit of available memory and you need to upgrade the virtual machine to have 4 GB of memory.
-
-What should you do?
-
-![alt text](image.png)
-
-# Question 4
-You created a Google Cloud Platform project with an **App Engin**e application inside the project.  
-You initially configured the application to be served from the us-central1 region. Now you want the application to be served from the europe-west1 region.  
-What should you do?  
-
-Create a new GCP project and create an App Engine application inside this new project. Specify europe-west1 as the region to serve your application.  
-Change the region property setting in the existing App Engine application from us-central1 to europe-west1  
-Create a second App Engine application in the existing GCP project and specify europe-west1 as the region to serve your application.  
-In an existing GCP project, change the default region property setting to europe-west1.  
-
-```txt
-App Engine is region specific. You CANNOT move it to different region. Create a new project and create new app engine in the new region
-```
-
-# Question 5
-You have a developer laptop with the **Cloud SDK installed** on **Ubuntu**. The Cloud SDK was installed from the Google Cloud Ubuntu package repository.  
-You want to **test your application locally** on your laptop with **Cloud Datastore**.  
-
-What should you do?  
-Install the google-cloud-sdk-datastore-emulator component using the apt get install command  
-Create a Cloud Datastore index using gcloud datastore indexes create  
-Install the cloud-datastore index using the gcloud components install command  
-Export Cloud Datastore data using gcloud datastore export  
-
-```txt
-* Exporting and importing is something you’d do when you need to **back up data** or **move between projects**.
-* For local testing, Google actually gives you a **Datastore emulator** that pretends to be Datastore, so you don’t need to export anything from the cloud.
-
-Here’s the key:
-
-* If the question says *“test your application locally”*, the correct approach is to **start the Datastore emulator** that comes with the Cloud SDK.  
-* Then, you **point your app’s environment variables** to talk to the emulator instead of the real cloud service.
-
-So exporting big datasets isn’t necessary (and yes, it could be huge!).
-
-```
-
-# Question 6
-You need to select and configure compute resources for a set of batch processing jobs. These jobs take about 2 hours to complete and are scheduled for every night. You want to keep your service expenses as low as possible.  
-Which of the following steps will meet the goal?  
-
-	
-Select Compute Engine. Use preemptible VM instances of the appropriate standard machine type  
-Select Google Kubernetes Engine. Use a three-node cluster with micro instance types  
-Select Compute Engine. Use VM instance types that support micro bursting  
-Select Google Kubernetes Engine. Use a single-node cluster with a small instance type  
-
-```txt
-
-**1. Batch processing**
-
-* Think of it as jobs that run on a schedule, crunch through a *batch* of data, and then stop.
-* Example: Every night, process all sales records of the day, generate a report, and save results.
-* Key: You don’t need servers running 24/7. You just need them for the job window (like 2 hours at night).
-
-**2. Preemptible VM (in GCP)**
-
-* These are **very cheap virtual machines** on Compute Engine.
-* BUT: Google can shut them down at *any time*, and they last a max of **24 hours**.
-* Cost: up to 80% cheaper than normal VMs.
-* Use case: great for batch jobs or workloads that can restart or tolerate interruptions.
-
-👉 So if your job takes only 2 hours (well under 24h) and runs nightly, **preemptible VMs are perfect** — they save lots of cost.
-
----
-
-So now, can you guess why in your options the best answer is:
-**“Select Compute Engine. Use preemptible VM instances of the appropriate standard machine type”**?
-
-```
