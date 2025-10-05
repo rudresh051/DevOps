@@ -83,7 +83,22 @@ Note - The process of Borrowing bits from Host ID to generate the subnet ID is a
 
 
 > Example  
-> > ![alt text](image-48.png)  
+> > ![alt text](image-48.png) 
 
+> First Subnet  
+>> ![alt text](image-49.png)  
+>> ![alt text](image-50.png)  
+>> ![alt text](image-51.png)  
+>> ![alt text](image-52.png)  
+>> ![alt text](image-53.png)  
+
+> Second subnet 
+> > ![alt text](image-54.png)  
+
+> 3rd subnet
+> > ![alt text](image-55.png)
+
+> 4th Subnet
+> > ![alt text](image-56.png)  
 
 
