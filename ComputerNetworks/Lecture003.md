@@ -60,7 +60,7 @@ Note -
 
 ![alt text](image-27.png)
 
-2. **Direct Broadcasting** - Transmitting data from one computer to all other computer in the different N/W is called as Direct Broadcasting
+2. **Directed Broadcasting** - Transmitting data from one computer to all other computer in the different N/W is called as Direct Broadcasting
 
 ![alt text](image-28.png)
 
@@ -69,8 +69,8 @@ Note - Whenever we have all 1's(or 255) in HID part of any IP address, that IP a
 ![alt text](image-29.png)
 
 Note - 
-1. Direct Broadcast Address can't be used as a source IP address
-2. Direct Broadcast Address will always be used as Destination IP address
+1. Directed Broadcast Address can't be used as a source IP address
+2. Directed Broadcast Address will always be used as Destination IP address
 
 example 2  of direct broadcast - 
 ![alt text](image-30.png)
@@ -119,3 +119,92 @@ Note - IP Address ANDing Network Mask => It gives Network ID
 ![alt text](image-37.png)
 
 Home Work - Questions 6,7,8,9
+
+
+# Notes - ChatGPT
+
+👉 **Limited Broadcast** and **Directed Broadcast** — perfect for quick revision or interview recall 👇
+
+---
+
+## 📘 **Broadcasting in IPv4 — Quick Notes**
+
+---
+
+### 🔹 **1. Limited Broadcast**
+
+| Concept                     | Details                                                         |
+| --------------------------- | --------------------------------------------------------------- |
+| **Address**                 | `255.255.255.255`                                               |
+| **Meaning**                 | “Send to *everyone* in *my local network*.”                     |
+| **Scope**                   | Local network only (cannot cross routers)                       |
+| **Use case**                | When host doesn’t yet know its own IP (e.g., **DHCP Discover**) |
+| **Source IP allowed?**      | ❌ No — because `255.255.255.255` is not a unique sender         |
+| **Destination IP allowed?** | ✅ Yes                                                           |
+| **Routable?**               | ❌ Never — routers drop it immediately                           |
+| **Example**                 | A new PC broadcasting to find a DHCP server on LAN              |
+| **Analogy**                 | Shouting “Hey everyone in this room!”                           |
+
+---
+
+### 🔹 **2. Directed Broadcast**
+
+| Concept                     | Details                                                            |
+| --------------------------- | ------------------------------------------------------------------ |
+| **Address**                 | `<Network ID> + all host bits = 1`                                 |
+| **Meaning**                 | “Send to *everyone* in *that specific remote network*.”            |
+| **Scope**                   | Crosses router boundaries (if not blocked)                         |
+| **Example Network**         | For `192.168.1.0/24` → Directed Broadcast = `192.168.1.255`        |
+| **Use case**                | Network management tools, wake-on-LAN, or controlled subnet alerts |
+| **Source IP allowed?**      | ❌ No                                                               |
+| **Destination IP allowed?** | ✅ Yes                                                              |
+| **Routable?**               | ⚠️ Possible, but **disabled by default (RFC 2644)**                |
+| **Risk**                    | Can be exploited in **Smurf attacks** (mass ICMP reply flood)      |
+| **Analogy**                 | Shouting “Hey everyone in the next room!”                          |
+
+---
+
+### 🧭 **3. Key Differences**
+
+| Feature                      | Limited Broadcast              | Directed Broadcast                         |
+| ---------------------------- | ------------------------------ | ------------------------------------------ |
+| **Address Example**          | `255.255.255.255`              | `192.168.1.255`                            |
+| **Target**                   | All hosts on **local** network | All hosts on a **specific remote** network |
+| **Router Forwarding**        | ❌ Never                        | ⚠️ Can (but usually blocked)               |
+| **Used in DHCP?**            | ✅ Yes                          | ❌ Rarely                                   |
+| **Can be Source Address?**   | ❌ No                           | ❌ No                                       |
+| **Common in Real Networks?** | ✅ Yes                          | ⚠️ Rare / Disabled                         |
+| **Security Concern**         | Minimal                        | High (DoS via Smurf attack)                |
+
+---
+
+### 💡 **4. Memory Tricks**
+
+* 🏠 **Limited = Local** → “Everyone near me.”
+* 🧭 **Directed = Destination network** → “Everyone over there.”
+* 🚫 **Routers block broadcasts** → They like *unicast* (clear routes).
+* 📜 **RFC 919 + 922** define broadcasting; **RFC 2644** disables directed broadcast by default.
+
+---
+
+### ⚙️ **5. Bonus Examples**
+
+| Network      | Subnet Mask         | Directed Broadcast |
+| ------------ | ------------------- | ------------------ |
+| 192.168.10.0 | 255.255.255.0       | 192.168.10.255     |
+| 172.16.4.0   | 255.255.252.0 (/22) | 172.16.7.255       |
+| 10.0.0.0     | 255.0.0.0 (/8)      | 10.255.255.255     |
+
+---
+
+### 🧠 **6. Pro Tip for Interviews**
+
+If they ask:
+
+> “Can a Class C host send a directed broadcast to a Class A network?”
+
+Say:
+
+> “Yes, syntactically it can form that address — but in practice, routers will block it (per RFC 2644) to prevent Smurf attacks.”
+
+
