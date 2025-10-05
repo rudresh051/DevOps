@@ -82,7 +82,7 @@ Note - The process of Borrowing bits from Host ID to generate the subnet ID is a
 * Let's take an example
 
 
-> Example  
+> Example 1  
 > > ![alt text](image-48.png) 
 
 > First Subnet  
@@ -92,13 +92,93 @@ Note - The process of Borrowing bits from Host ID to generate the subnet ID is a
 >> ![alt text](image-52.png)  
 >> ![alt text](image-53.png)  
 
-> Second subnet 
+> Second subnet  
 > > ![alt text](image-54.png)  
 
-> 3rd subnet
+> 3rd subnet  
 > > ![alt text](image-55.png)
 
-> 4th Subnet
+> 4th Subnet  
 > > ![alt text](image-56.png)  
 
+> Shortcut  
+> > ![alt text](image-57.png)  
+> > ![alt text](image-58.png)  
 
+# Homework - Question 2
+![alt text](image-59.png)  
+* 8 combination banane ke liye 3 bit chahiye minimum
+* ![alt text](image-60.png)
+
+# Question 3 - ISRO exam
+* Last 2 bit is used. If we take last 2 bit borrow from host ID, then what is subnet ID and Direct broadcast ID?
+* ![alt text](image-61.png)
+
+> ![alt text](image-62.png)  
+> ![alt text](image-63.png)  
+> Isme IP address sequence me nahi hai. Practically aisa possible nhi hai.  
+> ![alt text](image-64.png)
+
+
+# Subnet Mask
+* We saw Network mask. Now let's see subnet mask
+* It is a 32 bit number used to indicate no. of bits borrowed from host-id and there positions based on the following rules
+* Rule 1 - No of 1's in the subnet mask indicate NID + SID
+* Rule 2 - No of 0's in the subnet mask indicate HID part.
+* Subnet Mask ka concept kyun aaya? kyunki humne subnet me divide kiya isliye aaya
+
+# Default subnet Mask
+
+![alt text](image-65.png)
+
+![alt text](image-66.png)
+
+# Question 1
+![alt text](image-67.png)
+
+![alt text](image-68.png)
+
+![alt text](image-69.png)
+
+![alt text](image-70.png)
+
+# Question 2
+![alt text](image-71.png)
+
+# Question 3
+![alt text](image-72.png)
+
+![alt text](image-73.png)
+
+![alt text](image-74.png)
+
+# Question 4
+![alt text](image-75.png)
+
+# Question 5
+![alt text](image-76.png)
+
+![alt text](image-77.png)
+
+# Question 6
+![alt text](image-78.png)
+
+![alt text](image-79.png)
+
+# Question 7
+![alt text](image-80.png)
+
+# Question 8
+![alt text](image-81.png)
+
+![alt text](image-82.png)
+Answer - D
+
+# Question 9
+![alt text](image-83.png)
+
+# Question 10
+![alt text](image-84.png)
+
+# Question 11
+![alt text](image-85.png)
