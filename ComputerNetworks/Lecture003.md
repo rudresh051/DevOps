@@ -1,4 +1,12 @@
 # Computer Networks 03 | Types of Communication
+> Question
+![alt text](image-45.png)
+Class A - 2^24 IP Address in one network or 2^24 Host/Network  
+Class B - 2^16 IP Addresses in one network  
+Class C - 2^8 IP Addresses in one networkc  
+
+
+> Question
 ![alt text](image-19.png)
 
 Note - When ever we have all 0's in HID part of any IP address, that IP address represent the NID of entire network this the reason we can't assign this IP address to any host.
@@ -80,7 +88,7 @@ Example -
 ![alt text](image-31.png)
 
 ## Network Masks - 
-A network mask helps you to know which portion of the address identifies the network-id and which portion of the address identifies the host-id. Class A, B, and C networks have default masks, also known as natural masks, as shown here-
+A network mask helps you to know which portion of the address identifies the network-id and which portion of the address identifies the host-id. Class A, B, and C networks have default masks, also known as natural masks, as shown here-  
 Class A - 255.0.0.0  
 Class B - 255.255.0.0  
 Class C - 255.255.255.0  
