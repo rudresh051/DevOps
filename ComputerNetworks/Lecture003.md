@@ -15,7 +15,7 @@ Note - When ever we have all 0's in HID part of any IP address, that IP address 
 3. Multicast communication(1 to many)
 
 ## Unicast Communication
-Transmitting the data from one computer to another computer is called as unicast communication
+Transmitting the data from one computer to another computer is called as unicast communication.  
 It is one to one transmission
 
 ![alt text](image-23.png)
@@ -101,4 +101,4 @@ Note - IP Address ANDing Network Mask => It gives Network ID
 
 ![alt text](image-37.png)
 
-HW - 6,7,8,9
+Home Work - Questions 6,7,8,9
