@@ -1,9 +1,12 @@
 # Computer Networks 04 | Introduction to Subnetting
 
-![alt text](image-44.png)
-* Option C - IP address belongs to class B. See the table and limited broadcast address sabka same hota hai.
+> Question 6
+> ![alt text](image-44.png)
+> Option C - IP address belongs to class B. See the table and limited broadcast address sabka same hota hai.
 
-![alt text](image-38.png)
+> Question 7  
+> ![alt text](image-38.png)
+> Refer Lecture 3 at 33:30 for concept
 
 ![alt text](image-39.png)
 
