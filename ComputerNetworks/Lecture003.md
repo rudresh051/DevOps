@@ -1,10 +1,9 @@
 # Computer Networks 03 | Types of Communication
 > Question  
-> ![alt text](image-45.png)
-
-Class A - 2^24 IP Address in one network or 2^24 Host/Network  
-Class B - 2^16 IP Addresses in one network  
-Class C - 2^8 IP Addresses in one networkc  
+> ![alt text](image-45.png)  
+> Class A - 2^24 IP Address in one network or 2^24 Host/Network  
+> Class B - 2^16 IP Addresses in one network  
+> Class C - 2^8 IP Addresses in one networkc  
 
 
 > Question  
