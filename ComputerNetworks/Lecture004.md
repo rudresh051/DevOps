@@ -1,6 +1,6 @@
 # Computer Networks 04 | Introduction to Subnetting
 
-> Question 6
+> Question 6  
 > ![alt text](image-44.png)
 > Option C - IP address belongs to class B. See the table and limited broadcast address sabka same hota hai.
 
@@ -8,9 +8,12 @@
 > ![alt text](image-38.png)
 > Refer Lecture 3 at 33:30 for concept
 
-![alt text](image-39.png)
+> Question 8  
+> ![alt text](image-39.png)  
 
-![alt text](image-40.png)
+
+> Question 9  
+> ![alt text](image-40.png)  
 
 # Classful Addressing
 1. Class A - 2^24 IP Addresses in one network
@@ -19,7 +22,9 @@
 
 
 
-### 1. **Classful Addressing (Old Method)**
+### 1. **Classful Addressing (Old Method)** and **Why Subnetting required**
+> Example 1  
+>> ![alt text](image-47.png)  
 
 * IPv4 was originally divided into **fixed classes** (A, B, C, D, E).
 * Example:
@@ -59,19 +64,26 @@ If an organization needed only 500 IPs, they couldn’t fit in Class C (only 254
 **Classful Addressing → Subnetting → CIDR**
 
 
-Example -2
-![alt text](image-42.png)
+> Example -2  
+>> ![alt text](image-42.png)  
 
-Example - 3
-
-![alt text](image-41.png)
+> Example - 3  
+>> ![alt text](image-41.png)
 
 # Subnetting
-The process of dividing a big network to many smaller subnet is called as subnetting.
+* Matlab kaafi IP address waste ho jaate the. Isiliye hum subnetting use kar rahe hain.
+* Iske baad Subnetting bhi fail hoga. Phir subernetting uske baad hum class less me jaayenge.
+* The process of dividing a big network into many smaller pieces/subnet is nothing but a subnetting.
 
 ![alt text](image-43.png)
 
 Note - The process of Borrowing bits from Host ID to generate the subnet ID is also called as Subnetting
-* No of bit borrowed depends on our requirement
+* **No of bit borrowed depends on our requirement**
+* Let's take an example
 
-Example - 
+
+> Example  
+> > ![alt text](image-48.png)  
+
+
+

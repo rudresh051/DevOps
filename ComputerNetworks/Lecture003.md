@@ -14,27 +14,30 @@
 > ![alt text](image-46.png)  
 > Note - When ever we have all 0's in HID part of any IP address, that IP address represent the NID of entire network this the reason we can't assign this IP address to any host.
 
-> * **Example**  
+> **Example**  
 > ![alt text](image-20.png)  
 > Network ID kaise nikalenge? Host ID me sare bits zero kar do 
 
 > **Example**  
 > ![alt text](image-21.png)
 
-![alt text](image-22.png)
+> **Example**  
+> ![alt text](image-22.png)
 
 ## Types of communication
-1. Unicast communication(1 to 1)
-2. Broadcast communication(1 to all)
-3. Multicast communication(1 to many)
+1. Unicast communication **(1 to 1)**
+2. Broadcast communication **(1 to all)**
+3. Multicast communication **(1 to many)**
 
 ## Unicast Communication
 Transmitting the data from one computer to another computer is called as unicast communication.  
 It is one to one transmission
 
-![alt text](image-23.png)
+> **Example**  
+> ![alt text](image-23.png)  
 
-![alt text](image-24.png)
+> **Example**  
+> ![alt text](image-24.png)
 
 Note - 
 * In Unicast communication both source and destination can be present in the same network or different network.
@@ -61,7 +64,7 @@ Note -
 
 ![alt text](image-28.png)
 
-Note - Whenever we have all 1's in HID part of any IP address, that IP address represents the direct broadcast address so this is the reason we can't assign this IP address to any host
+Note - Whenever we have all 1's(or 255) in HID part of any IP address, that IP address represents the direct broadcast address so this is the reason we **cannot** **assign this IP address to any host**
 
 ![alt text](image-29.png)
 
