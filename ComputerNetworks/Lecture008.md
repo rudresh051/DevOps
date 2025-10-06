@@ -1,5 +1,8 @@
 # Classless Addressing
 
+> Subnetting was not a permanent solution  
+> > Aisa hamesha nhi ho sakta ki aapko aisa org mil jaye jisko same requirement ho IP addresses ki. Mushkil kaam hai.
+
 Classless addressing in computer networks is a way of assigning **IP addresses without being restricted to the traditional classful system (Class A, B, C, D, E)**.
 
 In the older **classful addressing** system:
