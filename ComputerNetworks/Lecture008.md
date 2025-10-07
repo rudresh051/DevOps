@@ -74,4 +74,23 @@ This gives flexibility:
 * With classless addressing, they can be assigned `172.16.0.0/21` → which provides 2048 IPs.
 * No need to waste an entire Class B block.
 
+# CIDR
+![alt text](image-93.png)
+
+what is the meaning of contiguous? It means IP address should be continuous block
+
+2. Block size must be a power of 2. That means 512, 256. 1000 is not possible
+
+
+* How to find Quotient and remainder when we divide number by 2 or 10
+
+![alt text](image-94.png)
+
+![alt text](image-95.png)
+
+* If block size is given in power of 2 we can easily find network ID and host ID
+* Host ID - 5 bit and Network ID is 27
+
+3. First IP address of the block must be divisible by size of the block
+
 
