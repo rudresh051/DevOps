@@ -2,6 +2,24 @@
 
 > Subnetting was not a permanent solution  
 > > Aisa hamesha nhi ho sakta ki aapko aisa org mil jaye jisko same requirement ho IP addresses ki. Mushkil kaam hai.
+> > In staring demand of Class C network was most because less IP address was required(In starting many small companines were there)
+
+# Disadvantage of classful addressing
+1. Wastage of IP Addresses
+2. Class C was generally was more used compared to Class-A and Class-B
+
+# Advantage of Classful Addressing
+* I could see any IP address and tell what is Network ID and what is Host ID size
+  * E.g. 10.19.32.55 => NID is 8 bit size and host id is 24 bit size
+* Notation is a.b.c.d in classful Addressing
+* But in **classless Addressing** how would I tell it belongs to which class? so for that we have different notation
+  * e.g. **a.b.c.d|n where n is Network ID or Subnet mask**
+  * e.g. 10.9.32.54|2 where Network id = 22 bit size and host id size = 32-22 = 10 bit
+    * Number of IP addresses = 2^10 = 1024
+    * Number of Host = 2^10 - 2 = 1022
+
+![alt text](image-92.png)
+
 
 Classless addressing in computer networks is a way of assigning **IP addresses without being restricted to the traditional classful system (Class A, B, C, D, E)**.
 
