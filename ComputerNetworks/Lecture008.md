@@ -21,6 +21,7 @@
 ![alt text](image-92.png)
 
 
+```txt
 Classless addressing in computer networks is a way of assigning **IP addresses without being restricted to the traditional classful system (Class A, B, C, D, E)**.
 
 In the older **classful addressing** system:
@@ -44,9 +45,8 @@ The problem:
 * Introduced in **1993** to replace classful addressing.
 * Uses the format:
 
-  ```
+
   IP_address / prefix_length
-  ```
 
   where `prefix_length` = number of bits in the **network ID**.
 * Example:
@@ -74,12 +74,14 @@ This gives flexibility:
 * With classless addressing, they can be assigned `172.16.0.0/21` → which provides 2048 IPs.
 * No need to waste an entire Class B block.
 
+```
+
 # CIDR
 ![alt text](image-93.png)
 
 what is the meaning of contiguous? It means IP address should be continuous block
 
-2. Block size must be a power of 2. That means 512, 256. 1000 is not possible
+2. **Block size must be a power of 2. That means 512, 256. 1000 is not possible**
 
 
 * How to find Quotient and remainder when we divide number by 2 or 10
@@ -91,6 +93,6 @@ what is the meaning of contiguous? It means IP address should be continuous bloc
 * If block size is given in power of 2 we can easily find network ID and host ID
 * Host ID - 5 bit and Network ID is 27
 
-3. First IP address of the block must be divisible by size of the block
+3. **First IP address of the block must be divisible by size of the block**
 
-
+![alt text](image-96.png)
