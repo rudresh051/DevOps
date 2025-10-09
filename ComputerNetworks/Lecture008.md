@@ -129,3 +129,18 @@ that means this block can be assigned to a customer.
 ![alt text](image-100.png)
 
 ![alt text](image-101.png)
+
+
+## Example 2
+![alt text](image-104.png)
+
+
+![alt text](image-102.png)
+
+![alt text](image-103.png)
+
+First IP address will represent Block ID(BID) and it cannot be assigned to any host computer
+
+Last IP address will represent DBA
+
+# Subnetting in CIDR
