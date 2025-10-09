@@ -96,3 +96,36 @@ what is the meaning of contiguous? It means IP address should be continuous bloc
 3. **First IP address of the block must be divisible by size of the block**
 
 ![alt text](image-96.png)
+
+![alt text](image-97.png)
+
+> what is the meanning of divisible? it basically means the Host ID will be all zeros. so the first IP address will be all zeros
+> > Basically it wants to convey the first IP address will be **block ID**.(Similar to Network ID and Subnet ID)
+
+![alt text](image-98.png)
+
+> Note - First IP address must be used as a block ID
+> > And it is understood that the first IP address are not assigned to any host computer as it represents ID of Network ID or Subnet ID.
+
+
+* Question - Last IP is DBA - Directed Broadcast address. And host ID is all 1's
+* 4th rule is not required - As if first 3 rules are true for a block and 4 th rule will be automatically true. Basically all bits of host id in the block will be ones
+
+## Example - 
+100.100.100.64  
+100.100.100.65  
+100.100.100.66  
+100.100.100.67  
+.  
+.  
+100.100.100.127  
+1. It is contiguous(IP address are present in serial form)
+2. Block size  is 2^6 i.e. from 64 to 127 is total 64 count
+3. ![alt text](image-99.png)
+
+that means this block can be assigned to a customer.
+
+## Representation of CIDR
+![alt text](image-100.png)
+
+![alt text](image-101.png)
