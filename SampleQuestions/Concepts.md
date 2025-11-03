@@ -1,4 +1,4 @@
-# what is microservices in software ?
+# What is microservices in software ?
 Microservices in software is an **architectural style** where an application is built as a collection of small, independent, and loosely coupled services.
 
 Instead of one large monolithic system (where everything is in a single codebase), microservices break the application into many smaller parts, each handling a specific business function.
@@ -149,7 +149,7 @@ The most popular tool for this is **Kubernetes (K8s)**. Others include Docker Sw
 
 
 # Kubernetes
-Exactly 👌 — **Kubernetes (K8s)** is the **most popular tool** for container orchestration, but it’s **not the only option**.
+**Kubernetes (K8s)** is the **most popular tool** for container orchestration, but it’s **not the only option**.
 
 ---
 
