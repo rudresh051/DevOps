@@ -238,3 +238,81 @@ What should they do?
 > ✅ If they already have Workspace emails → grant IAM roles directly
 > ⚙️ For team-based management → use Workspace Groups → manually grant roles to group
 > 🚫 Never rely on “default” access for any group or domain
+
+
+# Question 9
+The company has a billing account created for you and they want you to link it with an existing Google Cloud Platform project.
+What should you do?
+1. Verify that you are the Project Billing Manager for the GCP project. Link the billing account created for you to the existing project.
+2. Verify that you are a Billing Account User for the billing account. Create a new project and link the new project to the existing billing account.
+3. Verify that you are Billing Account Viewer for the billing account. Update the existing project to link it to the existing billing account.
+4. Verify that you are Billing Account Creator for the GCP project. Update the existing project to link it to the existing billing account.
+
+## 🧾 **GCP Billing & IAM — Quick Revision Notes**
+
+### 🧩 1. Key Concepts
+
+* **Billing Account** = the “wallet” that pays for project resources.
+* **Project** = the container that holds your actual GCP resources (VMs, APIs, etc.).
+* To link them → you need permissions on **both sides** (billing + project).
+
+---
+
+### 🧩 2. Important Roles & Their Purpose
+
+| Role                                                         | Scope              | What it Allows                                                         |
+| ------------------------------------------------------------ | ------------------ | ---------------------------------------------------------------------- |
+| **Billing Account Creator** (`roles/billing.creator`)        | Org level          | Create **new** billing accounts.                                       |
+| **Billing Account User** (`roles/billing.user`)              | On billing account | Use or **link** this account to projects.                              |
+| **Billing Account Viewer** (`roles/billing.viewer`)          | On billing account | View details and invoices only.                                        |
+| **Project Billing Manager** (`roles/billing.projectManager`) | On project         | **Link / unlink** billing accounts for that project.                   |
+| **Project Owner**                                            | On project         | Can also change billing (includes billing.projectManager permissions). |
+
+---
+
+### 🧩 3. Linking a Billing Account to a Project
+
+✅ **Requirements:**
+
+1. You are a **Billing Account User** on the billing account.
+2. You are a **Project Billing Manager** (or Owner) on the project.
+
+🔗 **Steps:**
+
+1. In GCP Console → **Billing → Link Billing Account**
+2. Select the correct billing account → **Save**
+3. Project is now billed under that account.
+
+---
+
+### 🧩 4. Common Misunderstandings
+
+| Myth                                                                 | Reality                                                             |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| “If I log into the billing account’s Gmail, I can link any project.” | ❌ You must be added as **Project Billing Manager** on that project. |
+| “Billing Account Creator can link projects.”                         | ❌ They can only *create* new billing accounts.                      |
+| “Viewer can link projects.”                                          | ❌ Viewer = read-only.                                               |
+| “Linking works automatically for same domain users.”                 | ❌ No auto-linking; it’s always explicit.                            |
+
+---
+
+### 🧠 5. Quick Exam Rule
+
+> **To link = Two keys**
+> 🔑 **Billing Account User** on the billing account
+> 🔑 **Project Billing Manager** on the project
+
+Without both → ❌ linking fails.
+
+---
+
+### 🧩 6. Example Scenario
+
+**Company action:** Creates a billing account → gives you credentials.
+**Your goal:** Link it to an existing project.
+**You need:**
+
+* Project access (`roles/billing.projectManager`)
+* Billing account access (`roles/billing.user`)
+  Then you can link them successfully.
+
