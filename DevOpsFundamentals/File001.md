@@ -2,6 +2,8 @@
 
 # https://www.udemy.com/course/devops-fundamentals-aws
 
+## Instructor - Rahul Shetty
+
 # What is DevOps?
 * DevOps is the combination of practices and tools that increases an organization's ability successful delivery of software into production at high velocity
 * Devops teams use practices to automate processes that historically have been manual and slow
