@@ -1,19 +1,19 @@
 # Kubernetes
 
 ## Borg
-* Websites crash ho jaa raha tha
-* Toh 2014 me inhone Borg start kiya 
-* Later rename kubernetes kar diya
+* Websites crash हो जा रहा था ।
+* तो 2014 में इन्होंने Borg शुरुवात किया
+* Later rename kubernetes कर दिया
 
 # Kubernetes
-* Ye ek orchestration tool hai
-* Isko K8S bhi bolte hain
-* Kubernetes use kiyon karte hain?
-* Pehle application monolithic hote hain(Mono means single)
+* ये एक orchestration tool है
+* इसको K8S भी बोलते हैं
+* Kubernetes use क्यों करते हैं ?
+* पहले application monolithic होते हैं(Mono means single)
 * e.g. D-Mart
-* Ek bade application ko chhote pieces me bana diya
+* एक बड़े application को छोटे pieces में बना दिया
 * Why to study kubernetes?
-  * **Microservice** ka use jyada ho raha hai
+  * **Microservice** का प्रयोग अधिक हो रहा है
 * CKA(Certified Kubernetes Administrator)
 
 # Kubernetes Architecture
@@ -485,6 +485,7 @@ Let’s say you install **Calico** as your CNI:
 * `kubectl` = CLI tool for Kubernetes.
 * Talks to the **API Server** to manage/view resources.
 * Without `kubectl`, you’d have to interact with the API manually (ugly JSON/HTTP calls).
+
 
 
 
