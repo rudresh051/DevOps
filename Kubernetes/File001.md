@@ -23,12 +23,11 @@
   * 1 Node = 1 Server
   * Multi Node = Cluster
   * Master Node and Worker Node
-  * Master Node - Ye worker node se kaam karwate hain
-  * Worker node me docker ka container chal raha hota hai
-* **Master node me kya hota hai?**
-  * 1. **API Server** - API Server ka kaam kya hai? To communicate. It's a medium. If you want to talk to Kubernetes Cluster you need to talk through API server
-  * 2. Requirement hai DevOps Engineer ki. Hire kaun karwata hai? HR
-    * **Scheduler** - To schedule container or Pods.Aapke containers ko worker node par schedule karti hai
+  * Master Node - ये worker node से काम करवाते हैं
+  * Worker node में docker का container चल रहा होता है
+* **Master node में क्या होता है?**
+  * 1. **API Server** - API Server का क्या काम है? To communicate. It's a medium. If you want to talk to Kubernetes Cluster you need to talk through API server
+  * 2. **Scheduler** - To schedule container or Pods. आपके containers को worker node पर schedule करती है
   * 3. 
 
 
@@ -485,6 +484,7 @@ Let’s say you install **Calico** as your CNI:
 * `kubectl` = CLI tool for Kubernetes.
 * Talks to the **API Server** to manage/view resources.
 * Without `kubectl`, you’d have to interact with the API manually (ugly JSON/HTTP calls).
+
 
 
 
