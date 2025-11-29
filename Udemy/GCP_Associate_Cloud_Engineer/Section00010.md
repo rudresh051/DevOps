@@ -100,6 +100,14 @@ kubectl create deployment hello-world-rest-api --image=in28min/hello-world-rest-
 ```
 
 ## Create a Kubernetes cluster
+
+1. Autopilot Mode
+
+![alt text](image-36.png)
+
+* Don't do any custimization just review and create cluster.
+
+
 ![alt text](image-22.png)
 
 ## GKE Remember
