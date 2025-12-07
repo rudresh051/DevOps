@@ -1,7 +1,7 @@
 # Kubernetes
 
 ## Borg
-* Websites crash हो जा रहा था ।
+* Google applications were not robust. Kubernetes initial name was Borg. Websites crash हो जा रहा था ।
 * तो 2014 में इन्होंने Borg शुरुवात किया
 * Later rename kubernetes कर दिया
 
