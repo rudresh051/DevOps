@@ -244,3 +244,56 @@ Question 4 -
 another way -  
 
 ![alt text](image-115.png)
+
+Question 5 -  
+
+![alt text](image-116.png)
+
+Question 6 -  
+
+![alt text](image-117.png)
+
+Question 7 -  
+
+![alt text](image-118.png)
+
+Question 8 -  
+easy one - just remember no of network bits in class B
+
+![alt text](image-119.png)
+
+Question 9 -  
+
+![alt text](image-120.png)
+
+Question 10 -   
+
+![alt text](image-121.png)
+
+Question 11 -  
+
+![alt text](image-122.png)
+
+
+Question 13 -  
+
+just remember the range 
+class A - 1 to 126
+class B - 128 to 191
+class C - 192 to 223
+Class D - 224 - 239
+Class E - 240 - 255
+
+![alt text](image-123.png)
+
+Question 15 -  
+
+![alt text](image-124.png)
+
+
+
+
+
+
+
+
