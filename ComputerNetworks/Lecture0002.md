@@ -105,13 +105,16 @@ Weightage - 128,64, 32, 16,8,4,2,1
 C8:FC:3F:F7
 
 
-# Class A
+# Class A [1-126]
 ![alt text](image-108.png)
 
 Note - 
 1. Whenever we have all zeros or all ones, either in the network ID or in the Host ID of any IP addresses. These IP addresses are reserved for some special purpose, so we cannot assign these IP addresses to computer.
 
 ![alt text](image-109.png)
+
+So Practically we have the following - 
+![alt text](image-110.png)
 
 ### **1. 0.0.0.0 as the “default route”**
 
@@ -155,25 +158,52 @@ It’s the same address, but the meaning depends on **context (routing vs DHCP).
 
 
 
-# Class B
+# Class B (128-191)
 * IP Address - 2^30
   * Kitne bits fix hain? 10
 
 ![alt text](image-11.png)
 
+* here we don't have anything IP address to cancel
+
+Now -  Visualization Part  
+
+here we have two octet of Network ID
+second octet will be from 0 to 255 and for each first octet startting value from 128, 129. ...toll 191
+
 ![alt text](image-12.png)
 
-# Class C
+# Class C (2^29 - 110 bits fixed here)
+In class C we have 24 bit for network ID and last 8 bit for host ID.
+Also we have 110 first three bits fixed in network ID. 
 
 ![alt text](image-13.png)
+
+We have 3 bits fixed in class C , so number of network will be 2^21 practically.
 
 ![alt text](image-14.png)
 * Number of networks - 32*2^16 = 2^21
 
-# Class D
+```
+with 5 bits we will have 32 combination
+and other 2 octet will give 2^8 and 2^8 combination.
+So total will be 32 x 2^16
+```
+
+```
+Total Class C IPs = (number of networks) × (IPs per network)
+                  = 2²¹ × 2⁸
+                  = 2²⁹
+
+```
+
+
+# Class D (2^28 and we have 4 bits fixed - 1110)
+Here we don't have any NID or HID
 Note - 
 1. No network id and no host id in class D
 2. class D is used for multicasting
+3. Class D IP address is not assigned to any computer
 
 ![alt text](image-15.png)
 
