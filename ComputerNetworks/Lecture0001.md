@@ -122,8 +122,8 @@ Byte -> B
 1 Byte = 8bits  
 1KB = 1024 Byte  
 1MB = 1024KB(Kilo Byte)  
-1GB = 1024MB(Mega Byte)  
-1TB = 1024GB(Giga Byte)  
+1GB = 1024MB(Mega Byte)(e.g. Jio Intial data plan)    
+1TB = 1024GB(Giga Byte)( e.g. Laptop Harddisk)    
 1EB = 1024PB(Peta Byte)  
 1ZB = 1024EB(Exa Byte)  
 1YB = 1024ZB(Zetta Byte)  
@@ -133,7 +133,7 @@ Byte -> B
 Weightage =>128,64,32,16,8,4,2,1,0
 
 00000000=0  
-00000001=1  
+00000001=1(2^0)  
 00000011=3(2^2-1)  
 00000111=7(2^3-1)  
 00001111=15(2^4-1)  
@@ -142,39 +142,50 @@ Weightage =>128,64,32,16,8,4,2,1,0
 01111111=127(2^7-1)  
 11111111=255(2^8-1)  
 
-* Range pata chal jaayega upar se
-  * e.g 8 bit ka number hai => 0 to 2^8-1
-  * n bit ka number hai=> 0 to 2^n-1
+* Range पता चल जाएगा ऊपर से
+  * e.g 8 bit का number है => 0 (minimum value) to 2^8-1(maximum value)
+  * **Hence => n bit का number है => 0 (minimum value) to 2^n-1(maximum value)**
 
 * Binary number to decimal value
+Second way =>  
 
 10000000=128  
-11000000=192  
-11100000=224  
-11110000=240[255-15]  
+11000000=192 (128 + 64)    
+11100000=224 (128 + 64 + 32)  
+11110000=240 (128 + 64 + 32 + 16) [255-15(लास्ट के 4 बिट का वेटेज) ]  
 11111000=248[255-7]  
-11111100=252[255-3]  
+11111100=252[255-3] => 255 में 3 कम कर दो    
 11111110=254[255-1]  
 11111111=255  
+
+(To write the number directly instead of converting and taking time to do that)  
+
+![alt text](image-105.png)
 
 * 1 bit
   * 0,1 = 2^1 combination
 * 2 bit
-  * 00,01,10,11 = 2^2 combination banega
+  * 00,01,10,11 = 2^2 combination banega(address space . Basically total combiantions is called address space.)
   * 1 fix karne par => 2 parts me address space divide hoga
-* 3 bit
-  * 000,001,010,011,100,101,110,111 =8 = 2^3 combination
+* Now suppose we have a 3 bit number
+  * 000,001,010,011,100,101,110,111 =8 = 2^3 combination i.e. We have 8 combination of address space
   * 1 bit fix karne par => 2 parts me address space divide hoga
   * 2 bit fix karne par => 4 parts me address space divide hoga
-* n bit
-  * 2^n combination banega
+* n bit ( with 2 bit we have 2^2 combination, with 3 bit number we have 2^3 combination)
+  * therefore with n bit number we will have 2^n combination banega (address space)
 
-* Address Space
-  * 1 bit = 2 = 2^1 parts
+* Address Space(Now if someone selects k bit from n bit number then)
+  * 1 bit fixed then = Address space will get divide in two parts = 2^1 parts (can be written as)
   * 2 bits = 4 parts = 2^2 parts
-  * Agar mere paas n bit hai toh aur k bits fix kiya toh => address space 2^k parts me divide hoga
-  * basically 2^n combination ko 2^k parts me divide kar diya
-  * harek parts ka size kitna hota? 2^(n-k) parts
+  * .
+  * .
+  * .
+  * **अगर मेरे पास n bit का नंबर है तो और k bits फिक्स किया तो => address space 2^k parts में divide होगा**
+  * Basically 2^n combination number will get divided into 2^k parts
+  * Now remainning bits are (n-k) bits. now can you tell be size of each part? Basically apply the unitary method of class 5
+  *  2^k parts have 2^n combination
+     *  therefore 1 part will be 2^n/2^k
+     * हरेक parts का size कितना होगा? 2^(n-k) size of each part
 
 ![alt text](image.png)
   
@@ -182,15 +193,30 @@ Weightage =>128,64,32,16,8,4,2,1,0
 ![alt text](image-1.png)
 
 # Introduction to IP Addressing
+Here we have 32 bit number.
+
 IPv4 Address = 32 bit  
 Total number of IP addresses = 2^32 = 4,294,967,296=> more than 4 billion  
 
-2^32 = 2^2*2^30 = (4G IP Addresses)
+2^32 = 2^2*2^30 = (4G IP Addresses - basically saying we have 4 giga IP addresses)
 Initially in 1980's  Addresses was divided into two fixed parts
 NID = 8 bit  
 HID = 24 bit  
 * agar 8 bit ki network id hai toh total combination banega = 2^8 networks
-* host id = 24 bits = combination will be 2^24(host/network) = 2^4 * 2^20 = 16M Host/network = approx 1.6 cr Host/network
+* host id = 24 bits = combination will be 2^24(host/network) = 2^4 * 2^20 = 16M Host/network = approx 1.6 crore Host/network
+* So each part will have 2^24 IP addresses. IOW N1 will have 2^24 IP address, N2 will have 2^24 IP address. And continuing till network N256 part will have 2^24 IP address.
+* And if you are still confused about part it is basically grouping of IP address when a particular bit is fixed.
+
+```txt
+Why this is correct (bit-level view)
+An IPv4 address is a 32-bit binary number.
+When we say:
+Network part → some leading bits are fixed
+Host part → remaining bits are variable
+➡️ All IPs that share the same fixed bits belong to the same group (network).
+
+That “group” is exactly what a network is.
+```
 
 ![alt text](image-2.png)
 
@@ -199,7 +225,7 @@ HID = 24 bit
 ![alt text](image-4.png)
 
 ## Disadvantage
-* There are only 256 Network's, and even a small organization must buy 16M computer (HOST) to purchase one network
+* There are only 256(2^8) Network's(These are basically parts), and even a small organization must buy 16M computer (HOST) to purchase one network
   
 
 ## Solution - classful Addressing
