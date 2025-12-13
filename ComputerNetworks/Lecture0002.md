@@ -63,6 +63,7 @@ By the 1990s, IPv4 was running out of space because of this waste.
 👉 **In short:**
 Classful addressing was the **first, simple way to divide IPv4 addresses**, but it was too rigid and wasteful. CIDR replaced it to allow finer control and prevent IPv4 exhaustion.
 
+# IP Address division
 
 ![alt text](image-8.png)
 Note -
@@ -71,6 +72,17 @@ Note -
 3. Class C = 2^29
 4. Class D = 2^28
 5. Class E = 2^28
+
+**Classful IP addressing is nothing but grouping IPs by fixed leading bits, and the remaining bits decide how many addresses exist.**
+
+| Class | First bits | Binary prefix |
+| ----- | ---------- | ------------- |
+| A     | 0          | `0xxxxxxx`    |
+| B     | 10         | `10xxxxxx`    |
+| C     | 110        | `110xxxxx`    |
+| D     | 1110       | `1110xxxx`    |
+| E     | 1111       | `1111xxxx`    |
+
 
 ![alt text](image-9.png)
 
