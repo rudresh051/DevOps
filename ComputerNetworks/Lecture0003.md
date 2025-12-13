@@ -76,7 +76,7 @@ Note - **Whenever we have all 1's(or 255) in HID part of any IP address**, that 
 
 Note - 
 1. Directed Broadcast Address can't be used as a source IP address
-2. Directed Broadcast Address will always be used as Destination IP address
+2. **Directed Broadcast Address will always be used as Destination IP address**
 
 example 2  of direct broadcast - 
 ![alt text](image-30.png)
@@ -103,20 +103,33 @@ Example -
 ![alt text](image-31.png)
 
 ## Network Masks - 
-A network mask helps you to know which portion of the address identifies the network-id and which portion of the address identifies the host-id. Class A, B, and C networks have default masks, also known as natural masks, as shown here-  
+A network mask **helps you to know which portion of the address identifies the network-id and which portion of the address identifies the host-id.** Class A, B, and C networks have default masks, also known as natural masks, as shown here-  
 Class A - 255.0.0.0  
 Class B - 255.255.0.0  
 Class C - 255.255.255.0  
 
-Note - In the network mask number of ones indicate network ID part and number of zeros indicate host id part
+**Note - In the network mask -  number of 1's indicate network ID part and number of 0's indicate host id part**
+
 
 ![alt text](image-32.png)
 
+**Question** - what is the network ID and host ID for below IP address  
+
 ![alt text](image-33.png)
 
-Note - IP Address ANDing Network Mask => It gives Network ID
 
+from above number 1's are in the first 3 octet . therefor network id will be 200.200.200 and host id will be the last octet where 0's are present.
+
+# Concept
+* Not important but can be done this way also
+* 
+**Note - IP Address ANDing Network Mask => It gives Network ID**
 ![alt text](image-34.png)
+
+We will only follow shortcut - find the which class the IP address belongs then put 0's in Host ID to get the Network ID
+
+
+# Questions - 
 
 ![alt text](image-35.png)
 
