@@ -210,7 +210,7 @@ Note -
 # Class E
 * 240-255
 * 2^28
-* No network and no host id in class E
+* we don't have anything to cancel here because - No network and no host id in class E. 
 * Class E is reserved for research and future purpose
 
 ![alt text](image-16.png)
@@ -223,3 +223,24 @@ Note -
 Number of hosts per network
 
 ![alt text](image-17.png)
+
+# Questions
+
+Question 1 -  
+
+![alt text](image-111.png)
+
+Question 2 -  
+![alt text](image-112.png)
+
+Question 3 -  
+
+![alt text](image-113.png)
+
+Question 4 -  
+
+![alt text](image-114.png)
+
+another way -  
+
+![alt text](image-115.png)
