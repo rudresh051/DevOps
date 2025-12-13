@@ -98,11 +98,20 @@ Weightage - 128,64, 32, 16,8,4,2,1
 
 2. convert in Hexadecimal 
 
+![alt text](image-107.png)
+
+![alt text](image-106.png)
+
 C8:FC:3F:F7
+
+
+# Class A
+![alt text](image-108.png)
 
 Note - 
 1. Whenever we have all zeros or all ones, either in the network ID or in the Host ID of any IP addresses. These IP addresses are reserved for some special purpose, so we cannot assign these IP addresses to computer.
 
+![alt text](image-109.png)
 
 ### **1. 0.0.0.0 as the “default route”**
 
@@ -143,6 +152,8 @@ It’s the same address, but the meaning depends on **context (routing vs DHCP).
   * subtract 2 => 2^24-2
 * 10.0.0.0 - cannot be assigned to any computer
   * 10.255.255.255 - cannot be assigned to any computer
+
+
 
 # Class B
 * IP Address - 2^30
