@@ -51,20 +51,26 @@ Two types -
 
 **Limited Broadcasting** -   
 Transmitting data from **one** computer to **all other** computer in the **same network** is called as Limited Broadcasting
+जब एक कंप्यूटर डेटा बस अपने ही नेटवर्क में सेंड करे दूसरे कंप्यूटर को।
+
+e.g. The destination IP is fixed in Limited broadcast address - 255.255.255.255
 
 ![alt text](image-26.png)
 
 Note - 
 1. Limited Broadcast address cannot be use as a Source IP Address
-2. Limited Broadcast address will always be used as a destination IP address
+2. **Limited Broadcast address will always be used as a destination IP address** i.e. **255.255.255.255 which is fixed.** got it?
+3. किसी भी क्लास का नेटवर्क हो उससे फर्क नहीं पड़ता । Limited Broadcast address will always be 255.255.255.255 and it will always be Destination IP
+
+
 
 ![alt text](image-27.png)
 
-2. **Directed Broadcasting** - Transmitting data from one computer to all other computer in the different N/W is called as Direct Broadcasting
+2. **Directed Broadcasting** - Transmitting data from one computer to all other computer in the **different network** is called as Direct Broadcasting
 
 ![alt text](image-28.png)
 
-Note - Whenever we have all 1's(or 255) in HID part of any IP address, that IP address represents the direct broadcast address so this is the reason we **cannot** **assign this IP address to any host**
+Note - **Whenever we have all 1's(or 255) in HID part of any IP address**, that IP address represents the direct broadcast address so this is the reason we **cannot** **assign this IP address to any host**
 
 ![alt text](image-29.png)
 
