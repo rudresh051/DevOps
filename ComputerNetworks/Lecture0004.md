@@ -85,17 +85,22 @@ If an organization needed only 500 IPs, they couldn’t fit in Class C (only 254
 # Subnetting
 * Matlab kaafi IP address waste ho jaate the. Isiliye hum subnetting use kar rahe hain.
 * Iske baad Subnetting bhi fail hoga. Phir subernetting uske baad hum class less me jaayenge.
-* The process of dividing a big network into many smaller pieces/subnet is nothing but a subnetting.
+* **The process of dividing a big network into many smaller pieces/subnet is nothing but a subnetting.**
 
 ![alt text](image-43.png)
 
-Note - The process of Borrowing bits from Host ID to generate the subnet ID is also called as Subnetting
+**IMPORTANT Note** - **The process of Borrowing bits from Host ID to generate the subnet ID is also called as Subnetting**
 * **No of bit borrowed depends on our requirement**
 * Let's take an example
 
 
 > Example 1  
 > > ![alt text](image-48.png) 
+
+```txt
+I want to create 4 subnets(basically divide that class network in 4 pieces. so to divide how many bits I need to borrow? 2 bits - right? right. Because 2^2 will give 4 combination.)
+So out of 8 bits, 2 bit taken borrowed from Host ID. So, first 2 bits will represent subnet ID and 6 bit will be left for Host ID . And with the 2 bit borrowed we will have 2^2 = 4 subnets. 
+```
 
 > First Subnet  
 >> ![alt text](image-49.png)  
@@ -115,9 +120,24 @@ Note - The process of Borrowing bits from Host ID to generate the subnet ID is a
 
 > Shortcut  
 > > ![alt text](image-57.png)  
+
+where SID = Subnet ID and DBA = Directed Broadcast address
+
 > > ![alt text](image-58.png)  
 
 # Homework - Question 2
+I want to create 8 subnets. how many bit I have to borrow? 3 bit. Because from 3 bits 8 combination is possible. (basically 8 groups can be made.)
+e.g. 
+000 => for 1st subnet first 3 bits will be fixed to 000 and remaining 5 bits will vary from all 0's to all 1's  
+001 => for 2nd subnet first 3 bits will be fixed to 001 and remaining 5 bits will vary from all 0's to all 1's  
+010 => for 3rd subnet first 3 bits will be fixed to 010 and remaining 5 bits will vary from all 0's to all 1's  
+011  
+100    
+101  
+110  
+111  
+
+
 ![alt text](image-59.png)  
 * 8 combination banane ke liye 3 bit chahiye minimum
 * ![alt text](image-60.png)
