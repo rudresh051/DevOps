@@ -7,9 +7,21 @@
 > Question 7  
 > ![alt text](image-38.png)
 > Refer Lecture 3 at 33:30 for concept
+```
+The source ID is invalid IP, because host ID is all 0 in the host octet. Then that IP address cannot be assigned to any computer
+```
 
 > Question 8  
 > ![alt text](image-39.png)  
+
+```
+Explanation - 
+We have source IP as - 23.0.0.97
+And let's suppose we have destination IP as - 29.3.5.7
+
+And If we reverse in above the SIP and DIP . i.e. Source IP is 29.3.5.7 and Destination IP as 23.0.0.97 then this will also work. so correct option is A
+
+```
 
 
 > Question 9  
