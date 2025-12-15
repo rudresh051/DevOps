@@ -152,14 +152,18 @@ e.g.
 > ![alt text](image-64.png)
 
 
-# Subnet Mask
+# Concept - Subnet Mask
 * We saw Network mask. Now let's see subnet mask
-* It is a 32 bit number used to indicate no. of bits borrowed from host-id and there positions based on the following rules
-* Rule 1 - No of 1's in the subnet mask indicate NID + SID
-* Rule 2 - No of 0's in the subnet mask indicate HID part.
+* It is a 32 bit number used to indicate no. of bits borrowed from host-id and there positions based on the following rules - 
+
+Remember -  
+* **Rule 1** - No of **1's** in the subnet mask indicate **NID + SID**
+* **Rule 2** - No of **0 's** in the subnet mask indicate **HID part.**
 * Subnet Mask ka concept kyun aaya? kyunki humne subnet me divide kiya isliye aaya
 
 # Default subnet Mask
+
+Default subnet mask represents when we haven't taken any bit borrowed from Host ID
 
 ![alt text](image-65.png)
 
@@ -178,6 +182,9 @@ e.g.
 ![alt text](image-71.png)
 
 # Question 3
+
+Important - The extra 1's in the host ID represent Host ID
+
 ![alt text](image-72.png)
 
 ![alt text](image-73.png)
