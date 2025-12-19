@@ -69,3 +69,9 @@ Similary default subnet for class C is 255.255.255.0 And any extra bits indicate
 Same as above
 
 ![alt text](image-130.png)
+
+## Question 7
+
+![alt text](image-131.png)
+
+For class C subnet to be possible, no of minimum ones required is 24. so subnet for class C is not possible in above.
