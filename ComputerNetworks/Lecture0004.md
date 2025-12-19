@@ -157,7 +157,7 @@ e.g.
 * It is a 32 bit number used to indicate no. of bits borrowed from host-id and there positions based on the following rules - 
 
 Remember -  
-* **Rule 1** - No of **1's** in the subnet mask indicate **NID + SID**
+* **Rule 1** - No of **1's** in the subnet mask indicate **NID + SID** . But remember Network ID depends upon class
 * **Rule 2** - No of **0 's** in the subnet mask indicate **HID part.**
 * Subnet Mask ka concept kyun aaya? kyunki humne subnet me divide kiya isliye aaya
 
@@ -171,6 +171,8 @@ Default subnet mask represents when we haven't taken any bit borrowed from Host 
 
 # Question 1
 ![alt text](image-67.png)
+
+The NID given is 200.200.200.0 which indicate it's of class C. so 24 bits of 1's are confirmed.
 
 ![alt text](image-68.png)
 

@@ -38,3 +38,34 @@ And after that to find the host id , subtract the subnet id from ip value( i.e. 
 Same as above question. Just to the bitwise Anding with Mask address as IP address address is given. You can also use shortcut to quikly write down values and add the common in both(IP address and mask address)
 
 ![alt text](image-125.png)
+
+
+## Important discussion
+
+![alt text](image-126.png)
+
+In above the number 0's indicate Host ID part. therefore HID = 5 bit
+
+**In the above example the above subnet mask can be used for class A, class B or class C. Because in above the number of 1's is greater than 8, greater than 16 and greater than 24. So that's why above subnet mask can be used for class A, class B and Class C**
+
+In the above example from subnet mask, we can't say that subnet ID is of 27 bits. Because default subnet mask of class A is 255.0.0.0 and some extra one's are present we can say the number of bits borrowed for class A.
+
+Similarly default subnet mask of class B is 255.255.0.0 and any extra bits indicate subnet ID but it can also be for class A
+Similary default subnet for class C is 255.255.255.0 And any extra bits indicate subnet ID but it can also be for class A , class B and class C
+
+
+## Question 5
+
+![alt text](image-127.png)
+
+![alt text](image-128.png)
+
+**Shortcut Note - To find the no. of subnet in above find how many extra 1's are present.**
+
+![alt text](image-129.png)
+
+
+## Question 6
+Same as above
+
+![alt text](image-130.png)
