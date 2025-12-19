@@ -30,6 +30,11 @@ Write the 120 as bits value starting from larger values (128, 64, 32, 16, 8, 4, 
 And then whichever are common add those value.
 
 Just remember - To find the subnet ID do the bitwise Anding with subnet mask.  
-And after that to find the host id , subtract the subnet id from ip value( i.e. 120 - 40)
+And after that to find the host id , subtract the subnet id from ip value( i.e. 120 - 40 = 80)
 
 ![alt text](image-91.png)
+
+## Question 4
+Same as above question. Just to the bitwise Anding with Mask address as IP address address is given. You can also use shortcut to quikly write down values and add the common in both(IP address and mask address)
+
+![alt text](image-125.png)
