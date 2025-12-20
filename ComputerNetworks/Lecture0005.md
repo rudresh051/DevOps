@@ -140,3 +140,28 @@ from above we need to find out the subnet number also
 ![alt text](image-143.png)
 
 ![alt text](image-142.png)
+
+## Question 16
+
+![alt text](image-144.png)
+
+
+## Question 17
+
+To find the subnet ID , basically change all the host ID to zeros and then find the value 
+
+![alt text](image-145.png)
+
+## Question 18
+
+![alt text](image-146.png)
+
+## Question 19
+
+![alt text](image-147.png)
+
+![alt text](image-148.png)
+
+## Question 20
+
+![alt text](image-149.png)
