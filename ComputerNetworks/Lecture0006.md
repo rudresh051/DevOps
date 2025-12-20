@@ -98,6 +98,29 @@ AD Rule -
 
 ## Question 12
 
+![alt text](image-176.png)
+
+## Question 13
+
+![alt text](image-177.png)
+
+## Question 14
+
+![alt text](image-178.png)
+
+## Question 15
+
+![alt text](image-179.png)
+
+number of zeros indicate Host ID part
+
+## Question 16
+
+![alt text](image-180.png)
+
+![alt text](image-181.png)
+
+for above shortcut will not work. need to check. To make 31 , 5 bits will be required.
 
 
 
