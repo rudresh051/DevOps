@@ -54,12 +54,28 @@ third part =>
 
 
 ## Question 6
+![alt text](image-160.png)
 
+![alt text](image-161.png)
+
+![alt text](image-162.png)
 
 ## Question 7
+![alt text](image-163.png)
 
+![alt text](image-164.png)
 
+![alt text](image-165.png)
+ 
 ## Question 8
+
+![alt text](image-166.png)
 
 
 ## Question 9
+
+![alt text](image-167.png)
+
+## Question 10
+
+
