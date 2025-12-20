@@ -131,7 +131,12 @@ So in above last 4 bit of HID are zeros. Just find which options have last 4 bit
 
  ## Question 15
 
- 
+ ![alt text](image-140.png)
 
+![alt text](image-141.png)
 
+from above we need to find out the subnet number also
 
+![alt text](image-143.png)
+
+![alt text](image-142.png)
