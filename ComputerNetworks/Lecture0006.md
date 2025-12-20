@@ -77,5 +77,28 @@ third part =>
 ![alt text](image-167.png)
 
 ## Question 10
+![alt text](image-168.png)
+
+## Question 11
+![alt text](image-169.png)
+
+![alt text](image-170.png)
+
+![alt text](image-171.png)
+
+![alt text](image-172.png)
+
+![alt text](image-173.png)
+
+AD Rule -  
+
+![alt text](image-174.png)
+
+![alt text](image-175.png)
+
+## Question 12
+
+
+
 
 
