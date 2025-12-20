@@ -75,3 +75,63 @@ Same as above
 ![alt text](image-131.png)
 
 For class C subnet to be possible, no of minimum ones required is 24. so subnet for class C is not possible in above.
+
+## Question 8
+
+![alt text](image-132.png)
+
+11111111.11111100.00000000.00000000  
+
+No. of 0's = 18  
+therefore Host ID = 18 bit  
+No. of IP address/subnet = 2^18  
+No. of Host/subnet = 2^18-2   
+No. of 1's = 14  
+
+Class A - NID + SID = 14  
+8 + Subnet ID = 14  
+Subnet ID = 6 bit in class A. therefore no. of subnet in class A = 2^6  
+
+No. of subnet in class B - Not possible. Because minimum number of 1's required for class B is 16 bit.
+
+No. of Subnet in Class C - Not possible. Because minimum number of 1's required in class C is 24 bit.  
+
+## Question 9
+
+![alt text](image-133.png)
+
+Shortcut - Just find how many extra 1's are present. Class is not given in question so we will have two correct answer.
+
+## Question 10
+
+![alt text](image-134.png)
+
+## Question 11
+
+![alt text](image-135.png)
+
+Important - What is the meaning of direct broadcast address? whenever we have all 1's in the host ID part
+
+![alt text](image-136.png)
+
+So in above last 4 bit of HID are zeros. Just find which options have last 4 bit as 1's  and those can be direct broadcast address.
+
+## Question 12
+
+![alt text](image-137.png)
+
+## Question 13
+
+![alt text](image-138.png)
+
+
+## Question 14
+
+ ![alt text](image-139.png)
+
+ ## Question 15
+
+ 
+
+
+
