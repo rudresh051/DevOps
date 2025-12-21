@@ -73,6 +73,48 @@ Subnet mask - 255.255.00011111.0
 
 ![alt text](image-196.png)
 
+![alt text](image-197.png)
+
+You can do the bitwise ANDing or just find the upto which bits are same.
+
+## Question 8
+
+![alt text](image-198.png)
+
+
+![alt text](image-199.png)
+
+**Note - If DIP matched with more than one interface then Router forward the packet to the interface which have longest subnet mask.[i.e. more no. of 1's in the subnet mask]**
+
+Note - First start witht the longest subnet mask
+
+## Question 9
+
+![alt text](image-200.png)
+
+
+![alt text](image-201.png)
+
+## Question 10
+![alt text](image-202.png)
+
+## Question 11
+
+![alt text](image-203.png)
+
+![alt text](image-204.png)
+
+![alt text](image-205.png)
+
+![alt text](image-206.png)
+
+![alt text](image-207.png)
+
+![alt text](image-208.png)
+
+
+
+
 
 
 
