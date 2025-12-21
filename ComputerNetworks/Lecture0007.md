@@ -112,8 +112,49 @@ Note - First start witht the longest subnet mask
 
 ![alt text](image-208.png)
 
+![alt text](image-209.png)
 
 
+Y and Z can be interchanged as both have 50 host requirement.
+
+![alt text](image-210.png)
+
+all four options are correct.
+
+variable length subnet mask concept covered in above question.
+
+## Question 12
+
+![alt text](image-211.png)
+
+![alt text](image-212.png)
+
+![alt text](image-214.png)
+
+option E is correct 
+
+![alt text](image-213.png)
+
+## Question 13
+H.W  
+
+![alt text](image-215.png)
+
+## Question 14
+
+![alt text](image-216.png)
+
+## Question 15
+
+![alt text](image-217.png)
+
+## Question 16
+
+![alt text](image-218.png)
+
+## Question 17
+
+![alt text](image-219.png)
 
 
 
