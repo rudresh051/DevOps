@@ -26,3 +26,55 @@ shortcut - just take the 3rd octet of each IP.
 write down the subnet ID from subnet mask.
 then how will you write 38, 48, 68 from its 4 bits which are 1's in subnet ID(basically starting from 128...1)
 
+## Question 3
+
+![alt text](image-187.png)
+
+## Question 4
+
+![alt text](image-188.png)
+
+above can be done by doing bitwise ANDing but that will take time  
+Shortcut -   
+
+![alt text](image-189.png)
+
+## Question 5
+
+![alt text](image-190.png)
+
+![alt text](image-191.png)
+
+![alt text](image-192.png)
+
+## Question 6
+
+![alt text](image-193.png)
+
+Normal logic is that - for same network , we should have same subnet ID
+
+Basically doing bitwise ANDing of IP addresses of each options. If subnet ID is same then that option will be correct if both have same subnet ID
+
+So basically you have to do 8 AND operations. how to save time?
+
+Option A - No need to check as second octet is different in both IP addresses. Since first two octet of subnet mask is 255 and 255.
+
+Option C - second octet values are 203 and 204. No need to check i.e. bitwise ANDing to find the subnet ID. here 2nd octet is also differ.
+
+We need to focus on 3rd octet last 5 bits.  
+
+Subnet mask - 255.255.00011111.0  
+
+![alt text](image-194.png)
+
+![alt text](image-195.png)
+
+## Question 7
+
+![alt text](image-196.png)
+
+
+
+
+
+
