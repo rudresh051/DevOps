@@ -14,7 +14,7 @@
 * Notation is a.b.c.d in classful Addressing
 * But in **classless Addressing** how would I tell it belongs to which class? so for that we have different notation
   * e.g. **a.b.c.d|n where n is Network ID or Subnet mask**
-  * e.g. 10.9.32.54|2 where Network id = 22 bit size and host id size = 32-22 = 10 bit
+  * e.g. 10.9.32.54|22 where Network id = 22 bit size and host id size = 32-22 = 10 bit
     * Number of IP addresses = 2^10 = 1024
     * Number of Host = 2^10 - 2 = 1022
 
@@ -81,7 +81,8 @@ This gives flexibility:
 
 what is the meaning of contiguous? It means IP address should be continuous block
 
-2. **Block size must be a power of 2. That means 512, 256. 1000 is not possible**
+2. **Block size must be a power of 2. That means 512, 256.  
+1000 is not possible**
 
 
 * How to find Quotient and remainder when we divide number by 2 or 10
@@ -93,7 +94,7 @@ what is the meaning of contiguous? It means IP address should be continuous bloc
 * If block size is given in power of 2 we can easily find network ID and host ID
 * Host ID - 5 bit and Network ID is 27
 
-3. **First IP address of the block must be divisible by size of the block**
+1. **First IP address of the block must be divisible by size of the block**
 
 ![alt text](image-96.png)
 
