@@ -103,6 +103,12 @@ what is the meaning of contiguous? It means IP address should be continuous bloc
 > what is the meanning of divisible? it basically means the Host ID will be all zeros. so the first IP address will be all zeros
 > > Basically it wants to convey the first IP address will be **block ID**.(Similar to Network ID and Subnet ID)
 
+Block है तो block ID बनाना है  
+network है तो network ID बनाना है  
+subnet है तो subnet ID बनाना है  
+
+
+
 ![alt text](image-98.png)
 
 > Note - First IP address must be used as a block ID
@@ -110,7 +116,7 @@ what is the meaning of contiguous? It means IP address should be continuous bloc
 
 
 * Question - Last IP is DBA - Directed Broadcast address. And host ID is all 1's
-* 4th rule is not required - As if first 3 rules are true for a block and 4 th rule will be automatically true. Basically all bits of host id in the block will be ones
+* 4th rule is not required - As if first 3 rules are true for a block and 4th rule will be automatically true. Basically all bits of host id in the block will be ones
 
 ## Example - 
 100.100.100.64  
@@ -129,12 +135,18 @@ that means this block can be assigned to a customer.
 ## Representation of CIDR
 ![alt text](image-100.png)
 
+you can take any IP address. e.g. in below. all IP address will be derived from that
+
 ![alt text](image-101.png)
 
 
 ## Example 2
 ![alt text](image-104.png)
 
+* first IP address will represent block ID as all bits in that host id will be zeros
+* DBA cannot be assigned to any host
+
+यहाँ पर हम network को block कह रहें हैं ।
 
 ![alt text](image-102.png)
 
@@ -145,3 +157,26 @@ First IP address will represent Block ID(BID) and it cannot be assigned to any h
 Last IP address will represent DBA
 
 # Subnetting in CIDR
+
+how to do subnetting in classless addressing?
+
+## Example - 
+
+![alt text](image-220.png)
+
+If I want to create 4 subnet from above host ID, I need to take 2 bit borrow.
+
+![alt text](image-221.png)
+
+so each subnet will have -  
+2^7/4 = 2^7/2^2 = 2^5 = 32 IP addresses
+
+![alt text](image-222.png)
+
+how to find range of above IP addresses in above subnet 
+
+![alt text](image-223.png)
+
+to write the n after the IP address, just check what's the number of bits used in subnet id or 32 minus bits used in subnet hosts
+
+![alt text](image-224.png)
