@@ -1,4 +1,5 @@
-# Supernetting
+# Computer Networks 10 | Supernetting
+
 ```
 **Supernetting** (also known as **route aggregation** or **CIDR aggregation**) is a technique in computer networking used to **combine multiple smaller networks (subnets) into one larger network**.
 
@@ -123,3 +124,35 @@ Common prefix = 23 bits
 
 
 ```
+
+* We will talk about supernetting in both classful and classless addressing
+
+## Supernetting in Classless addressing
+
+![alt text](image-244.png)
+
+Note - Class B, class cannot be combined. It also has some restriction
+
+## Rules for supernetting
+a. **Network ID must be contiguous**
+Contiguous means IP addresses must be in sequence.
+
+b. **Size of the Network must be same & No. of network must be a power of 2**
+c. **First Network ID must be divisible by size of the supernet.**
+
+![alt text](image-245.png)
+
+![alt text](image-247.png)
+
+![alt text](image-246.png)
+
+![alt text](image-248.png)
+
+## Supernet Mask
+It is a 32 bit number used to generate a single IP address for the group of network based on the following two rules  
+
+**Rule 1 - No of 1s in the supernet mask indicate fixed part.**  
+**Rule 2 - No of 0s in the supernet mask indicate variable part.**
+
+![alt text](image-249.png)
+
