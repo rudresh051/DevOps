@@ -76,6 +76,26 @@ for 16 subnets - 4 bit borrow
 
 ![alt text](image-240.png)
 
+correct options - a, c, d
+
+## Question 8
+
+![alt text](image-241.png)
+
+![alt text](image-242.png)
+
+No options valid from above.
+
+we have second way to do above question 
+
+![alt text](image-243.png)
+
+Shortcut - In above A will have /21 because only 1 bit is required. and for B 2 bit is required to borrow. so c and d options are not correct. 
+
+option b is also not possible because both have same subnet ID and in question we are assigning half to A and quarter to B
+
+
+
 
   
 
