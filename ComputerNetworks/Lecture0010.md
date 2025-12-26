@@ -137,7 +137,7 @@ Note - Class B, class cannot be combined. It also has some restriction
 a. **Network ID must be contiguous**
 Contiguous means IP addresses must be in sequence.
 
-b. **Size of the Network must be same & No. of network must be a power of 2**
+b. **Size of the Network must be same & No. of network must be a power of 2**  
 c. **First Network ID must be divisible by size of the supernet.**
 
 ![alt text](image-245.png)
@@ -198,4 +198,27 @@ network id = 32-10 = 22 bit
 
 
 
-## Questions
+## Question 1
+
+![alt text](image-254.png)
+
+Final answer - 56.6.96.0/19
+
+## Question 2
+
+![alt text](image-255.png)
+
+
+![alt text](image-256.png)
+
+Now combine these 2  
+
+![alt text](image-257.png)
+
+![alt text](image-258.png)
+
+![alt text](image-259.png)
+
+## Question 3
+
+![alt text](image-260.png)
