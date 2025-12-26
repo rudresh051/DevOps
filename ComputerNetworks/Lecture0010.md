@@ -156,3 +156,46 @@ It is a 32 bit number used to generate a single IP address for the group of netw
 
 ![alt text](image-249.png)
 
+Now we know that -  
+If we do IP Address ANDing with Subnet Mask it gives Subnet ID.  
+So in similar way When we do IP Address ANDing with Supernet Mask it gives **Supernet ID**
+
+We can take any IP address from above example of that supernet IP address.
+
+![alt text](image-250.png)
+
+
+Example - 
+N1 = 128.56.24.0/24  
+N2 = 128.56.25.0/24    
+N3 = 128.56.26.0/24  
+N4 = 128.56.27.0/24  
+
+We can take any IP address from above supernet after combining.
+
+**And if we do bitwise ANDing with Supernet Mask of any IP address it will give Supernet ID**
+
+e.g.  
+
+![alt text](image-251.png)
+
+**what is the shortcut to find the supernet ID?**  
+
+Supernet ID = First IP Address always
+
+e.g. it's similar to like we have a block, then first IP address of that block is called block id, we have network and it's first IP address is called Network ID.
+
+**Shortcut for Supernet Mask**  
+Total size of supernet.
+e.g. in above 2^8 + 2^8 + 2^8 + 2^8 = 2^10  
+
+so from above host id = 10 bit  
+network id = 32-10 = 22 bit  
+
+![alt text](image-252.png)
+
+![alt text](image-253.png)
+
+
+
+## Questions
