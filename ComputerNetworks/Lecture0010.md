@@ -222,3 +222,16 @@ Now combine these 2
 ## Question 3
 
 ![alt text](image-260.png)
+
+find the range of above IP address
+
+![alt text](image-261.png)
+
+![alt text](image-262.png)
+
+![alt text](image-263.png)
+
+so above 2 cannot be combined
+
+question is asking "collectively used"
+so both of them are answers
