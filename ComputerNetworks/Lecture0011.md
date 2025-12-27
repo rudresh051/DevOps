@@ -82,5 +82,35 @@ first option will be correct
 
 first supernet ID(00) first ip and last supernet id(11) last ip
 
+![alt text](image-287.png)
 
+Ultimately findout the supernet ID and last network DBA(direct broadcast address)
+no need to find for N2, N3 in above. But questions can be modified for N2, N3 range.
 
+## Question 7
+
+![alt text](image-288.png)
+
+![alt text](image-289.png)
+
+![alt text](image-290.png)
+
+## Question 8
+
+![alt text](image-291.png)
+
+![alt text](image-292.png)
+
+option 4 202.61.144.0/21 will not be correct because it is out of range.  
+
+![alt text](image-293.png)
+
+![alt text](image-294.png)
+
+therefore second option is correct
+
+third option is also correct
+
+## Question 9
+
+![alt text](image-295.png)
