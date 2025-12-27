@@ -25,3 +25,13 @@ we cannot apply supernetting on single network
 ![alt text](image-269.png)
 
 ![alt text](image-270.png)
+
+## Difference between Subnet Mask and Supernet Mask
+
+![alt text](image-271.png)
+
+![alt text](image-272.png)
+
+![ ](image-273.png)
+
+If it is not subnet then it will be supernet. no need to check if it is supernet
