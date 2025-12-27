@@ -62,3 +62,25 @@ Option A
 
 ![alt text](image-279.png)
 
+![alt text](image-280.png)
+
+![alt text](image-281.png)
+
+## Question 5
+![alt text](image-283.png)
+
+
+![alt text](image-282.png)
+
+![alt text](image-284.png)
+
+![alt text](image-285.png)
+
+![alt text](image-286.png)
+
+first option will be correct
+
+first supernet ID(00) first ip and last supernet id(11) last ip
+
+
+
