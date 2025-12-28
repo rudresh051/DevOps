@@ -1,5 +1,108 @@
 # Types of Error and Hamming Distance
 
+## Error
+If data received is not same as the data sent then this means error has occured.
+
+Types of Errors -  
+1. Signle-Bit error
+2. Burst Error  
+
+## Single bit error - 
+The term single bit error means that only 1 bit of given data unit is changed from 1 to 0 or 0 to 1.
+
+e.g.  
+![alt text](image-307.png)
+
+
+## Burst Error
+The term burst error means that 2 or more bits in the data unit have changed from 1 to 0 or from 0 to 1.  
+![alt text](image-308.png)
+ 
+Note - **Burst Length** - To find the burst error mark the first bit which has changed and last bit and then count the number of bits
+
+
+Which error has more chance to get affected?
+
+![alt text](image-309.png)
+
+So burst bit error has more chance.
+
+**Formula -**  
+Number of corrupted bits or affected bits = Data rate * Noise duration
+
+## Redundancy 
+1. The central concept in detecting or correcting error is Redundancy.
+2. To be able to detect or correct the errors, we need to **send some extra bits with our data**. These redundant bits are added by the sender and removed by the receiver.
+
+![alt text](image-310.png)
+
+
+![alt text](image-311.png)
+
+## Hamming Distance
+![alt text](image-312.png)
+
+To find the hamming distance just find out how many bits have changed. but if data size increases it's better to go with ex-or method
+
+How to find Ex-OR?
+To find the hamming distance just do the ex-or operation between two set of data or more
+
+0 ex-or 0 = 0  
+0 ex-or 1 = 1  
+1 ex-or 1 = 0  
+1 ex-or 0 = 1  
+
+Basically ex-or is Mod2Addition or Mod2Sum
+
+add the bits and then divide by 2. remainder is the output
+
+1 ex-or 1 ex-or 1 = 1
+
+## Minimum Hamming Distance
+
+![alt text](image-313.png)
+
+## Minimum Hamming Distance for Error Detection
+
+Minimum Hamming distance required **to detect d bit error = d+1**
+
+Minimum hamming distance required to correct "d" bit error = 2d + 1  
+
+
+## Question 1
+
+![alt text](image-314.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## 🧩 **1. Types of Errors in Computer Networks**
 
