@@ -114,3 +114,36 @@ third option is also correct
 ## Question 9
 
 ![alt text](image-295.png)
+
+![alt text](image-296.png)
+
+![alt text](image-297.png)
+
+![alt text](image-298.png)
+
+128 customer means 128 subnet
+To create 128 subnet we need to take 7 bit borrow
+
+![alt text](image-299.png)
+
+first group first customer
+
+![alt text](image-300.png)
+
+![alt text](image-301.png)
+
+![alt text](image-302.png)
+
+For second and third group we need to take two more bit borrow
+
+![alt text](image-303.png)
+
+* Second group
+  
+![alt text](image-304.png)
+
+So in above we have 19 bit NID and 13 bit HID
+
+now in second group we have 128 customer. which basically means 128 subnet. so again we need to take 7 bit borrow.
+
+![alt text](image-305.png)
