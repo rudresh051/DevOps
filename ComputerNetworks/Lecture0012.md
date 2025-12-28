@@ -73,6 +73,18 @@ Minimum hamming distance required to correct "d" bit error = 2d + 1
 
 ![alt text](image-314.png)
 
+![alt text](image-315.png)
+
+p = 3 and q = 1
+
+## Question 2
+
+![alt text](image-316.png)
+
+## Question 3
+
+![alt text](image-317.png)
+
 
 
 
