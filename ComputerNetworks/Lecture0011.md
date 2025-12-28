@@ -147,3 +147,9 @@ So in above we have 19 bit NID and 13 bit HID
 now in second group we have 128 customer. which basically means 128 subnet. so again we need to take 7 bit borrow.
 
 ![alt text](image-305.png)
+
+![alt text](image-306.png)
+
+next will be 128 + 63 = 191
+next will be 192 + 63 = 255  
+
