@@ -66,7 +66,7 @@ add the bits and then divide by 2. remainder is the output
 
 Minimum Hamming distance required **to detect d bit error = d+1**
 
-Minimum hamming distance required to correct "d" bit error = 2d + 1  
+Minimum hamming distance required  **to correct "d" bit error = 2d + 1**
 
 
 ## Question 1
@@ -75,16 +75,57 @@ Minimum hamming distance required to correct "d" bit error = 2d + 1
 
 ![alt text](image-315.png)
 
-p = 3 and q = 1
+Least number of bits changed is 3  
+So minimum hamming distance is 3  
+So p = 3  
 
+Now q is for how many bits error can be corrected  
+now, wkt minimum hamming distance required to correct d bit error = 2d + 1  
+so, 2d+1 = 3  
+2d = 2  
+d = 1  
+so q is 1.
+
+p = 3 and q = 1
+ 
 ## Question 2
 
 ![alt text](image-316.png)
+
+Distance means it's asking for minimum hamming distance  
+No pair has only 1 bit changed so d is not correct option.
+minimum bits changed in any pair is 2. so that's the answer.  
+
 
 ## Question 3
 
 ![alt text](image-317.png)
 
+Least no. of bits changed in any pair is 4  
+
+so minimum hamming distance is 4  
+
+minimum distance required to correct 'd' bit error is 2d+1  
+
+so 2d+1 = 4  
+d = 1.5  
+now lower boundry or upper boundry  
+take lower boudary  
+d = 1  
+why lower boundry?  
+
+![alt text](image-318.png)
+
+## Question 4
+
+![alt text](image-319.png)
+
+in this question we are given with d value which is equal to 5  
+so put d = 5 in 2d+1  
+so it is 11  
+
+## Question 5
+![alt text](image-320.png)
 
 
 
