@@ -39,7 +39,7 @@ basically whatever remainder you got replace it with the zeros appended in the d
 
 ![alt text](image-323.png)
 
-If Receiver received uncorrupted data  
+**If Receiver received uncorrupted data**  
 ![alt text](image-324.png)
 
 CRC is 3 bit so remainder is 3 bit - 3 zeros
@@ -49,3 +49,18 @@ CRC is 3 bit so remainder is 3 bit - 3 zeros
 so dataword will be accepted = [1001001]
 
 And if remainder would have been non-zero receiver would then reject it
+
+**If Receiver received corrupted data**  
+![alt text](image-325.png)
+
+so in above syndrom not equal to zero  
+so dataword will be rejected
+so that means there is some error in that.
+CRC is error detection scheme. but which bit is changed reciver doesn't know  
+
+## Polynomial Notation in CRC
+* Data word = d(x)
+* Codeword = c(x)
+* Generator = g(x)
+* Syndrome = s(x)
+* Error = e(x)
