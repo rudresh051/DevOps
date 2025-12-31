@@ -120,12 +120,16 @@ why lower boundry?
 
 ![alt text](image-319.png)
 
+In above question it is asking for "correct" d bit error so formula will be 2d+1
+
 in this question we are given with d value which is equal to 5  
 so put d = 5 in 2d+1  
 so it is 11  
 
 ## Question 5
 ![alt text](image-320.png)
+
+in above question it is asking for "detect"
 
 
 
