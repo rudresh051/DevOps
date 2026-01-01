@@ -41,6 +41,24 @@ convert 1001 which is non-zero into decimal. so 9th bit is corrupted.
 
 ![alt text](image-351.png)
 
+## Question 2
+
+![alt text](image-352.png)
+
+![alt text](image-353.png)
+
+## Question 3
+
+![alt text](image-354.png)
+
+![alt text](image-355.png)
+
+## Question 4
+
+![alt text](image-356.png)
+
+![alt text](image-357.png)
+
 
 
 
