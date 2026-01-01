@@ -59,6 +59,9 @@ convert 1001 which is non-zero into decimal. so 9th bit is corrupted.
 
 ![alt text](image-357.png)
 
+Note - By default Odd parity is preferable over even parity if no parity is given in the question  
+Proof is not required in crash course
+
 
 
 
