@@ -58,9 +58,57 @@ so dataword will be rejected
 so that means there is some error in that.
 CRC is error detection scheme. but which bit is changed reciver doesn't know  
 
-## Polynomial Notation in CRC
+## Polynomial Notation in CRC(Cyclic Redundancy Check)
 * Data word = d(x)
 * Codeword = c(x)
 * Generator = g(x)
 * Syndrome = s(x)
 * Error = e(x)
+
+## How to apply the CRC step by step
+1. Determine the degree 'r' of g(x) (highest power)
+2. Determine x^rd(x)
+3. Determine the remainder by dividing x^rd(x) by g(x)
+4. Codeword = x^rd(x) + remainder
+
+Let's take an example -  
+
+First find d(x) -  
+![alt text](image-326.png)
+
+**step1 -** 
+
+![alt text](image-328.png)
+
+**step2 -** 
+
+![alt text](image-329.png)
+
+**step3 -** Determine the remainder by dividing x^r.d(x) by g(x)
+
+g(x) = x^3 + x^2 + 1   
+r = 3  
+d(x) = x^9 + x^6 + x^3  
+
+![alt text](image-327.png)
+
+above x^9 and x^6 will be cancelled but not by concept of substraction
+
+x^9 means 9th bit is 1 , so by ex-or 1 , 1 becomes 0  
+
+similarly for x^6  
+
+![alt text](image-330.png)
+
+so from above image CRC is 111 which is same as previous example  
+
+**step 4 -**  
+codeword = x^r.d(x) + Remainder  
+x^9 + x^6 + x^3 + x^2 + x + 1  
+
+![alt text](image-331.png)
+
+
+
+
+
