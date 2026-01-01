@@ -84,6 +84,10 @@ First find d(x) -
 
 ![alt text](image-329.png)
 
+above is nothing but data with appended zeros  
+
+![alt text](image-332.png)
+
 **step3 -** Determine the remainder by dividing x^r.d(x) by g(x)
 
 g(x) = x^3 + x^2 + 1   
@@ -109,6 +113,45 @@ x^9 + x^6 + x^3 + x^2 + x + 1
 ![alt text](image-331.png)
 
 
+## Question 1
+
+![alt text](image-333.png)
+
+options are wrong in above questions.
+
+generator = x^3 + x + 1  
+
+message = 11000  
+
+![alt text](image-334.png)
+
+Ans is 100  
+
+## Question 2
+
+![alt text](image-335.png)
+
+![alt text](image-336.png) 
+
+option b is correct. Also after solving till step 2, options become clear
+
+## Question 3
+
+![alt text](image-337.png)
 
 
+![alt text](image-338.png)
 
+option b is correct
+
+## Question 4
+
+![alt text](image-339.png)
+
+## Question 5
+
+![alt text](image-340.png)
+
+## Question 6
+
+![alt text](image-341.png)
