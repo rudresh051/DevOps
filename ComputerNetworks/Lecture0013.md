@@ -155,3 +155,20 @@ option b is correct
 ## Question 6
 
 ![alt text](image-341.png)
+
+### CRC
+1. If the generator has more than one term and coefficient of x^0 is 1, all single bit error can be detected
+2. If a generator cannot divide x^t + 1 (t between 0 and n-1) then all isolated double error can be detected
+3. A generator that contains a Factor of x+1 can detect all odd numbered errors.
+
+* A good polynomial generator needs to have the following characteristics -  
+  * It should have atleast two terms
+  * The coefficient of the term x0 should be 1.
+  * It should not divide x^t + 1, for t between 2 and n-1
+  * It should have the factor x+1.
+
+## Question 7
+
+![alt text](image-342.png)
+
+option c
