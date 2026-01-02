@@ -138,3 +138,11 @@ So, therefore
 Note - Two **Network processes**, belongs to **different hosts** communicate over network, by exchanging "**messages**"
 
 ## Topic - Transport Layer
+Two Transport Layer Protocols -  
+1. UDP - User Datagram Protocol
+   1. Basic Protocol
+2. TCP - Transmission Control Protocol
+   1. UDP + Extra Services
+
+Analogy - needle and sword
+
