@@ -47,5 +47,37 @@ Packet switching analogy - Unreserved coach of train
 * Disadvantage - 
   * **Congestion** may occur **during routing**
 
-* **Packet-switched** network(analogy like road construction before driving a car)
+* **Packet-switched** network
+  * (analogy like road construction before driving a car)
 * **TCP/IP** Model (first this one was created by DARPA as we might think OSI model would have created first)
+  * It's a model which tells how the communication will happen in the packet-switched network
+
+## Topic - TCP/IP Model
+* Internet Protocol Stack[Suite]
+* Conceptual Model
+* Layered Architecture
+
+OSI is a superset. How the things will operate, design is given in TCP/IP Model. 
+
+* It's a 4-Layer Model
+  * Link Layer => Internet Layer => Transport Layer => Application layer
+* In Some books 5-Layer is mentioned
+  * Physical Layer => Link Layer => Internet Layer => Transport Layer => Application layer
+  * Don't go into debate
+  * IBM, Xerox, Digital Equipment corporation all started making their own model
+  * Then came ISO-OSI org
+
+## Topic - ISO - OSI Model (International Standard Organization)
+* Open System Interconnection
+* Conceptual Model
+* Datagram Network (they renamed it)
+  * Packet-switched network
+* Seven layer architecture
+  * Layer 7 - Application Layer(Host layer)
+  * Layer 6 - Presentation Layer(Host layer)
+  * Layer 5 - Session Layer(Host layer)
+  * Layer 4 - Transport Layer(Host layer)
+  * Layer 3 - Network Layer(Media Layer)
+  * Layer 2 - Data Link Layer(Media Layer)
+  * Layer 1 - Physical Layer(Media Layer)
+
