@@ -108,3 +108,33 @@ OSI is a superset. How the things will operate, design is given in TCP/IP Model.
     * But how P2 will know who is sending data ?
       * It will identify by source IP address and it's process running on P1
 * Local Port No.
+
+## Topic - Protocol
+* **Set of Rules**
+* **Define**, **how data is exchanged** between **network processes**
+
+## Application Layer Protocols (GATE Syllabus)
+1. DNS - Domain Name System
+2. HTTP - Hyper Text Transfer Protocol
+3. SMTP - Simple Mail Transfer Protocol
+4. FTP - File Transfer Protocol
+
+why so many protocol? 
+Analogy - To create PAN card we require different form, similarly for driving licence, voter id, aadhar card. So to deal with different servers we require procedure
+* Client(browser) changes it's protocols according to it's needs
+
+## Topic - Protocol Data Unit
+* **Protocol Data Unit(PDU)**
+  * **Basic Unit exchange**
+  * Between **same protocols** of **different machine**
+  * If server require SMTP we need to use SMTP, same with other protocols according to our need
+
+* In **"Internet Protocol Suite"(TCP/IP Model)**
+  * Application Layer PDU - "**Message**"
+* In "**OSI Model**"
+  * Application Layer PDU - "**Data**" or "**Message**". Analogy - It's like nickname just to call in general name
+
+So, therefore  
+Note - Two **Network processes**, belongs to **different hosts** communicate over network, by exchanging "**messages**"
+
+## Topic - Transport Layer
