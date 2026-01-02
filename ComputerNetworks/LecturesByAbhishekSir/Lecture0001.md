@@ -31,3 +31,21 @@
   * **Inefficient utilization** of **network resources**
   * **Expensive**
   * e.g. Analogy - A single person drives a whole car for travelling to work  
+
+So to make efficient use of resource we came up with Packet Switching
+
+## Topic - Packet Switching
+* No any **established required** between **sender** and **receiver**
+* **Store** and **forward** **network**
+* Example - **Internet** is a **packet-switched network**
+
+Packet switching analogy - Unreserved coach of train  
+
+* Advantage - 
+  * **Efficient utilization** of **network resources**[Lead to **better utilization** of **bandwidth resource**]
+  * Inexpensive
+* Disadvantage - 
+  * **Congestion** may occur **during routing**
+
+* **Packet-switched** network(analogy like road construction before driving a car)
+* **TCP/IP** Model (first this one was created by DARPA as we might think OSI model would have created first)
