@@ -81,3 +81,30 @@ OSI is a superset. How the things will operate, design is given in TCP/IP Model.
   * Layer 2 - Data Link Layer(Media Layer)
   * Layer 1 - Physical Layer(Media Layer)
 
+## Topic - Application Layer
+* Network application program(network)
+  * e.g. Browser
+* Process - Program in execution
+
+## Topic - Port Number
+* **Port Number**(16-bit) - Identifier, 2 byte
+* Used to Identify a **network process** in a machine
+  * Process involved in **Network Communication**
+* **Port Number** assigned/managed by **OS**
+  * Different with process id(pid)
+* Port Number should be unique within a machine
+  * two network process running in same host, can not have same port no. at a time
+* **Port Number** should be **unique within a machine**
+  * **two network process** running in **same host**, **can not have same port no.** at a time
+* Analogy - Everyone needs aadhar card. But if someone needs to foreign you need visa. Similarly the Process will be given port number those who require network communication
+
+## Topic - Two Process Communication
+* Communication Credentials
+  * Source Port No. - 16-Bit
+  * Source IPv4 Address - 32-Bit
+  * Destination IPv4 Address - 32-Bit
+  * Destination Port No. - 16-Bit
+    * Destination process will be identified with Port number P2 which is 16 bit
+    * But how P2 will know who is sending data ?
+      * It will identify by source IP address and it's process running on P1
+* Local Port No.
