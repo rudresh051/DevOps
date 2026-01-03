@@ -211,10 +211,14 @@ As we move down the payload size increases as each layer encapsulates it.
 
 ![alt text](image-5.png)
 
+![alt text](image-8.png)
+
 ![alt text](image-7.png)
 
 ![alt text](image-6.png)
 
 IP datagram should not be large as it should fit in Data Link Layer Frame.
+
+IP Datagram is not broken.
 
  
