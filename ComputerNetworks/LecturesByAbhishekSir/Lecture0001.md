@@ -247,5 +247,9 @@ Network Layer is responsible for tranmission of "Datagram".
 Data Link Layer is responsible for transmission of Frame.  
 Physical Layer is responsible for transmission of Bit.  
 
+## Summary
+1. Circuit and Packet Switching
+2. TCP/IP Model
+3. OSI Model
 
  
