@@ -54,3 +54,26 @@ Q. How two process client-server communicate? - Watch all 18 lectures :) to unde
 Correct option - d - Ping
 Ping is a utility, to check connectivity between either client-client or client-server
 
+## Topic - Stateless vs Stateful Protocol
+* **Server** maintains **no information** about past **client requests**
+  * **Every request** from **client** will be treated as new request by **server**
+  * So it is called **Stateless**
+  * > Don't talk about cookies now. Cookies is a business need. Cookies is not connected with state. It's personal interest. It's not a protocol need
+* **Protocols** that maintain "**state**" are **complex**
+  * [Past history(**state**) must be maintained]
+  * It is called **Stateful**
+
+* DNS server is a stateless protocol. It doesn't maintain any log regarding client requests. If it wants it can expand it's business like anything. It can recommend according to the needs to the clients.
+
+|Protocol|Stateless or Stateful|Description|
+|-|-|-|
+|DNS|Stateless|
+|HTTP|Stateless|
+|SMTP|Stateless/Stateful|Stateful within one session|
+|POP3|Statelss/Stateful|Post office protocol ;Stateless across multiple session|
+|IMAP|Stateful|Internet mail access protocol|
+|FTP|Stateful|
+
+![alt text](image-16.png)
+
+
