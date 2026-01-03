@@ -221,4 +221,31 @@ IP datagram should not be large as it should fit in Data Link Layer Frame.
 
 IP Datagram is not broken.
 
+## Question 1
+
+![alt text](image-9.png)
+
+![alt text](image-10.png)
+
+![alt text](image-11.png)
+
+![alt text](image-12.png)
+
+4 times 
+
+Above is called layered architecture. Network layer provide service to Tranport layer, Data link layer provide service to network layer. Actual work is done by Physical Layer 
+
+![alt text](image-13.png)
+
+## Topic - Protocol Data Unit - Summary
+
+![alt text](image-14.png)
+
+Application layer is responsible for transmission of "Message".  
+Transport layer is responsible for transmission of "Segment".  
+Network Layer is responsible for tranmission of "Datagram".  
+Data Link Layer is responsible for transmission of Frame.  
+Physical Layer is responsible for transmission of Bit.  
+
+
  
