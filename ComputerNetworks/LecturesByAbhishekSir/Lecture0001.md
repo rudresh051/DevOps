@@ -97,6 +97,7 @@ OSI is a superset. How the things will operate, design is given in TCP/IP Model.
 * **Port Number** should be **unique within a machine**
   * **two network process** running in **same host**, **can not have same port no.** at a time
 * Analogy - Everyone needs aadhar card. But if someone needs to foreign you need visa. Similarly the Process will be given port number those who require network communication
+* Definition - A port number is a way to identify a specific process to which a network message is to be forwarded when it arrives at a server
 
 ## Topic - Two Process Communication
 * Communication Credentials
