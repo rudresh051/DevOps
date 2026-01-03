@@ -144,5 +144,77 @@ Two Transport Layer Protocols -
 2. TCP - Transmission Control Protocol
    1. UDP + Extra Services
 
-Analogy - needle and sword
+Analogy - needle and sword. Both are required
 
+## Topic - Tranport Layer PDU
+* In "Internet Protocol Suite"(TCP/IP Model)
+  * For TCP - "**Segment**"
+  * For UDP - "**Datagram**"
+* In OSI Model
+  * Transport Layer PDU(For both TCP and UDP) - "**Segment**"
+
+ 
+![alt text](image.png)
+
+What if message size if long, then we need to break the message into smaller size
+
+Analogy - We need to send books of a library somewhere. And we are using van. Then we might need to use multiple vans
+
+![alt text](image-1.png)
+
+Transport Layer PDu - "Segment"  
+
+* **Sender** - 
+  * Divide application messages into segments
+  * Segments passes to network layer
+  * The above process is called segmentation
+* **Receiver** - 
+  * Reassemble segments into messages,
+  * Messages passes to application layer
+  * The above process is called Reassembly
+
+## Network Layer
+* Internet Protocol(IP)
+
+## Topic - Network Layer PDU
+* In "Internet Protocol Suite"(TCP/IP Model)
+  * Network Layer PDU - **Packet**
+  * Here it is called "Packet-switched Network"
+* In OSI Model
+  * Network Layer PDU - "**Datagram**" or Packet
+  * Here it is called Datagram Network
+
+IP Datagram or IP Packet or IP Fragment
+
+![alt text](image-2.png)
+
+
+As we move down the payload size increases as each layer encapsulates it.
+
+![alt text](image-4.png)
+
+![alt text](image-3.png)
+
+* Network Layer PDU - "**Datagram**"
+  * **Sender** - 
+    * Divide **segments** into **datagrams**
+    * **Datagrams** passes to **data link layer**
+    * It is called fragmentation
+  * **Receiver** - 
+    * Ressemble **datagrams** into **segments**
+    * **Segments** passes to **tranport layer**
+    * It is called Reassembly
+
+सेंडर का तोड़ने का, और रिसीवर का काम जोड़ने का
+
+## Topic Data Link Layer PDU
+
+![alt text](image-5.png)
+
+![alt text](image-7.png)
+
+![alt text](image-6.png)
+
+IP datagram should not be large as it should fit in Data Link Layer Frame.
+
+ 
