@@ -76,4 +76,28 @@ Ping is a utility, to check connectivity between either client-client or client-
 
 ![alt text](image-16.png)
 
+## Topic - Application layer protocols
+1. DNS - Domain Name System
+2. HTTP - Hyper Text Transfer Protocol
+3. SMTP - Simple Mail Transfer Protocol
+4. FTP - File Transfer Protocol
+
+All the above are Client-server model
+
+## Question 2
+
+![alt text](image-17.png)
+
+![alt text](image-18.png)
+
+## Topic - DNS Protocol
+* Domain Name System(DNS)
+* "Stateless" Application Layer Protocol
+* Client-Server Model
+* Used to translate **"Host Name"** into "**IP Address**"(Vice-versa)
+* **Hosts**(**DNS clients**) and **DNS server** communicate to **resolve names**[**Name/Address translation**]
+
+## Topic - DNS
+
+
 
