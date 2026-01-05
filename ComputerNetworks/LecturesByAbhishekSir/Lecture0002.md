@@ -164,4 +164,7 @@ RTT > 2 * Propagation delay
 
 ![alt text](image-27.png)
 
+## Topic - Web Page
+
+![alt text](image-28.png)
 
