@@ -97,7 +97,54 @@ All the above are Client-server model
 * Used to translate **"Host Name"** into "**IP Address**"(Vice-versa)
 * **Hosts**(**DNS clients**) and **DNS server** communicate to **resolve names**[**Name/Address translation**]
 
-## Topic - DNS
+## Topic - DNS Hierarchy
+* **Distributed Hierarchical Database** - **Global Hierarchy**
+  * Implemented in **hierarchy** of many **name servers**
+* DNS name servers - 
+  * 1. Root Name Servers
+  * 2. Top-Level Domain(TLD) Name
+  * 3. Authoritative Name Servers
+    * (Organization own DNS server)
+
+![alt text](image-19.png)
+
+![alt text](image-20.png)
+
+## Topic - DNS Messages
+* Two types of DNS messages
+  * 1. **DNS Query(Request) Message**
+  * 2. **DNS Response(Reply) Message**
+
+* **DNS Query** and **Response messages** have **same format**
+
+## Topic - DNS Name Resolution
+* **DNS Name Resolution** or **Lookup** - **DNS Resolver Program**
+* **Two Mode** - 
+  * **Iterated Query**
+  * **Recursive Query**
+DNS is a Address Resolution/Translation
+
+## Topic - Iterated Query
+* **Contacted server** replies with name(address) of server to contact
+
+e.g. Domain name - www.google.com
+
+![alt text](image-21.png)
+ 
+
+## Question 2
+![alt text](image-22.png)
+
+3 pair
+
+## Question 3
+
+![alt text](image-23.png)
+
+## Topic - Round Trip Time
+RTT - **Round Trip Time**
+* Time required for a small packet to travel from client to server and returned back
+
 
 
 
