@@ -145,6 +145,23 @@ e.g. Domain name - www.google.com
 RTT - **Round Trip Time**
 * Time required for a small packet to travel from client to server and returned back
 
+RTT > 2 * Propagation delay
 
+## Question 3
+
+![alt text](image-24.png)
+
+![alt text](image-25.png)
+
+
+## Topic - Recursive Query
+* Put burden of name resolution on Contacted name server
+* Heavy load at upper levels of hierarchy
+
+![alt text](image-26.png)
+
+* Local DNS is maintained by Router
+
+![alt text](image-27.png)
 
 
