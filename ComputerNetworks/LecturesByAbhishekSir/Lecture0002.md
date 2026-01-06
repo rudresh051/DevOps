@@ -168,3 +168,32 @@ RTT > 2 * Propagation delay
 
 ![alt text](image-28.png)
 
+## Topic - HTTP
+* **Hypertext Transfer Protocol**(HTTP)
+  * > Initially we used to send only HTML file
+  * > Now it is called objects
+  * > Now it is used to transfer objects between HTTP client and HTTP Server
+* '**Stateless**' Application Layer Protocol
+* **Client-Server** Model
+* **Client** - **Browser** (HTTP Client)
+  * **Requests** web objects to **Web Server**
+  * Receives web objects from Web Server
+  * Display web objects[Rendering Process]
+* **Server** - **Web Server**(HTTP Server)
+  * **Sends** **web objects** in response to **requests**
+
+## Topic - HTTP Messages
+Two types of HTTP Messages -   
+1. **HTTP Request Message**
+2. **HTTP Response Message**
+
+## Topic - HTTP uses TCP
+* **Client** initiates **TCP connection** to **server**
+  * **Server** accepts **TCP connection** from **client**
+* **3-way handshake process**
+  * [For **TCP Connection Establishment**]
+
+## Topic - TCP Connection Establishment
+
+
+
