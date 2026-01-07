@@ -183,6 +183,7 @@ RTT > 2 * Propagation delay
   * **Sends** **web objects** in response to **requests**
 
 ## Topic - HTTP Messages
+Similar to DNS Request message and response message , we have same in HTTP messages
 Two types of HTTP Messages -   
 1. **HTTP Request Message**
 2. **HTTP Response Message**
@@ -194,6 +195,41 @@ Two types of HTTP Messages -
   * [For **TCP Connection Establishment**]
 
 ## Topic - TCP Connection Establishment
+Let's see 3-way handshake process
 
+![alt text](image-29.png)
 
+* TCP Client is an HTTP Client and TCP Server is HTTP Server
 
+Detail we will see in next lecture
+
+## Topic - HTTP uses TCP
+First TCP connection is created then HTTP communction happens  
+
+* **HTTP messages** are exchanged
+  * between **browser**(**HTTP client**) and **web server**(**HTTP server**)
+* TCP Connection **closed**
+
+## Topic - HTTP Connections
+* Two types of HTTP Connections - 
+  * 1. Non-persistent HTTP - HTTP/1.0
+  * 2. Persistent HTTP - HTTP/1.1
+
+## Topic - Non-persistent HTTP - HTTP/1.0
+* At most **one object** **sent** over a **TCP connection**
+* **Downloading** **multiple objects** required **multiple TCP connections**
+
+![alt text](image-30.png)
+
+* If object is sent by server in payload then we get 200  
+* In above 1.0 TCP connection is closed after one object
+  * If object or payload is large then multiple TCP segments are required
+
+## Example 4 - 
+
+![alt text](image-31.png)
+
+![alt text](image-32.png)
+
+## Question - 
+![alt text](image-33.png)
