@@ -233,3 +233,56 @@ First TCP connection is created then HTTP communction happens
 
 ## Question - 
 ![alt text](image-33.png)
+
+## Topic - Non-persistent HTTP(HTTP/1.0)
+HTTP response time(per object) -   
+* 2 RTT (per object)
+
+## Example 5
+
+![alt text](image-34.png)
+
+![alt text](image-35.png)
+
+## Topic - Non-persistent HTTP(HTTP/1.0)
+* Browser often open **multiple parallel** **TCP Connection** to fetch referenced **objects in parallel**
+
+## Example 6 - 
+![alt text](image-36.png)
+
+![alt text](image-37.png)
+
+## Topic - Persistent HTTP(HTTP/1.1)
+
+![alt text](image-38.png)
+
+![alt text](image-39.png)
+
+## Example 7
+![alt text](image-40.png)
+
+![alt text](image-41.png)
+
+5 round trip time  
+
+## Question - 
+![alt text](image-42.png)
+
+## Topic - Persistent HTTP (HTTP/1.1)
+* **Client** can make **requests**  in pipeline
+* **Server** can send **referenced objects** in pipeline
+* **One RTT** for all **referenced objects(for small size objects)**
+
+## Example 8 - 
+
+![alt text](image-43.png)
+
+![alt text](image-45.png)
+
+![alt text](image-46.png)
+
+
+
+
+
+
