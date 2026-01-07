@@ -339,6 +339,21 @@ Mail download protocol - IMAP
 
 **POP** had some limitaions. It doesn't had parallel login
 
+## Questions
+
+![alt text](image-56.png)
+
+Send - SMTP
+retrieve - POP3 or IMAP
+
+## Question - 
+![alt text](image-57.png)
+
+![alt text](image-58.png)
+
+C is the correct answer
+
+
 
 
 
