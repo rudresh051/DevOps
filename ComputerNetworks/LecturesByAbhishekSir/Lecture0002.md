@@ -281,6 +281,67 @@ HTTP response time(per object) -
 
 ![alt text](image-46.png)
 
+## Question
+
+![alt text](image-47.png)
+
+![alt text](image-48.png)
+
+## Question 
+![alt text](image-49.png)
+
+## Topic - Email
+* Client-Server Model
+* 3 part of Email Address - UserName@DomainName
+  * UserName is unique withi a domain
+  * majorly it is case insensitive
+* 3 major component of Email
+  * 1. **User Agent**
+    * Mail Reader
+    * Composing, editing, reading mail messages
+    * e.g. outlook
+  * 2. **Mail Server**
+    * **Mailbox** - Contains **incoming message** for user
+    * **Message Queue** - **Outgoing** (to be sent) mail messages
+      * Message Queue - Multilevel single message queue
+  * 3. Protocol - SMTP and IMAP
+    * To communicate between user agent and mail server
+
+
+![alt text](image-50.png)
+
+In Web user agent the HTTP "put" method is used not SMTP
+
+
+![alt text](image-51.png)
+
+![alt text](image-52.png)
+
+## Topic - SMTP
+* **SMTP** - Simple Mail Transfer Protocol
+* Protocol between **mail servers** to send email messages
+* Client - Sending mail server
+* Server - Receiving mail server
+
+![alt text](image-53.png)
+
+**IMAP** is used when GMAIL sever sends it. Basically when user downloads the email
+
+Mail download protocol - IMAP
+* Push - SMTP
+* Downlaod - IMAP
+
+![alt text](image-54.png)
+
+## Topic - IMAP
+
+![alt text](image-55.png)
+
+**POP** had some limitaions. It doesn't had parallel login
+
+
+
+
 
 
 
