@@ -68,3 +68,33 @@ P<sub>d</sub> = d/u
 d is the correct option
 
 ## Question 3
+
+![alt text](image-371.png)
+
+![alt text](image-372.png)
+
+![alt text](image-373.png)
+
+## Question 4
+
+![alt text](image-374.png)
+
+![alt text](image-375.png)
+
+![alt text](image-376.png)
+
+![alt text](image-377.png)
+
+Total time = Td + Pd = 0.08 + 7 = 7.08 milli second  
+
+## Queuing Delay
+The amount of time packet will wait in the queue at a router before being taken up for processing is called as Queuing delay
+
+![alt text](image-378.png)
+
+There is no generalize formula for Queuing delay as there is no certainity when the receiver will check or use internet. This is negligible if nothing is given
+
+## Processing delay
+Processing delay is the time required for a router or a destination host to receive packet from its input port, remove the header, perform an error detection procedure, and deliver the packet to the output port(in case of router) or deliver the packet to the upper layer protocol(in case of destination host)
+
+There is no generalised formula for Processing delay. This is negligible if nothing is given
