@@ -67,9 +67,13 @@ Note - Delay Acknowledgement might be wrongly considered as an Acknowledgement o
 Above 3 Problems are resolved by using stop and wait ARQ(Automatic Repeat Request)
 
 ## Noisy Channel - Stop and Wait ARQ
-1. It Provides both Error control and flow control
-2. Error control in stop and wait ARQ is done by keeping a copy of sent frame until it receives an acknowledgment.
-
+1. It Provides both **Error control** and **flow control**
+   1. > simple "stop and wait protocol" only provided flow control.
+2. Error control in stop and wait ARQ is done by **keeping a copy** of sent frame until it receives an acknowledgment.
+   1. > It will keep data in the buffer
+3. Sender start a timer when it send a frame. If ACK is not received with in the allocated time period, the sender assume that the frame was lost or damage and resends it.
+4. Receiver send an Acknowledgement to sender. If it receives a frame correctly.
+5. ACK number always define the number of the Next expected frame.
 
 
 
