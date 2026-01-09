@@ -74,6 +74,26 @@ Above 3 Problems are resolved by using stop and wait ARQ(Automatic Repeat Reques
 3. Sender start a timer when it send a frame. If ACK is not received with in the allocated time period, the sender assume that the frame was lost or damage and resends it.
 4. Receiver send an Acknowledgement to sender. If it receives a frame correctly.
 5. ACK number always define the number of the Next expected frame.
+   1. example - refer below diagram
+
+![alt text](image-384.png)
+
+6. Stop and wait ARQ = Stop and wait + Time out + sequence Number(Data Packet) + sequence Number(ACK)
+
+1. Solution of lost data packet -  
+
+![alt text](image-385.png)
+
+2. Solution of Lost Acknowledgement
+
+![alt text](image-386.png)
+
+3. Solution of Delay Acknowledgement
+
+![alt text](image-387.png)
+
+![alt text](image-388.png)
 
 
+## Efficiency OR Line Utilization OR Link Utilization OR Sender Utilization
 
