@@ -97,3 +97,18 @@ Above 3 Problems are resolved by using stop and wait ARQ(Automatic Repeat Reques
 
 ## Efficiency OR Line Utilization OR Link Utilization OR Sender Utilization
 
+![alt text](image-390.png)
+
+
+![alt text](image-389.png)
+
+![alt text](image-391.png)
+
+formula of efficiency -  
+
+![alt text](image-392.png)
+
+## Throughput OR effective Bandwidth or Bandwidth utilization OR Maximum data
+
+![alt text](image-393.png)
+
