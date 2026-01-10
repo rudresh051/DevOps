@@ -27,3 +27,30 @@ Now substitue the values
 ![alt text](image-423.png)
 
 ## Question 8
+![alt text](image-424.png)
+
+same question as discussed in last lecture
+
+![alt text](image-425.png)
+
+## Question 9
+
+![alt text](image-426.png)
+
+Same question - directly use the general formula and substitue the values
+
+![alt text](image-427.png)
+
+![alt text](image-428.png)
+
+## Question 10
+
+![alt text](image-429.png)
+
+![alt text](image-430.png)
+
+![alt text](image-431.png)
+
+Throughput by another formula -   
+
+![alt text](image-432.png)
