@@ -183,4 +183,12 @@ Total time is nothing but Round trip time
 
 ![alt text](image-411.png)
 
+![alt text](image-413.png)
+
+![alt text](image-414.png)
+
+substitue above values
+
+![alt text](image-412.png)
+
 
