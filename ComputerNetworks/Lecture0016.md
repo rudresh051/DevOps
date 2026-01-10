@@ -27,25 +27,34 @@ Buffer capacity = 25 bits
 2. Stop and wait protocol is a flow control for Transmission of **frames** over **noiseless channel**.
 
 ![alt text](image-380.png)
+> Application layer sends message to Transport layer. TL attach it's header. And it's called segement. TL sends segment to NL. NL attach it's header H2 and it is called as packet here. NL sends packet to Data link layer. Here DLL attach trailor and header. And here it is called frame. DLL sends frame to physical layer. And at physical layer we call it as stream of bits
 
 3. It provides **unidirectional** data transmission with flow control facilities **without error control**
-   1. We don't have any solution if something gets corrupted in the packet
+   1. We don't have any solution if something gets corrupted in the packet or packet gets lost. i.e. in noiseless channel we don't have any facility.
 4. The idea of stop and wait protocol is straightforward.
-   1. After transmitting one Frame, the sender waits for an acknowledgement before transmitting the next frame.
+5. After transmitting one Frame, the **sender waits for an acknowledgement** before transmitting the next frame.
+
+Analogy -  
 
 ![alt text](image-381.png)
 
 
 ## Primitives of Stop and Wait protocol
-Sender Side -   
-Rule 1 - Send one data packet at a time  
+Basically what will happen at sender and receiver side  
+
+**Sender Side -**   
+Rule 1 - Send **one data** packet **at a time**  
 Rule 2 - Send the next packet only after receiving the ACK for the previous packet.  
 
-Receiver Side -   
+**Receiver Side -**   
 Rule 1 - Receive and consume the data packet.
 Rule 2 - After consuming packet, Ack need to be sent.
 
+![alt text](image-394.png)
+
 ## Problems of stop & wait Protocol
+So what are the actual problem we have here, let's see.
+
 1. **Lost data packet**  
 
 
@@ -112,4 +121,66 @@ formula of efficiency -
 ## Throughput OR effective Bandwidth or Bandwidth utilization OR Maximum data
 
 ![alt text](image-393.png)
+
+Another formula for throughput -  
+
+![alt text](image-395.png)
+
+throughput = Efficiency * Bandwidth  
+
+Efficiency = Throughput/Bandwidth  
+
+## Example 1
+
+![alt text](image-396.png)
+
+![alt text](image-397.png)
+
+Counting will again start from 4th since 4th is lost. Then again from 7th(every 4th is lost) 
+
+## Example 2
+
+![alt text](image-398.png)
+
+![alt text](image-399.png)
+
+![alt text](image-400.png)
+
+## Problem solving on Stop and wait protocol
+
+## Question 1
+![alt text](image-401.png)
+
+![alt text](image-402.png)
+
+## Question 2
+
+![alt text](image-403.png)
+
+![alt text](image-404.png)
+
+![alt text](image-405.png)
+
+now substitue the values from above
+
+![alt text](image-406.png)
+
+0.0476  
+= 4.761%
+
+## Question 3
+![alt text](image-407.png)
+
+Total time is nothing but Round trip time
+
+![alt text](image-408.png)
+
+![alt text](image-409.png)
+
+![alt text](image-410.png)
+
+## Question 4
+
+![alt text](image-411.png)
+
 
