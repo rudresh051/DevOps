@@ -3,19 +3,19 @@
 > Revise , so that you don't forget
 
 ## Flow Control
-Flow control coordinate the amount of data can be sent before receiving the acknowledgement
+Flow control coordinate the **amount of data** can be sent **before receiving the acknowledgement**
 
 ![alt text](image-379.png)
 
 Buffer capacity = 25 bits
 
-Analogy - Teaching by an Instructor and learning speed of students
+**Analogy** - Teaching by an Instructor and learning speed of students
 
-* Flow control protocols
-  * Noiseless Channel(perfect channel)
+* Flow control protocols  
+  * **Noiseless Channel**(perfect channel, no packet lost, no corrupted packet)
     * 1. Simplest protocol(not in GATE syllabus)
     * 2. Stop wait protocol
-  * Noisy Channel(data loss, frame loss, acknowledgement loss or duplicate packets are possibility)
+  * **Noisy Channel**(data loss, frame loss, acknowledgement loss or duplicate packets are possibility)
     * 1. Stop wait ARQ(Automatic repeat request)
     * 2. Go-back-N ARQ(GBN ARQ)
     * 3. Selective Repeat ARQ
@@ -23,7 +23,8 @@ Analogy - Teaching by an Instructor and learning speed of students
 
 ## Nosieless channel - 1. Stop and Wait Protocol
 1. Used in **connection-oriented** communication
-2. Stop and wait protocol is a flow control for Transmission of **frames** over noiseless channel.
+   1. > Connection are of two types. Connection oriented and connection less. Here first we need to establish connection.
+2. Stop and wait protocol is a flow control for Transmission of **frames** over **noiseless channel**.
 
 ![alt text](image-380.png)
 
