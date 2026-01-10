@@ -54,3 +54,15 @@ Same question - directly use the general formula and substitue the values
 Throughput by another formula -   
 
 ![alt text](image-432.png)
+
+## GO Back-N ARQ
+* Sliding Window
+  * GB-N
+  * S-R
+
+**Sliding Window** - In the Sliding window concept instead of sending one packet and wait for the acknowledgement, we send 'w' packet and wait for the Acknowledgement. Where 'w' is the sender window size.
+
+## GB-N(N>1)
+1. In the GB-N the sender window size is N itself
+2. In the GB-N the receiver window size is equal to one always
+
