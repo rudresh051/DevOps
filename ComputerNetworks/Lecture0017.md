@@ -103,9 +103,40 @@ Note -
 2. Timer is maintained only ofr the first frame(right most) in the window because if its timer expire then sender assume that rest of the frames are not received by receiver (because out of order delivery is rejected)
 
 
-## Question 
+## Question 1
 
 ![alt text](image-437.png)
+
+![alt text](image-438.png)
+
+Total transmission  = 18
+
+OR  
+
+![alt text](image-439.png)
+
+## Question 2
+
+![alt text](image-440.png)
+
+## Question 3
+
+![alt text](image-441.png)
+
+Total transmission  = 27
+
+## Question 4
+
+![alt text](image-442.png)
+
+जो पैकेट lost हो रहा है वहीं से window start करो 
+
+![alt text](image-443.png)
+
+## Question 6
+
+![alt text](image-444.png)
+
 
 
 
