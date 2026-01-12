@@ -103,3 +103,30 @@ TCP acknowledgments include:
 ✔ **Delayed ACK**
 ✔ **Immediate / Piggybacked ACK**
 ✔ **Implicit ACK**
+
+## Acknowledgement
+Two types -  
+1. **Independent**
+   1. > Suppose we have sender size 4
+   2. > Independent each packet we will have separate acknowledgement
+   3. > Packet number 0 acknowledgement number will be 1. Similarly for packet 1, ACK number will be 2
+
+![alt text](image-445.png)
+
+2. **Cumulative**
+   1. > After receiving group of packets, it will send 1 Acknowledgement
+
+![alt text](image-446.png)
+
+> Now we have a question? 
+>  In cumulative after how many packet it will send the acknowledgement?
+
+Note - GBN uses cumulative Acknowledgement and Acknowledgement number defines the number of next expected Frame
+
+> **ACK Timer is less than Time out timer**
+
+![alt text](image-447.png)
+
+## Relationship between window size & Sequence number
+
+![alt text](image-448.png)
