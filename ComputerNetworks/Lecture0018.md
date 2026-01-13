@@ -106,27 +106,72 @@ TCP acknowledgments include:
 
 ## Acknowledgement
 Two types -  
-1. **Independent**
-   1. > Suppose we have sender size 4
+1. **Independent****(हरेक पैकेट के लिए Individual Acknowledgement)**
+   1. > Suppose we have sender window size 4. four packets are sent back to back.
    2. > Independent each packet we will have separate acknowledgement
    3. > Packet number 0 acknowledgement number will be 1. Similarly for packet 1, ACK number will be 2
 
 ![alt text](image-445.png)
 
 2. **Cumulative**
-   1. > After receiving group of packets, it will send 1 Acknowledgement
+   1. > Here also we have window size 4 of the sender
+   2. > After receiving group of packets, it will send only **1 Acknowledgement**
+   3. > ACK no - 4 means - I have received packets 0,1,2,3 packets and waiting for 5th packet
 
 ![alt text](image-446.png)
 
 > Now we have a question? 
->  In cumulative after how many packet it will send the acknowledgement?
+> In cumulative after how many packet it will send the acknowledgement?
 
-Note - GBN uses cumulative Acknowledgement and Acknowledgement number defines the number of next expected Frame
+Note - GBN uses **cumulative Acknowledgement** and **Acknowledgement number defines the number of next expected Frame**
 
+Which timer should expire first?
 > **ACK Timer is less than Time out timer**
+
+Let's take an example -  
 
 ![alt text](image-447.png)
 
+What will happen with the last packet? And timer starts. In this only packet came so, only one acknowledgement will go. ACK NO - 10
+
 ## Relationship between window size & Sequence number
+e.g. GB-5, Sequence No. = 5(0-4)
+
+जो 1st पैकेट होता है, उसी का Timeout timer होता है ।
+
+
+Note -  
+1. Duplicate Packet problem can be solved by Increasing the sequence Number or Decreasing the sender window size. **OR**
+2. Duplicate Packet Problem can be solved by using following formula
+
+
+W<sub>s</sub> + W<sub>r</sub> <= ASN(Available Sequence number)
 
 ![alt text](image-448.png)
+
+Problem of duplicate packet  
+
+![alt text](image-450.png)
+
+
+Below we don't have problems of duplicates packet
+
+
+![alt text](image-449.png)
+
+![alt text](image-451.png)
+
+**Wr Size** - In the **GB-N** the window receiver size is **equal to one always** irrespective of window sender size(Ws=1)
+
+**Ws size** - Window sender size is calculated based on the following formula  
+Ws + Wr <= ASN  
+Ws + 1 <= ASN  
+Ws <= ASN-1  
+
+![alt text](image-452.png)
+
+![alt text](image-453.png)
+
+![alt text](image-454.png)
+
+In above figure just add the window sender size and window receiver size to the get the min. sequence number required
