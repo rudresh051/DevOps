@@ -175,3 +175,18 @@ Ws <= ASN-1
 ![alt text](image-454.png)
 
 In above figure just add the window sender size and window receiver size to the get the min. sequence number required
+
+Which of the following are possible?
+
+![alt text](image-455.png)
+
+In GBN we does not send one packet
+
+## Efficiency Formula -  
+
+efficiency = useful time/total time
+
+Here we send complete window and wait for acknowledgment.
+
+![alt text](image-456.png)
+
