@@ -190,3 +190,50 @@ Here we send complete window and wait for acknowledgment.
 
 ![alt text](image-456.png)
 
+## Throughput Formula - 
+
+here we are sending n packets not 1 packet, that's why we need to multiply it in the frame
+
+![alt text](image-457.png)
+
+## Problems Solving on GB-N Protocol
+
+## Question 1
+
+1. In Go-back-N protocol, if the maximum window size is 512, what is the range of sequence number
+
+* 0 to 513
+* 1 to 513
+* 0 to 512
+* 1 to 512
+
+![alt text](image-458.png)
+
+sequence number starts from 0
+
+## Question 2
+ 
+![alt text](image-459.png)
+
+![alt text](image-460.png)
+
+In above question we need find the throughput
+
+![alt text](image-461.png)
+
+![alt text](image-462.png)
+
+## Question 3
+![alt text](image-464.png)
+
+![alt text](image-463.png)
+
+![alt text](image-465.png)
+
+![alt text](image-466.png)
+
+![alt text](image-467.png)
+
+## Question 4
+
+![alt text](image-468.png)
