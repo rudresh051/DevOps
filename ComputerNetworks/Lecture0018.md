@@ -237,3 +237,13 @@ In above question we need find the throughput
 ## Question 4
 
 ![alt text](image-468.png)
+
+## Question 5
+
+![alt text](image-469.png)
+
+![alt text](image-470.png)
+
+![alt text](image-471.png)
+
+![alt text](image-472.png)
