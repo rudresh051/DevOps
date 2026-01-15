@@ -22,3 +22,15 @@
 5. **Timer is maintained** **for each and every frame in the window at sender size**
    1. > GBN, Timer was maintained for first frame only. only for first packet
    2. > Here 3 packet is lost, then only 3rd packet will be retransmit. If Acknowledgement doesn't come retransmit will be done
+
+Let's take an example to understand -  
+
+![alt text](image-496.png)
+
+Diagram explanation - 
+
+Note -  
+1. For **1st out of order** delivery or if packet received is corrupted then **NAK(negative acknowledgement)** for respective packet is sent by receiver to sender.
+2. When sender **receive NAK 3** then it will **search in the window for packet 3** & immediately packet 3 is retransmitted even though its **timer is not expired**
+
+## Relationship between window size & sequence number.
