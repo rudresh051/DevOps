@@ -88,3 +88,90 @@ or
 
 ![alt text](image-509.png)
 
+## Problem solving on SR Protocol
+
+## Question 1
+![alt text](image-510.png)
+
+B will be the correct answer
+
+## Question 2
+![alt text](image-511.png)
+
+![alt text](image-512.png)
+
+## Question 3
+
+![alt text](image-513.png)
+
+![alt text](image-514.png)
+
+In above question N is the maximum sequence number NOT total sequence number
+
+## Question 4
+![alt text](image-515.png)
+
+![alt text](image-516.png)
+
+## Question 5
+![alt text](image-517.png)
+
+![alt text](image-518.png)
+
+![alt text](image-519.png)
+
+## Question 6
+HW  
+
+![alt text](image-520.png)
+
+## Question 7
+![alt text](image-521.png)
+
+![alt text](image-522.png)
+
+![alt text](image-523.png)
+
+![alt text](image-524.png)
+
+## Question 8
+
+![alt text](image-525.png)
+
+![alt text](image-527.png)
+
+![alt text](image-526.png)
+
+![alt text](image-528.png)
+
+## Question 9
+
+![alt text](image-529.png)
+
+above is HW
+
+## Question 10
+
+![alt text](image-530.png)
+
+![alt text](image-531.png)
+
+Take N greater so N = 51
+
+## Question 11
+
+![alt text](image-532.png)
+
+![alt text](image-533.png)
+
+![alt text](image-534.png)
+
+## Question 12
+![alt text](image-535.png)
+
+
+
+
+
+
+ 
