@@ -63,3 +63,28 @@ So hence we can put a general formula -
 ![alt text](image-503.png)
 
 ![alt text](image-504.png)
+
+![alt text](image-505.png)
+
+## Efficiency
+
+efficiency = usefultime/total time
+
+In question window size will be given of the frame
+
+![alt text](image-506.png)
+
+## Throughput
+
+Throughput = efficiency * Bandwidth
+
+or  
+
+![alt text](image-507.png)
+
+## Summary - Comparison between stop & wait, GB-N , and SR
+ 
+![alt text](image-508.png)
+
+![alt text](image-509.png)
+
