@@ -247,3 +247,31 @@ In above question we need find the throughput
 ![alt text](image-471.png)
 
 ![alt text](image-472.png)
+
+## Question 6
+![alt text](image-473.png)
+
+![alt text](image-474.png)
+
+Now we need to find out the N??
+In GB-N , N is sender window size
+
+![alt text](image-475.png)
+
+![alt text](image-476.png)
+
+now how to find the bandwidth??
+
+![alt text](image-477.png)
+
+![alt text](image-478.png)
+
+![alt text](image-479.png)
+
+## Question 7
+
+![alt text](image-480.png)
+
+![alt text](image-481.png)
+
+![alt text](image-482.png)
