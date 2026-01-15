@@ -27,10 +27,39 @@ Let's take an example to understand -
 
 ![alt text](image-496.png)
 
-Diagram explanation - 
+![alt text](image-497.png)
+
+Diagram explanation -   
 
 Note -  
 1. For **1st out of order** delivery or if packet received is corrupted then **NAK(negative acknowledgement)** for respective packet is sent by receiver to sender.
 2. When sender **receive NAK 3** then it will **search in the window for packet 3** & immediately packet 3 is retransmitted even though its **timer is not expired**
 
-## Relationship between window size & sequence number.
+## Relationship between window size & sequence number
+* Minimum how many sequence required to achieve 100% efficiency
+* Very important to understand with diagram
+
+![alt text](image-498.png)
+
+In the above we have problem of duplicate packet, as according to this is also proved
+
+![alt text](image-502.png)
+
+Note -   
+1. Duplicate packet problem can be solved by increasing the sequence No. or decreasing the sender window size
+2. Duplicate packet problem can be solved by using the following formula
+
+Ws + Wr <= A.S.N(available sequence number)  
+
+![alt text](image-499.png)
+
+![alt text](image-500.png)
+
+
+![alt text](image-501.png)
+
+So hence we can put a general formula - 
+
+![alt text](image-503.png)
+
+![alt text](image-504.png)
