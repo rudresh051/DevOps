@@ -275,3 +275,70 @@ now how to find the bandwidth??
 ![alt text](image-481.png)
 
 ![alt text](image-482.png)
+
+Above question is not of GB-N but it can be solved . Actually it's of S-R
+For throughput receiver window size is not required
+## Question 8
+
+![alt text](image-483.png)
+
+first collect the data
+
+L = 4000 bits i.e. Frame size  
+Bandwidth = 10^6 bits/sec  
+Pd = 18msec  
+
+if efficency is not given we will assume efficeincy as 100% or 1
+
+Transmission delay = frame size/Bandwidth =4000/10^6  
+4msec  
+
+![alt text](image-484.png)
+
+![alt text](image-485.png)
+
+## Question 9
+![alt text](image-486.png)
+
+![alt text](image-487.png)
+
+
+Tranmsission delay Td = Frame size/Bandwidth = 10^7/500*10^6  
+0.02 second  
+
+![alt text](image-488.png)
+
+![alt text](image-489.png)
+
+
+## Question 10
+
+![alt text](image-490.png)
+
+![alt text](image-491.png)
+
+![alt text](image-492.png)
+
+N = 20.125  
+
+should we take 20 or 21?? what should be considered?
+
+we will always take upper value.  
+
+N = 21
+if we take N = 20, efficiency will come less than 100
+
+so If send 21 packets then only efficiency will be 100.
+
+## Question 11
+
+![alt text](image-493.png)
+
+ 
+## Question 12
+
+![alt text](image-494.png)
+
+## Question 13
+
+![alt text](image-495.png)
