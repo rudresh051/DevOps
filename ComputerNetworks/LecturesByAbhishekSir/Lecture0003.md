@@ -60,4 +60,39 @@ option - c
 
 ![alt text](image-64.png)
 
+## Topic - UDP
+* **UDP** - **User Datagram Protocol**
+* Provide "**Connection-less**" and "**Unreliable**" services  
+  * [**Unordered delivery of messages**, messages **may be lost**]
+
+![alt text](image-65.png)
+
+![alt text](image-66.png)
+
+> Suppose P1 sends 4 messages P2
+> no numbering in UDP
+> IP is a connection-less protocol and unreliable
+
+* **Connection-less** - 
+  * **No handshaking** between **UDP** **sender** and **receiver**
+  * **Delivery** of messages be **any order** to the communication process
+* Unreliable
+  * Messages may be lost
+  * No any recovery of lost of messages
+*  **Simple and Fast** - 
+   *  **No connection state** at sender and receiver
+   *  **No any flow** and **congestion control**
+*  Prefer for **shorter communication**[like **query** and **response**]
+*  UDP as transport protocol used by:
+   *  DNS, SNMP,HTTP/3, RIP and Real Time Multimedia[Streaming Multimedia]
+
+![alt text](image-67.png)
+
+Email uses TCP
+DNS by default uses DNS
+FTP uses TCP
+
+correct answer is C
+
+
 
