@@ -24,6 +24,40 @@ e.g. Consider the below diagram
 * Process P1 through sockets transfer the message through sockets to transport layer. And tranport layer encapsulates into segment. Tranport layer decides to make TCP segment or UDP segment. And network layer make IP datagram. 
 
 ## Transport Layer
-1. Provide logical communication between application   processes(Processes running on different machine)
+1. Provide **logical communication** between **application processes**(Processes running on different machine)
 2. Responsible for **process-to-process**(end-to-end) **communication**(connectivity)
+   1. > It is called end-to-end because two process are run on two end machines
 3. **Multiplexing** & **Demultiplexing**
+   1. > It is a must functionality
+
+![alt text](image-60.png)
+
+option d(it is must categoy funcitonality)
+
+## Two Transport layer Protocols
+1. **UDP - User Datagram Protocol**
+   1. > Uncontrolled and not structured transmission. It's free protocol
+   2. > UDP is a basic protocol
+2. **TCP - Transmission control protocol**
+   1. > Controlled and structured fashion transmission
+   2. > TCP = UDP + Extra services
+
+Note - UDP provide faster communication
+
+![alt text](image-61.png)
+
+DHCP - Used for dynamic IP protocol
+
+These do not use TCP/IP => [OSPF, ICMP, IGMP] gives packet directly to IP  
+
+![alt text](image-62.png)
+
+Telnet is remote login. These days we have better to login into servers.
+
+option - c
+
+![alt text](image-63.png)
+
+![alt text](image-64.png)
+
+
