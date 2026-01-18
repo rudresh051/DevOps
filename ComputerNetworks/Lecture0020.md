@@ -133,3 +133,74 @@ It is the 3 bit field or shown in the figure.
 * first bit is not used
 * DF mean? Second bit is called as **Don't Fragment**
 * MF mean? 3rd bit is called **More Fragment**
+
+## DF - Don't Fragment
+* It is bit. it can be 0 or 1
+* DF = 1 means - Datagram cannot be fragmented
+* DF = 0 means - Datagram can be fragmented
+what is the meaning of above?
+
+let's take an example
+
+![alt text](image-548.png)
+
+* suppose we have A. A wants to send data  of packet 300 byte. and ID = 100. And DF = 1
+* It comes to router. Sender sets the DF = 1 and says don't fragment
+* Now router what will do? sender wants NOT fragment but MTU is 100. Now what router will do? If router can't divide then can't send? so what will do
+  * In this case **Router will discard the packet**
+  * And after discard it will send the message - ICMP
+  * It will send reason of ICMP. It's a supporing protocol of IP
+* So now what sender will do?
+* So sender will divide itself it to 100
+* but what if router and a MTU of 50 is ahead? so again it will discard.
+  * So minimum  MTU packet can be send from that route.
+
+Next question?? So why source don't want to divide? 
+
+let's take an example
+
+![alt text](image-549.png)
+
+* suppose we have 300 byte data and 20 byte header. And it ID no is 100. And DF is 0, so it means data can be fragmented
+* Now we have MTU is 120. so router will divide the data into pieces.
+* Header has every information
+  * So we will have to add 20 byte header to each 3 pieces attached.
+  * हर पैकेट के साथ Header होना चाहिए
+  * Each path can go different path, that's why we need to attach it
+* Analogy - 4 cars going to delhi but with different paths. then we need to give GPS to each
+* Efficiency will decrease as number of packets increase because overhead will increase.
+
+## MF - More Fragment - 
+* MF = 1 means this is not last fragment, there are more fragment after this Fragment
+* MF = 0 - means this is the last fragment or only fragment
+
+Let's take an example - 
+
+![alt text](image-550.png)
+
+* Suppose we have piece of 300 byte data and 20 byte header. ID is 100 and DF is 0.
+* MTU is 120 byte
+* So we will hav 20 and 100 3 peices. And each piece will have same identification number 100
+* which one is first and last. let's write it as 0 - 99, 100 to 199 , 200 to 299
+* So MF for will be 1 for first . And again for second MF will be 1. For last MF will be 0
+
+what is the requirement of MF?
+
+suppose last piece is lost? so how reciver will come to know the last piece . so with MF with 0 receiver will come to know.
+
+## Fragment offset
+* It is of 13 bit
+* Fragment offset indicate **no of data byte ahead** of this fragment **in that particular packet**
+* how many byte ahead of this byte
+
+![alt text](image-551.png)
+
+* IP is a **packet stream protocol**
+* i.e. Every packet is associated with a sequence number
+* In TCP, we give sequence number to each byte
+  * TCP is **byte stream protocol**
+* Fragement works as indexing. कौन सा पहला है, दूसरा और तीसरा
+* Receiver can out of order packet.
+
+Question - Sir , 0, 1, 2 is the best indexing? simple right? we will see it in fragment offset. why above method works
+
