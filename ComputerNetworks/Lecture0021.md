@@ -107,3 +107,109 @@ A strict source routing is used by the source to predetermine a route for data g
 A loose source route option is similar to strict route but it is less rigid. Each router in the list must visited, but the data gram can visit other router as well.
 
 ![alt text](image-565.png)
+
+## Record Routing
+A record route option is used to record the internet routers that handle the data gram. It can list up to 9 router Address. All the Router are supposed to record their IP Address on their IP packets
+
+* Suppose we have a packet and travels to R1
+  * Here R1 router IP address is recorded.
+* suppose it travels to Router R2
+  * here again R2 IP address is recorded
+
+![alt text](image-566.png)
+
+Note - First 16 bits (2 byte) are reserved for option type(8 bit) and length(8 bit). Out of 40 byte only 38 bytes are remaining for storing IPv4 addresses. In 38 byte we can store 9 IPv4 addresses as each IPv4 address is of 4 byte.
+
+## Time Stamp 
+It is used to find out the delays at each router. Every router should incoming time and outgoing time.
+
+ ![alt text](image-567.png)
+
+ ## Problem solving on IPv4
+
+ ## Question 1
+
+ ![alt text](image-568.png)
+
+ ![alt text](image-569.png)
+
+ ## Question 2
+
+ ![alt text](image-570.png)
+
+## Question 3
+![alt text](image-571.png)
+
+covert 59 to decimal - 5*16^1 + 9*16^0 = 89
+
+## Question 4
+HW
+
+## Question 5
+![alt text](image-572.png)
+
+## Question 6
+HW
+![alt text](image-573.png)
+
+## Question 7
+![alt text](image-574.png)
+
+![alt text](image-575.png)
+
+## Question 8
+![alt text](image-576.png)
+
+option c - to remove infinite loop
+
+## Question 9
+![alt text](image-577.png)
+
+## Question 10
+ ![alt text](image-578.png)
+
+ answer is d
+
+## Question 11
+![alt text](image-579.png)
+
+## Question 12
+![alt text](image-580.png)
+
+option d - 1, 2, 3 all will change
+
+## Question 13
+![alt text](image-581.png)
+
+option - C
+
+## Question 14
+![alt text](image-582.png)
+
+Header size can be in between 20-60 byte but always in the multiple of 4
+
+option B
+
+## Question 15
+![alt text](image-583.png)
+![alt text](image-584.png)
+
+## Question 16
+![alt text](image-585.png)
+HW
+
+## Question 17
+![alt text](image-586.png)
+
+HW
+## Question 18
+![alt text](image-587.png)
+
+# Question 19
+![alt text](image-588.png)
+
+TTL is of 8 bit so it's range is 0 to 2^8-1 = 255  
+
+TTL value cannot be 0. Packet cannot travel. Minimum value can be 1. Source will never assign TTL value to 0.
+
+TTL value can be in the range  - 1 to 255
