@@ -102,3 +102,93 @@ If each fragment follow a different path  and arrives out of order, the final de
 
 **can receiver ask router for second lost piece?**  
 Router cannot do that. Router doesn't save the fragment. It's just forward it. It just store in buffer memory temporarily.
+
+![alt text](image-601.png)
+
+what about throughput?
+
+we will consider the minimum bandwidth
+
+![alt text](image-602.png)
+
+![alt text](image-603.png)
+
+Question will be mostly on offset, MF and total length GATE
+
+## Problem Solving on Fragmentation
+## Question 1
+![alt text](image-604.png)
+
+Important - datagram means - data + header  
+or  
+IP packet - data + header
+
+![alt text](image-605.png)
+
+980/80 = 12.25 => take next int. It will not work every question
+
+## Question 2
+![alt text](image-606.png)
+
+## Question 3
+![alt text](image-607.png)
+
+![alt text](image-608.png)
+
+option a
+
+## Question 4
+![alt text](image-609.png)
+
+![alt text](image-610.png)
+
+![alt text](image-611.png)
+
+## Question 5
+![alt text](image-612.png)
+
+![alt text](image-613.png)
+
+if offset value is given we can easily find out no. of data byte ahead . just multiply it by 8  
+300*8 = 2400
+
+![alt text](image-614.png)
+
+Options are easy to discard. 
+
+![alt text](image-615.png)
+
+## Question 6
+![alt text](image-616.png)
+
+HW
+
+## Question 7
+![alt text](image-617.png)
+
+![alt text](image-618.png)
+
+180/8 => Not divislbe by 8.
+can't determine => Not correct answer
+
+* if any fragment is not divisible by 8 , then 100% sure it is last fragment
+
+Answer - option c
+
+## Question 8
+![alt text](image-619.png)
+
+## Question 9
+![alt text](image-620.png)
+
+## Question 10
+![alt text](image-621.png)
+
+## Question 11
+![alt text](image-622.png)
+
+## Question 12
+![alt text](image-623.png)
+
+## Question 13
+![alt text](image-624.png)
