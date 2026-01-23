@@ -41,3 +41,31 @@ Let's understand this first -
 4. To Avoid collision station must send data by executing a preocedure or condition defined by the protocol
 5. There is not fixed order in which station send data so these are called Random Access Protocols
 6. Each station competes for the channed hence these are also known as **Contention methods.**
+
+![alt text](image-644.png)
+
+## Introduction To ALOHA
+* Aloha was developed at university of hawaii in 1970's.
+* It was Designed for wireless LAN but it can be used in any shared medium.
+* Each station sends **equal size** Frame.
+
+![alt text](image-645.png)
+
+## PURE ALOHA
+* It allows the stations to transmit the data at any time whenever they want.
+* Hence collision chances are very high.
+* After transmitting the data packet stations must wait for the acknowledgement.
+* If acknowledgement does not arrive after a time out period, the station assume that frame (or the acknowledgement) has been destroyed.
+* The timeout period is equal to the maximum possible round trip propagation delay i.e. **2*Pd**
+  * Reason?
+* After time out, station will again send data but if it immediately tries to send data packet then collision will occur. Because timeout timer is also same for all the stations. Hence no station can effectively send data.
+* So station must not send frame immediately after time out.
+* It must wait for random amount of time called **back-off or waiting time   
+* Back off time = k * slot time**
+  * k is any random number in between 0 to 2^n -1
+
+![alt text](image-646.png)
+
+
+
+
