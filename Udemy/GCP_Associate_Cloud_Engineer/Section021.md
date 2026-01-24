@@ -79,68 +79,92 @@ region
 ## Firewall Rules
 * Configure Firewall Rules to control traffic going in or out of the network
   * Stateful
+    * > If request is allowed, then automatically response is allowed
   * Each firewall rule has priority(0-65535) assigned to it
   * 0 has highest priorty. 65535 has least priority
-  * Default implied rule with lowest priority(65535)
-    * Allow all egress
-    * Deny all ingress
+  * **Default implied rule with lowest priority(65535)**
+    * Allow **all** egress(outgoing)
+    * Deny **all** ingress(incoming)
     * Default rules can't be deleted
     * You can override default rules by defining new rules with priority(0-65534)
-    * Default VPC has 4-additional rules with priority 65534
-      * Allow incoming traffic from VM instances in same network(default-allow-internal)
-      * Allow incoming TCP traffic on port22(SSH) default-allow-ssh
+  * Default VPC has **4-additional rules** with priority 65534
+      * Allow incoming traffic from VM instances in same network **(default-allow-internal)**
+      * Allow incoming TCP traffic on port22(SSH) **default-allow-ssh**
+      * Allow Incoming TCP traffic on port 3389 (RDP) **default-allow-rdp**
+      * Allow Incoming ICMP from any source on the network **default-allow-icmp**
 
 ## Firewall Rules - Ingress and Egress Rules
-* Ingress Rules - Incoming traffic from outside to GCP targets
-* Egress Rules - Outgoing traffic to destination from GCP targets
-* Along with each rule, you can also define:
-  * Priority - Lower the number, higher the priority
-  * Action on match - Allow or Deny traffic
-  * Protocol - ex. TCP or Deny traffic
-  * Port - which port?
-  * Enforcement status - Enable or Disable the rule
+> We can define our own rule
+* **Ingress Rules** - Incoming traffic from outside to GCP targets
+  * **Target(defines the destination)** - All instances or instances with TAG/SA
+  * **Source(defines where the traffic is coming from)** - CIDR instances with TAG/SA
+* **Egress Rules** - Outgoing traffic to destination from GCP targets
+  * Target(defines the source)- All instances or instances with TAG/SA
+  * **Destination** - CIDR Block
+* **Along with each rule**, you can also define:
+  * **Priority** - **Lower the number, higher the priority**
+  * **Action on match**- Allow or Deny traffic
+  * **Protocol** - ex. TCP or Deny traffic
+  * **Port** - which port?
+  * **Enforcement status** - Enable or Disable the rule
 
 ## Shard VPC
-* Scenario - Your organization has multiple projects. You want resources in different projects to talk to each other?
+* **Scenario** - Your organization has **multiple projects**. You want **resources** in different projects to **talk to each other?**
   * How to allow resources in different projects to talk with internal IPs securely and efficiently?
 * Enter **Shared VPC(virtual private cloud)**
   * Created at organization or shared folder level (Access Needed - Shared VPC Admin)
   * Allows VPC network to be shared between projects in same organization
   * Shared VPC contains one host project and multiple service projects
-    * Host Project - Contains VPC network
-    * Servie Projects - Attached to host projects
+    * **Host Project** - Contains VPC network
+    * **Servie Projects** - Attached to host projects
 * Helps you achieve **separation of concerns**
   * Network administrators responsible for Host projects and Resources users use Service Project
 
 ## VPC Peering
-* Scenario - How to connect VPC networks across different organizations?
+* **Scenario** - How to **connect VPC networks** across **different organizations?**
 * Enter **VPC Peering**
+  * Networks in same project, different projects and across projects in different organizations can be peered
+  * All communication happens using internal IP addresses
+    * Highly efficient because all communication happens **inside Google Network**
+    * Highly secure because **not accessible from internet**
+    * **No data transfer charges** for data transfer between services
+  * (REMEMBER) Network administration is NOT changed - 
+    * Admin of one VPC do not get the role automatically in a peered network.
 
 
 # Hybrid Cloud
+> How to you connect an on-premise network to a cloud network
 ## 1. Cloud VPN
 * Cloud VPN - Connect on-premise network to the GCP network
   * Implemented using **IPSec VPN Tunnel**
-  * Traffic through internet(public)
+  * Traffic through internet(**public**)
   * Traffic encrypted using **Internet Key Exchange** protocol
 * Two types of Cloud VPN Solutions
-  * HA VPN
-  * Classic VPN
+  * High Availability(HA) VPN - (SLA of 99.99% service availability with two external IP addresses)
+    * Only dynamic routing (BGP) supported
+  * Classic VPN (SLA of 99.9% service availability, a single external IP address)
+    * Supports Static routing (policy-based, route-based) and dynamic routing using BGP
 
 ## 2. Cloud Interconnect
-* High speed physical connection between on-premise and VPC networks
+* High speed **physical direct connection** between on-premise and VPC networks
   * Highly available and high throughput
-  * Two types of connections possible
-    * Dedicated interconnect
-    * Partner interconnect
-* Data exchange happens through a private network
+  * Two types of connections possible 
+    * Dedicated interconnect - 10 Gbps or 100 Gpbs configurations
+    * Partner interconnect - 50 Mbps to 10 Gbps configurations
+* **Data exchange happens through a private network**
 * (Feature) Supported Google API's and services can be privately accessed from on-premise
-* Use only for high bandwidth needs - 
-  * For low bandwidth. Cloud VPN is recommended
+  * Communicate using VPC network's internal IP addresses from on-premise network
+  * Reduces egress costs
+    * As public internet is not used
+* **Use only for high bandwidth needs** - 
+  * For **low bandwidth** -  Cloud VPN is recommended
 
-## Direct Peering
+## 3. Direct Peering
 * Connect customer network to google network using network peering
-* Not a GCP service
-* Not recommended
+  * Direct path from on-premises network to Google services
+* **Not a GCP service**
+  * Lower level network connection outside of GCP
+* NOT RECOMMENDED
+  * Use Cloud Interconnect and Cloud VPN
 
 
