@@ -61,11 +61,60 @@ Let's understand this first -
 * After time out, station will again send data but if it immediately tries to send data packet then collision will occur. Because timeout timer is also same for all the stations. Hence no station can effectively send data.
 * So station must not send frame immediately after time out.
 * It must wait for random amount of time called **back-off or waiting time   
-* Back off time = k * slot time**
+* Back off time = k * **slot time**
   * k is any random number in between 0 to 2^n -1
 
 ![alt text](image-646.png)
 
+Note - Collision number is with respect to the data packet
+
+What is slot time?  
+different things are said in different book - RTT, Pd, Td. Standard books have conflict among themselves.
+In exam question it will be given
+Note - Maximum number of attempts for the station is 15.
+
+## Binary exponential Back off Algorithm(2 station)
+![alt text](image-647.png)
+* Suppose Station A wants to send packet 1 and Station B wants to send packet 2
+* They send at same time at t1
+* So a collision will happen
+  * so n =1 for both of them for first time becasue both data packet collided for first time
+  * so k will be {0,1} - 0 to 2^n-1
+
+![alt text](image-648.png)
+
+from above collision probability is 50%
+
+* If we choose {0,1}. A choose 0 and B choose 1
+  
+![alt text](image-649.png)
+
+So A would have successfully sent the data packet
+
+![alt text](image-650.png)
+
+At second time n = 1 for A, because data packet 2 has collided for first time and for B, n = 2 because it's the same packet which is colliding again.
+
+* Third Time
+
+![alt text](image-651.png)
+
+![alt text](image-652.png)
+
+Now above is the one of the disadvantage of above algorithm
+* Starting - A have 25% and B have 25%
+* Second time A won, 3rd time A won
+* A will capture whole link and won't give chance to other station
+
+## Disadvantage of Back Off Algorithm
+This algorithm suffers from capture effect. If any station wins in the 1st collision then it have a more probability for winning in the next collision.
+
+e.g. 
+P(A) =  25%  
+P(A) =  62.5%  
+P(A) = 81.25%  
+
+![alt text](image-653.png)
 
 
 
