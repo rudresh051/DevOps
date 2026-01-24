@@ -1,35 +1,80 @@
 # Networking
 
 ## Need for Google Cloud VPC
+* In a corporate network or an on-premises data center:
+  * Can anyone on the internet s**ee the data exchange** between the application and the database?
+    * No
+* Can anyone from internet **directly connect to your database?**
+  * Typically **NO.**
+  * You need to connect to your corporate network and then access your applications or databases.
+* Corporate network provides a **secure internal network** protecting your resources, data and communication from external users
+* How do you do create **your own private network** in the cloud?
+  * Enter Virtual Private Cloud (VPC)
 
 ## Google Cloud VPC(Virtual Private Cloud)
+* Your **own isolated network** in GCP cloud
+  * Network traffic within a VPC is isolated (not visible) from all other Google
+Cloud VPCs
+* You **control all the traffic** coming in and going outside a VPC
+* **(Best Practice)** Create all your GCP resources (compute, storage, databases etc) **within a VPC**
+  * Secure resources from unauthorized access AND
+  * Enable secure communication between your cloud resources
+* VPC is a **global resource** & contains subnets in one or more
+region
+  * (REMEMBER) NOT tied to a region or a zone. VPC resources can be in any region or zone!
 
 ## Need for VPC(Virtual Private Cloud) Subnets
 * Different types of resources are created on cloud - databases, compute etc
+  * Each type of resource has its **own access needs**
+  * Load Balancers are accessible from internet(**public** resources)
+  * Databases or VM instances should NOT be accessible from internet
+    * ONLY or VM instances should NOT be accessbile from internet
 * How do you **separate public resources from private resources** inside a VPC?
   * Create separate Subnets!
-* (Additional Reason) - You want to distribute resources across multiple regions for high availability
+* (Additional Reason) - You want to **distribute resources** across multiple regions for high availability
+  * This can be done by using creating subnets
 
 ## VPC Subnets
 * (Solution)**Create different subnets** for public and private resources
-  * Resources in a public subnet CAN be accessed from internet
-  * Resources in a private subnet CANNOT be accessed from internet
+  * Resources in a public subnet **CAN** be accessed from internet
+  * Resources in a private subnet **CANNOT** be accessed from internet
   * But resources in public subnet can talk to resources in private subnet
 * Each Subnet is crated in a region
-* Example - VPC - demo-vpc => Subnets - region us-central1, europe-west1 or us-west1 or ..
+* **Example** - VPC - demo-vpc => Subnets - region us-central1, europe-west1 or us-west1 or ..
 
 ## Creating VPCs and Subnets
 * By default, every project has a default VPC
 * You can create your own VPCs
 * Options when you create a subnet
-  * Enable **Private Google Access** - Allows VM's to connect to Google API's using private IP's
-* Enable **FlowLogs** - To troubleshoot any VPC related network issues
+  * **OPTION 1** - Auto mode VPC network
+    * Subnets are automatically created in each region
+    * Default VPC created automatically in the project uses auto mode!
+  * **OPTION 2** - Custom mode VPC network.
+    * No subnets are automatically created
+    * You have complete control over subnets and their IP ranges
+    * Recommended for Production
+  * Options when you create a subnet - 
+    * Enable **Private Google Access** - Allows VM's to connect to Google API's using private IP's
+  * Enable **FlowLogs** - To troubleshoot any VPC related network issues
 
 ## Step 03a - Understanding CIDR Blocks
 * Resources in a network use continuous IP addresses to make routing easy
+  * Example - Resources inside a specific network can use IP addresses from 69.208.0.0 to 69.208.0.15
 * How do you express a **range of addresses** that resources in a network can have?
-  * CIDR block
+  * Using **CIDR block**
+* A **CIDR block** consists of a **starting IP address(69.208.0.0)** and a **range(/28)**
+  * Example - CIDR block 69.208.0.0/28 represents addresses from 69.208.0.0 to 69.208.0.15 - a total of 16 addresses
+* **Quick Tip** - 69.208.0.0/28 indicates that the first 28 bits(out of 32) are fixed. 
+  * > Ok basically the network id NID are fixed.
+  * > Last 4 bits can change = 2^4 = 16 addresses
 * https://cidr.xyz/
+
+![alt text](image-37.png)
+
+![alt text](image-38.png)
+
+## Demo - Creating a VPCs and Subnets in GCP
+(To be continued)
 
 ## Firewall Rules
 * Configure Firewall Rules to control traffic going in or out of the network
