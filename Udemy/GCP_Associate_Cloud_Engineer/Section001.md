@@ -1,3 +1,4 @@
+# Link - https://www.udemy.com/course/google-cloud-certification-associate-cloud-engineer/
 # Getting Started
 
 * GCP has 200+ services. This exam expects knowledge of 40+ Services.
