@@ -128,6 +128,10 @@ what is Firewall? It is basically a first line of defence in the network securit
 
 ![alt text](image-57.png)
 
+* **Lower the number higher the priority**
+
+![alt text](image-58.png)
+
 
 <!-- ----- -->
 * Configure Firewall Rules to control traffic going in or out of the network
