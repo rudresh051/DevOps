@@ -77,6 +77,8 @@ region
 (To be continued)
 * How to identify non-overlapping subnets?
 * What is MTU? and what is it's unit?
+* What is secondary IP ranges in Custom-mode VPC creation?
+* 
 
 
 ## Limitation of Default VPC
@@ -152,7 +154,48 @@ region
 * Helps you achieve **separation of concerns**
   * Network administrators responsible for Host projects and Resources users use Service Project
 
-## VPC Peering
+## VPC Peering(To enable communication between VPCs)
+* **Default VPC Communication** - 
+  * In a Google Cloud environment, by default, Virtual Private Clouds(VPCs) operate in isolation. Each VPC is like its own private network, and instances within the same VPC can communicate with each other without any extra configuration
+* **Isolation Challenges**
+  * However, when you have multiple VPCs for different projects, teams, or purposes, they might need to collaborate. Without any special setup, direct communication between these isolated VPCs is not possible earlier
+
+
+![alt text](image-40.png)
+
+What is the solution? => VPC Peering
+
+![alt text](image-41.png)
+
+* **Advantages of VPC Peering**
+
+![alt text](image-42.png)
+
+![alt text](image-43.png)
+
+### VPC Peering - Detailed Understanding
+How does it work?  
+How communication happens between VMs within same VPC ?
+* When VMs are in Same VPC - they will automatically use internal IP address(see below diagram)
+
+![alt text](image-45.png)
+
+NOTE - See in above that the VMs are in different zones. while creating VPC, if we use default different non-overlapping subnetwork are created. But they are in same VPC
+
+* What was traditional way of doing previously - when two VMs are in different VPCs was exposing the external IP address of VM to the public internet(basically configure it)
+
+![alt text](image-46.png)
+
+* Now what we use is VPC Peering - It establish a communiation between two different VPCs **using Internal IP address**
+  * Nutshell - VPC helps us to establish a communication between VM instances or any resources that is runnin in a different VPCs, either within the same project or in different project
+  * It helps us to avoid exposing public IP address
+  * It is making communication in a secured way
+
+
+![alt text](image-44.png)
+
+
+<!-- ---- -->
 * **Scenario** - How to **connect VPC networks** across **different organizations?**
 * Enter **VPC Peering**
   * Networks in same project, different projects and across projects in different organizations can be peered
@@ -162,6 +205,15 @@ region
     * **No data transfer charges** for data transfer between services
   * (REMEMBER) Network administration is NOT changed - 
     * Admin of one VPC do not get the role automatically in a peered network.
+
+
+## VPC Peering within same project - Demo
+
+![alt text](image-47.png)
+
+Delete the VM instance created before if taking long break as 4 VMs were created.
+
+
 
 
 # Hybrid Cloud
