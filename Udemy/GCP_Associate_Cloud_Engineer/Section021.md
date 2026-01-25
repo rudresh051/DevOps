@@ -75,7 +75,39 @@ region
 
 ## Demo - Creating a VPCs and Subnets in GCP
 (To be continued)
+* How to identify non-overlapping subnets?
+* What is MTU? and what is it's unit?
 
+
+## Limitation of Default VPC
+* **Global Scope**
+  * The default VPC is global, which means it spans all GCP regions. while this can be advantageous in terms of connectivity, it might lead to increased complexity and potential security concerns, especially if you want to enforce regional isolation
+* **Limited Customization**
+  * The default VPC Is designed for simplicity and ease of use, but it might lack the level of customization required for complex networkarchitectures. If your project demands specific IP ranges,subnetting, or other advanced configurations, the default VPC may be restrictive
+  * You cannot change the entire subnet
+* **Address Range Limitations**
+  * The default VPC comes with predefined IP address ranges. If these ranges conflict with your existing on-premises network or if they do not meet your specific addressing requirements, it could be a limitation
+* **Security Concerns** - The default firewall rules in the default are relatively permissive to ensure broad compatibility. Depending on your security posture, these rules might need adjustment to adhere to specific compliance standards or internal security policies
+* **Cross-Project Connectivity**
+  * If you need to connect resources across different projects, the default VPC might not be the best choice. Setting up VPC Network Peering or using Shared VPCs might be more suitable for such scenarios
+* **Lack of Isolation Controls**
+  * The default VPC is designed to be straightforward, but it might lack the granularity needed for strict isolation between different parts of your infrastructure. This could be a concern in environments with stringent security or compliance requirements
+* **Scalability Challenges**
+  * For larger or more complex deployments, the default VPC might face scalability challenges. If your project grows significantly, you may need to migrate to a custom VPC with more scalable configurations.
+* **Limited Routing Options**
+  * The default VPC comes with a predefined set of routes. If your application requires specific configurations, such as custom route prioritization or VPN configurations, you may find the default VPC limiting
+* **Resource Naming Restrictions**
+  * Naming conventions within the default VPC may be generic and not aligned with your orgnizations standards. This can lead to confusion, especially in larger projects with multiple teams working concurrently
+
+## Creating VPC in Auto mode - Demo
+* Not much difference between default and auto-mode
+* > If your customer belongs to a particular region, then you want to create VPC in that region. Basically we can create subnetworks for the region which is required
+
+![alt text](image-39.png)
+
+* Google will give the non-overlapping subnets after selecing auto-mode for "new VPC network" creation
+
+## Creating new VPC - Custom mode - Demo
 ## Firewall Rules
 * Configure Firewall Rules to control traffic going in or out of the network
   * Stateful
