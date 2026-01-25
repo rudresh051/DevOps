@@ -110,7 +110,26 @@ region
 * Google will give the non-overlapping subnets after selecing auto-mode for "new VPC network" creation
 
 ## Creating new VPC - Custom mode - Demo
+done
+
+
 ## Firewall Rules
+what is Firewall? It is basically a first line of defence in the network security
+
+![alt text](image-54.png)
+
+* It establishes a barrier between your trusted internal network from your external/untrusted network
+
+> how it decides to allow or deny any packet? how does it happen? We need to define a security policy. It would be defined by administrator
+
+![alt text](image-55.png)
+
+![alt text](image-56.png)
+
+![alt text](image-57.png)
+
+
+<!-- ----- -->
 * Configure Firewall Rules to control traffic going in or out of the network
   * Stateful
     * > If request is allowed, then automatically response is allowed
@@ -141,6 +160,9 @@ region
   * **Protocol** - ex. TCP or Deny traffic
   * **Port** - which port?
   * **Enforcement status** - Enable or Disable the rule
+
+## Basic Firewall Rule Configurations - Demo
+Let's create a simple firewall rule.
 
 ## Shard VPC
 * **Scenario** - Your organization has **multiple projects**. You want **resources** in different projects to **talk to each other?**
@@ -207,14 +229,46 @@ NOTE - See in above that the VMs are in different zones. while creating VPC, if 
     * Admin of one VPC do not get the role automatically in a peered network.
 
 
-## VPC Peering within same project - Demo
+
+
+### VPC Peering within same project - Demo
 
 ![alt text](image-47.png)
 
 Delete the VM instance created before if taking long break as 4 VMs were created.
 
 
+Steps - 
+1. Create 3 VMs
 
+![alt text](image-48.png)
+
+2. Click SSH into two VMs of same default VPC and ping the internal IP address
+
+![alt text](image-49.png)
+
+from above it confirms for communication within Same VPC it require internal IP address
+
+3. Go VPC peering and create new connection . from default to vpc-custom as well as vpc-custom to default. else it will remain inactive
+
+![alt text](image-50.png)
+
+so now the status is active
+
+![alt text](image-51.png)
+
+Now the ping of ip address will be working
+
+### VPC Peering between Different Project -  Demo
+1. Create new VPC peering from project 1 to project 2 inside project 1
+
+![alt text](image-52.png)
+
+2. Create new VPC peering from project 2 to project 1 inside project 2
+
+![alt text](image-53.png)
+
+So now communication will be happening, because we have enabled between two projects and it is straighforward which is secure
 
 # Hybrid Cloud
 > How to you connect an on-premise network to a cloud network
