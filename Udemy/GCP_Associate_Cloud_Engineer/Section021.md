@@ -229,6 +229,32 @@ so what happens when we select service account in the firewall?
 
 ![alt text](image-68.png)
 
+### GCP Firewall Policy - Demo | Hands-on
+> So when you are having multiple requirement to define your firewall rule, so for easy management you can create a policy. Basically you can add all the related firewall rule under that policy and then you can associate to a VPC
+
+![alt text](image-69.png)
+
+* 2nd step - Add the firewall rule
+
+then associate the policy VPC network
+![alt text](image-70.png)
+
+![alt text](image-71.png)
+
+* We cannot delete a firewall policy directly, first we need to remove the VPC network association
+
+![alt text](image-72.png)
+
+after removing the association we can now  delete the firewall policy
+
+![alt text](image-73.png)
+
+
+## Section - GCP Private Access
+
+![alt text](image-74.png)
+
+
 
 ## Shard VPC
 * **Scenario** - Your organization has **multiple projects**. You want **resources** in different projects to **talk to each other?**
