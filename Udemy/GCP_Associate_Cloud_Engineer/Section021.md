@@ -200,6 +200,35 @@ we will not be able to ping the public ip address of VMs
 
 * Now let's create new firewall rule with source ip for ingress from your local machine
 
+## GCP Firewall rules - Tag based - Demo
+> What is Tag? Tag is nothing but a metadata that is defined to any instance in the GCP platform
+
+![alt text](image-63.png)
+
+* In the firewall rule choose the network tags option while selecting
+
+![alt text](image-64.png)
+
+firewall rule updated - 
+
+![alt text](image-65.png)
+
+## Firewall rules - Service account based - Demo | Hands-on
+> Now let's see how to create based on service accounts
+
+By default compute engine default service account will be selected
+
+![alt text](image-66.png)
+
+so what happens when we select service account in the firewall?
+> Only vm-6 is part of that service account we created. so our firewall rule is now applicable to only vm-6 with the service account we created.
+
+> For other VMs it will not ping because now firewall rule is appliable to specific service account which allows the traffic. Basically e.g. VM2 is not part of that service account and that's the reason firewall is not allowing the traffic
+
+![alt text](image-67.png)
+
+![alt text](image-68.png)
+
 
 ## Shard VPC
 * **Scenario** - Your organization has **multiple projects**. You want **resources** in different projects to **talk to each other?**
