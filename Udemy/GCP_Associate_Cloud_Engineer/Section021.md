@@ -251,9 +251,53 @@ after removing the association we can now  delete the firewall policy
 
 
 ## Section - GCP Private Access
-
+> without traversing the public internet we can securely connect to GCP resources
 ![alt text](image-74.png)
 
+![alt text](image-75.png)
+
+> suppose you want to connect to tenant network
+> e.g. in Banking sector
+
+## GCP Private Access - Demo | Hands-on
+
+* Add two more subnets in vpc "custom-vpc-demo"
+
+![alt text](image-76.png)
+* Create a bucket in London-2 region and add an object
+
+* A tenant = an isolated customer, team, or environment
+  * A logically isolated network belonging to one tenant
+
+So now we need to establish a communication between the storage which is in "London-2" region(tenant network) and with the VM which is in another network "cutom-vpc-demo" which has subnets in singapore, delhi, mumbai and us-lowa
+
+So because of "public IP address" we can see the object . This VM is in delhi and object is in london
+
+![alt text](image-77.png)
+
+Above can be confirmed , if we disable the set the external ip address of vm5 to none
+
+![alt text](image-78.png)
+
+And now since we don't have public/external IP address for VM5, it will not be able to ping
+
+![alt text](image-80.png)
+
+![alt text](image-79.png)
+
+> Now let's enable the google private access. so with this it will be able to communicate even though it doesn't have public IP address
+
+Now enable the google private access
+
+![alt text](image-81.png)
+
+So now we can see the object in our storage thourgh google private access
+
+![alt text](image-82.png)
+
+but still since external IP address is removed, we can't ping to public IP
+
+## Section - Assigning Multiple IP address to a single Instance
 
 
 ## Shard VPC
