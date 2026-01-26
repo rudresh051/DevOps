@@ -133,7 +133,8 @@ what is Firewall? It is basically a first line of defence in the network securit
 ![alt text](image-58.png)
 
 
-<!-- ----- -->
+<hr>
+
 * Configure Firewall Rules to control traffic going in or out of the network
   * Stateful
     * > If request is allowed, then automatically response is allowed
@@ -167,6 +168,38 @@ what is Firewall? It is basically a first line of defence in the network securit
 
 ## Basic Firewall Rule Configurations - Demo
 Let's create a simple firewall rule.
+
+![alt text](image-59.png)
+
+* Firewall rule is applied to two vm instances as we have chosen network "vpc-custom-demo"
+
+![alt text](image-60.png)
+
+* Since source is 0.0.0.0/0
+
+we are able to ping the public ip address of our VM machine with our simple firewall rule
+```txt
+Action on match
+Allow
+
+Source filters
+IP ranges
+0.0.0.0/0
+```
+![alt text](image-61.png)
+
+
+## Exploring more firewall Rules - Demo
+
+* After disabling all the four firewall rule of vpc-custom-demo, it will deny all the incoming requests(by default it firewall deny if we don't allow anything)
+  * Basically any communication to that VM is not possible
+
+![alt text](image-62.png)
+
+we will not be able to ping the public ip address of VMs
+
+* Now let's create new firewall rule with source ip for ingress from your local machine
+
 
 ## Shard VPC
 * **Scenario** - Your organization has **multiple projects**. You want **resources** in different projects to **talk to each other?**
