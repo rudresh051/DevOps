@@ -297,7 +297,54 @@ So now we can see the object in our storage thourgh google private access
 
 but still since external IP address is removed, we can't ping to public IP
 
-## Section - Assigning Multiple IP address to a single Instance
+## Section - Handling Multiple IP address to a single Instance
+* There will be a requirement to assign multiple IP addresses to a single VM instance for many reasons. In that case, there are 2 methods we can assign more than one IP address to a VM instance.
+  * **Assigning additional VM NIC(Network Interface Card)**
+    * When we add more NIC, there is a limitation in this method. **Where each NIC will be a part of one VPC only**. We can NOT add same VPC to different NIC of a single VM instance.
+  * **Assigning Alias IP addresses**
+    * When we want to assign multiple IP address **from same VPC or subnet**, we can go with the second method, creating Alias IP addresses.
+
+* Demo - 
+
+Steps - 
+
+In the network , click on network interface
+
+![alt text](image-83.png)
+
+* Be default, every NIC will come under the default VPC
+* So when you create multiple NIC each NIC will be part of one VPC not same
+  * So now VM NIC 0 is part of my custom VPC and
+  * VM NIC 1 is part of default VPC
+
+So now we have **two IP addresses**
+
+![alt text](image-85.png)
+
+![alt text](image-84.png)
+
+![alt text](image-86.png)
+
+So above in one method of assigning multiple IPs to single VM.  
+>So when you add multiple NIC or a network interface card, you cannot assign from the same VPC. 
+> Each should have a different VPC. And it is kind difficult to manage
+
+* Second Method
+First add multiple subnet parts in a region
+
+![alt text](image-87.png)
+
+Now while creating the VM instance we will get the option to add alias IP range
+
+![alt text](image-88.png)
+
+* Now add the IP address , which is under the same VPC
+
+![alt text](image-89.png)
+
+Navigate to network details, and we have alias IP ranges that is for same VM and are part of same VPC and same subnet.
+
+![alt text](image-90.png)
 
 
 ## Shard VPC
