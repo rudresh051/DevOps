@@ -107,7 +107,7 @@ Now above is the one of the disadvantage of above algorithm
 * A will capture whole link and won't give chance to other station
 
 ## Disadvantage of Back Off Algorithm
-This algorithm suffers from capture effect. If any station wins in the 1st collision then it have a more probability for winning in the next collision.
+This algorithm suffers from **capture effect**. If any station wins in the 1st collision then it have a more probability for winning in the next collision.
 
 e.g. 
 P(A) =  25%  
