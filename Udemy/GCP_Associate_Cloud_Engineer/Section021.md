@@ -453,7 +453,43 @@ Now the ping of ip address will be working
 
 So now communication will be happening, because we have enabled between two projects and it is straighforward which is secure
 
+## Hybrid Network Connectivity
+* Hybrid connectivity refers to the ability to establish connections between **on-premises infrastructure**(data centers, private networks) and **resources in Google Cloud Platform(GCP).** It enables organizations to create integrated environments that span both on-premises and cloud infrastructure
+* **Advantage of Hybrid connectivity**
+  * The primary purpose of hybrid connectivity is to **facilitate communication** and **data exchange** between on-premises systems and resources hosted in GCP, allowing organizations to leverage the enefits of the cloud while maintaining some components on-premises
+  * > What is the need to Hybrid?
+  * > It depends on requirement. They still have some resources where they want to keep on-premises and move some resources to cloud
+* **Different methods**
+  * Cloud VPN
+  * Cloud Interconnect
+  * Peering
+
+example -  
+
+![alt text](image-91.png)
+
+
 # Hybrid Cloud
+
+## GCP Cloud VPN - Introduction
+* Create a new VPC with new subnets
+* Reserve External(public) IP address
+* Create a new VM instance in the VPC
+* Configure the Cloud VPN in the GCP
+* Validate the connection
+
+What is VPN?
+* It is a virtual private network which is built on top of the internet. It's a secured connectivity over the unsecured. Basically it's a secured tunnel that's connected over the unsecured internet.
+* How it works?
+
+
+![alt text](image-92.png)
+
+
+
+
+<hr>
+
 > How to you connect an on-premise network to a cloud network
 ## 1. Cloud VPN
 * Cloud VPN - Connect on-premise network to the GCP network
