@@ -291,7 +291,7 @@ Now enable the google private access
 
 ![alt text](image-81.png)
 
-So now we can see the object in our storage thourgh google private access
+So now we can see the object in our storage through google private access
 
 ![alt text](image-82.png)
 
