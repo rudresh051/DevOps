@@ -473,7 +473,7 @@ example -
 
 ## GCP Cloud VPN - Introduction
 * Create a new VPC with new subnets
-* Reserve External(public) IP address
+* Reserve **External**(public) IP address
 * Create a new VM instance in the VPC
 * Configure the Cloud VPN in the GCP
 * Validate the connection
@@ -484,6 +484,35 @@ What is VPN?
 
 
 ![alt text](image-92.png)
+
+As we don't have on-premises network, consider below diagram. workin will be same.
+
+![alt text](image-93.png)
+
+* Basically we will have two different GCP projects. Because we don't have real topologyL
+* Consider project 2 as on-premise network.
+
+### GCP Cloud VPN - Demo | Hands-on
+1. Create one each vpc in each project. e.g one in singapore and one in us and allocate the subnet.
+2. Our requirement is vm should have only internal IP address.
+
+so keep it as none.
+
+![alt text](image-94.png)
+
+Step 4 - After creating the VM in the two gcp project with different vpc , now configure the VPN
+
+![alt text](image-95.png)
+
+The external ip address reserved will be shown while configuring the VPN
+
+![alt text](image-96.png)
+
+So we will start to get the response in the ping for vm instances when vpn tunnel for both the projects is established
+
+
+
+
 
 
 
