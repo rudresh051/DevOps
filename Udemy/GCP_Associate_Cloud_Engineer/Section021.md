@@ -489,11 +489,17 @@ As we don't have on-premises network, consider below diagram. workin will be sam
 
 ![alt text](image-93.png)
 
-* Basically we will have two different GCP projects. Because we don't have real topologyL
+* Basically we will have two different GCP projects. Because we don't have real topology
 * Consider project 2 as on-premise network.
 
 ### GCP Cloud VPN - Demo | Hands-on
 1. Create one each vpc in each project. e.g one in singapore and one in us and allocate the subnet.
+
+Reserve exteranl IP address from IP Address. GCP will automatically give one from that subnet created above
+
+![alt text](image-100.png)
+
+
 2. Our requirement is vm should have only internal IP address.
 
 so keep it as none.
@@ -508,8 +514,18 @@ The external ip address reserved will be shown while configuring the VPN
 
 ![alt text](image-96.png)
 
+![alt text](image-97.png)
+
 So we will start to get the response in the ping for vm instances when vpn tunnel for both the projects is established
 
+### Static Routing - Demo | Hands-on
+If you add a new subnet to on-premises network, then project 1 will not be able to connect to this new subnet because project 1 does not know about this even though vpn tunnel is created between these projects. but Project 1 is not aware of new subnet. so to solve this we need to create new Route
+
+![alt text](image-98.png)
+
+## Understanding Dynamic Routing in GCP
+
+![alt text](image-99.png)
 
 
 
