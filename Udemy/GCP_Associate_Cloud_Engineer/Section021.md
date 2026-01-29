@@ -102,12 +102,17 @@ region
   * Naming conventions within the default VPC may be generic and not aligned with your orgnizations standards. This can lead to confusion, especially in larger projects with multiple teams working concurrently
 
 ## Creating VPC in Auto mode - Demo
-* Not much difference between default and auto-mode
+* Not much difference between default and auto-mode. Only difference is we creating VPC manually.
 * > If your customer belongs to a particular region, then you want to create VPC in that region. Basically we can create subnetworks for the region which is required
 
 ![alt text](image-39.png)
 
-* Google will give the non-overlapping subnets after selecing auto-mode for "new VPC network" creation
+* **Google will give the non-overlapping subnets** after selecing auto-mode for "new VPC network" creation
+  * Default VPC is created automatically after creating a project with non-overlapping subnets
+  * In Auto mode, we are just creating another VPC with different name but this time again the subnets are automatically given by gogole.
+    * The subnets remain same both in auto-mode and defualt vpc
+    * In auto-mode , you can make some changes in firewall rules.
+  * In custom, we need to create our own subnets.
 
 ## Creating new VPC - Custom mode - Demo
 done
@@ -381,7 +386,7 @@ What is the solution? => VPC Peering
 ### VPC Peering - Detailed Understanding
 How does it work?  
 How communication happens between VMs within same VPC ?
-* When VMs are in Same VPC - they will automatically use internal IP address(see below diagram)
+* **When VMs are in Same VPC** - they will automatically use internal IP address(see below diagram) to communicate/connect
 
 ![alt text](image-45.png)
 
@@ -430,7 +435,8 @@ Steps -
 
 ![alt text](image-49.png)
 
-from above it confirms for communication within Same VPC it require internal IP address
+* from above it confirms for communication within Same VPC it requires internal IP address. Also note they are in different zones(NOTE - **one is in us-central1-a zone and one is europe-west2-c zone in  but in SAME VPC**). So they are able to connect.
+  * Nothing extra is required to connect like going for VPC Peering option
 
 3. Go VPC peering and create new connection . from default to vpc-custom as well as vpc-custom to default. else it will remain inactive
 
