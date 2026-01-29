@@ -570,3 +570,24 @@ If you add a new subnet to on-premises network, then project 1 will not be able 
   * Use Cloud Interconnect and Cloud VPN
 
 
+## GCP CDN & Cache - Hands-on
+
+![alt text](image-101.png)
+
+* Key Features - 
+
+![alt text](image-102.png)
+
+![alt text](image-103.png)
+
+![alt text](image-104.png)
+
+* **Use Cases** 
+
+![alt text](image-105.png)
+
+![alt text](image-106.png)
+
+**Conclusion -**
+
+![alt text](image-107.png)
