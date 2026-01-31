@@ -125,3 +125,16 @@ Important -
 ![alt text](image-126.png)
 
 you will be able to create an Image if a VM instance is stopped, else it will give error
+
+So after creating an Image , now we can go create VM from instance template and it this from custom image which we created above
+
+![alt text](image-127.png)
+
+* Your custom-image created above will appear under **Image** option
+
+![alt text](image-128.png)
+
+we can also put our start-up script in above. 
+
+**So by creating custom image, it reduces our time of launching the VM instance**
+

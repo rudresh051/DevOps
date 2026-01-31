@@ -1,4 +1,24 @@
-# Section 5: Gcloud for Associate Cloud Engineer
+# Section 5: Google Compute - Optimizing Costs and Performance in GCP
+
+## Sustained Use Discounts
+
+* These are automatically applied when you use instanes created by GKE or VMs usage
+
+![alt text](image-129.png)
+
+
+## Committed use discounts
+* It needs commitment from you if you think you need specific resources for some fixed time like 1 year
+
+![alt text](image-130.png)
+
+
+
+
+
+
+
+
 
 ## Gcloud
 * Command line interface to interact with Google Cloud Resources
