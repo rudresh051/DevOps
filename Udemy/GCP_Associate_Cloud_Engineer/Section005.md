@@ -82,7 +82,30 @@ you can send your billing data to BigQuery Dataset
   * Don't get confused with live migration. Here machine type is not changed. This is done by google to maintain the host.
   * But when we do, we need to stop the VM
 
+Note - 
+* Instances are zonal(in a specific zone NOT region)
+  * Instance templates global(unless you use zonal resources in your templates)
+  * Custom Images(to reduce launch time of VM) are global - You can provide access to other project if needed
+* **Automatic Basic Monitoring** is enabled
 
+## Sole-tenant nodes
+* when you want more security, compliance
+  
+![alt text](image-141.png)
+
+## Virtual Machine manager
+* Basically to manage Virtual Machine
+![alt text](image-142.png)
+
+## Scenarios - Virtual Machine
+
+![alt text](image-143.png)
+
+## Quick Review
+
+![alt text](image-144.png)
+
+![alt text](image-145.png)
 
 
 
