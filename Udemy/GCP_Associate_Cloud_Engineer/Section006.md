@@ -18,7 +18,8 @@ actions like deployments as well!
 * Gcloud is part of Google Cloud SDK
   * Cloud SDK requires Python
   * Instructions to install Cloud SDK(and Gcloud) => https://cloud.google.com/sdk/docs/install
-* You can also use Gcloud on Cloud Shell
+  * But you don't need to install it. There is alternative for above
+* You can also use Gcloud on **Cloud Shell**
 * **Connecting to GCP**
   * `gcloud init` - initialize or reinitialize gcloud
     * Authorize gcloud to use your user account credentials
@@ -75,6 +76,55 @@ gcloud compute instance-templates describe my-instance-template-with-custom-imag
 * set commands
   * This is use to set the specified property in your active configuration
   * e.g. change the default region or zone or default account or default project
+    * e.g. gcloud config set 
+
+![alt text](image-146.png)
+
+* If I want to remove the default project which is configured - `gcloud config unset`
+
+## Managing Multiple Configurations in Gcloud 
+* **Scenario** - You are working on multiple projects from the same machine. You would want to be able to execute commands using different configurations.  
+  * Basically you would want to **easily switch between projects** and easily execute commands for them
+  * **Solution** - we need to create multiple configurations
+  * `gcloud config configurations create/delete/describe/activate/list`
+
+
+
+![alt text](image-147.png)
+
+| Command                             | Think of it as                 |
+| ----------------------------------- | ------------------------------ |
+| `gcloud config list`                | **What am I using right now?** |
+| `gcloud config configurations list` | **What profiles do I have?**   |
+
+* `gcloud config configurations create my-seond-configuration` - It will create a new configurations as well as activate it
+
+## Understanding Command structure in Gcloud to play with services
+
+![alt text](image-148.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ![alt text](image-11.png)
