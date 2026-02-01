@@ -47,3 +47,9 @@ above is high level view of cloud load balancer
 What's happening under the hood will help in understanding what's happening what we are going to talk in the next steps.
 
 ## Creating a Load Balancer in GCP - Demo | Hands-on
+
+
+
+## Load Balancer Scenarios
+
+![alt text](image-16.png)
