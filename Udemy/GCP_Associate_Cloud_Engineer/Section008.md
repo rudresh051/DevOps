@@ -53,3 +53,17 @@ What's happening under the hood will help in understanding what's happening what
 ## Load Balancer Scenarios
 
 ![alt text](image-16.png)
+
+
+<hr>
+
+## OR Google Cloud Load Balancer
+* Basically method of distributing the load or traffic request to the available resource
+
+![alt text](image-162.png)
+
+Advantages - 
+* Auto Scaling
+* High Availability
+* Health Monitors
+* Global Load Balancing
