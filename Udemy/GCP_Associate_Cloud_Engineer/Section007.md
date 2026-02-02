@@ -3,27 +3,45 @@
 # Section 6: Getting started with Instance Groups in Google Cloud
 
 * How do you create a group of VM instances?
-  * Instance Group - Group of VM instances managed as a single entity
-    * Manage group of similar VMs having similar lifecycle as ONE UNIT
-* Two Types of Instance Groups:
-  * Managed : Identical VMs created using a template:
- Features: Auto scaling, auto healing and managed releases
-   * Unmanaged : Different configuration for VMs in same group:
+  * **Instance Group** - Group of VM instances managed as a single entity
+    * **Manage group** of similar VMs having similar lifecycle as **ONE UNIT**
+* T**wo Types of Instance Groups:**
+  * **Managed** : Identical VMs created using a template:
+    * Features: *Auto scaling, auto healing and managed releases*
+  * **Unmanaged** : Different configuration for VMs in same group:
      * Does NOT offer auto scaling, auto healing & other services
      * NOT Recommended unless you need different kinds of VMs
- * Location can be Zonal or Regional
+ * **Location** can be Zonal or Regional
    * Regional gives you higher availability (RECOMMENDED)
 
 ## Managed Instance Groups(MIG)
-* Managed Instance Group - Identical VMs created using an Instance template
+* **Managed Instance Group**- Identical VMs created using an **Instance template**
 * Important Features - 
-  * Maintain
-  * Detect application failures
-  * Increase and decrease instances based on load(Auto scaling)
-  * Add Load balancer to distribute load
+  * **Maintain** certain number of instances
+    * If an instance crashes, MIG launches another instance
+  * **Detect application failures** using health checks(Self Healing)
+  * Increase and decrease instances based on load(**Auto scaling**)
+  * Add **Load balancer** to distribute load
+  * Create instances in multiple zones(regional MIGs)
+    * Regional MIGs provide higher availability compared to zonal MIGs
+  * **Release** new application versions without downtime
+    * **Rolling updates** - Release new version *step by step* (gradually). Update a percentage of instances to the new version at a time
+    * **Canary Deployment** - Test new version with a group of instances before releasing it all across all instances
 
 ## Creating Managed Instance Group(MIG)
-* Instance template is mandatory
+* **Instance template** is mandatory
+* Configure **auto-scaling** to automatically adjust number of instances based on load
+  * **Minimum** number of instances
+  * **Maximum** number of instances
+  * **Autoscaling metrics** - CPU Utilization or Load Balancer Utilization target or Any other metric from **Stack Driver**
+    * **Cool-down period** - How long to wait before looking at auto scaling metrics again?
+    * **Scale In Controls** - Prevent a sudden drop in no of VM instances
+      * **Example** - Don't scale in by more than 10% or 3 instances in 5 minutes
+    * **Autohealing** - Configure a Health Check with Initial delay(How long should you wait for your app to initialize before running a health check?)
+
+## Managed Instance Group - Demo | Hands-on
+
+![alt text](image-156.png)
 
 # Questions
 ## What is Compute Engine?
