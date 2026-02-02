@@ -102,6 +102,9 @@ Basically - Remember this - **Describe a VM instance once and then use that temp
 > you can customize further while creating, but ideally just click "create"
 
 ## Reducing Launch Time with Custom Image
+
+* Bascially custom image is created using boot disk attached to a VM instance
+
 > There is one more problem with the above approach we took
 > Intalling OS patches and software at the launch of VM instances increases boot up time
 > Basically it takes a lot of time to launch that VM Instance
@@ -124,7 +127,7 @@ Important -
 
 ![alt text](image-126.png)
 
-you will be able to create an Image if a VM instance is stopped, else it will give error
+you will be able to only create an Image if a VM instance is **stopped**, else it will give error for a VM instance running.
 
 So after creating an Image , now we can go create VM from instance template and it this from custom image which we created above
 

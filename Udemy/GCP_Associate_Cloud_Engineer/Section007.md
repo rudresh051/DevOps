@@ -43,6 +43,41 @@
 
 ![alt text](image-156.png)
 
+Scale-in - Reduce no of VM instance when load increases
+Scale-out - Increase no of VM instance when load increases
+
+* For higher availability - select multiple zones
+* Specify minimum number of VM instances and Maximum number of Instances
+
+![alt text](image-157.png)
+
+* Specify Auto-scaling signal metrics - 4 types - CPU Utilization in percentage is the default
+
+![alt text](image-158.png)
+
+* Predictive autoscaling - Google will use historical load to auto-scale
+* Autoscale-schedule feature - Basically you can specify when you want how many instances
+* Cooldown period - Once autoscale is made, how long you want to wait for next autoscale.
+  * Default is 60 seconds
+* Scale-in controls - e.g. I don't want more than 10 VM autoscale in a duration of 10 minutes. Or you can also specify percent of VM
+* Auto-Healing - How can a managed instance group decide if an instance is healthy or not.
+  * So for this create a Health check
+
+
+![alt text](image-159.png)
+
+
+![alt text](image-160.png)
+
+You can also log the VM health check in google "cloud logging"
+
+Click create
+
+![alt text](image-161.png)
+
+
+
+
 # Questions
 ## What is Compute Engine?
 
