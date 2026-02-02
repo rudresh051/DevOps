@@ -150,14 +150,16 @@ Initial Delay refers to the time duration that a load balancer or health checker
 ![alt text](image-13.png)
 
 ## Updating a Managed Instance Group(MIG)
-* Rolling update - Gradual
-  * Specifiy new template
-  * Specify how you want the update to be done
-    * when should the update happen?
-    * how should the update happen?
-      * Maximum surge
-      * Maximum unavailable
-* Rolling Restart/replace
+* **Rolling update** - Gradual
+  * Specifiy new template:
+    * (OPTIONAL) Specify a template for canary testing
+  * Specify how you want the update to be done:
+    * When should the update happen?
+      * Start the update immediately(Proactive) or when instance group is resized later(Opportunistic)
+    * How should the update happen?
+      * **Maximum surge**: How many instances are added at any point in time?
+      * **Maximum unavailable** - How many instances can be offline during the update?
+* **Rolling Restart/replace** - Gradual restart or replace of all instances in the group
   * No change in template but replace/restart existing VMs
 
 
