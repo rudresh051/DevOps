@@ -67,3 +67,31 @@ Advantages -
 * High Availability
 * Health Monitors
 * Global Load Balancing
+
+* **What is Auto-Scaling?**
+
+![alt text](image-163.png)
+
+Suppose above 3 VM can handle 10000 requests per second. what if there are 15000 requests per second? It will lead to application unavailability.
+So load balancer will monitor when load is coming more than threshold.
+So auto-scaling is basically increasing or decreasing resources
+
+* **What is High-availability?**
+What if one VM crashes, then still our application will be available from other 2 Virtual machine. So it will be serving from there
+
+* **What is Health Monitors?**
+
+Above situation will not occur because we have Health monitors. what if some VM becomes slow or went down. so load balancer will check the health of the available  resources.
+
+* **What is Global Load balancing?**
+
+You can distribute the load across multple zones or multiple regions.
+
+## Cloud Load Balancing Terminologies - 
+* **Frontend**
+  * It is basically representation of the application.
+  * It is basically combination of IP address and port number.
+* Host and Path rules
+  * Which traffic should be allowed.
+* **Backend**
+  * It is where the actual application is running.
