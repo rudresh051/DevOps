@@ -68,6 +68,28 @@ Add the details for frontend, backend and Routing rules
 > If you are using layer 7, then you're doing SSL termination or SSL offloading.
 > If you are using layer 4, then you're doing TLS termination or TLS offloading.
 
+* Client to Load Balancer - Over Internet
+  * HTTPS recommended
+* Load Balancer to VM instance - Through Google internal network
+  * HTTP is ok. HTTPS is preferred
+* SSL/TLS Termination/Offloading
+  * Client to Load Balancer - HTTPS/TLS
+  * Load Balancer to VM instance - HTTP/TCP
+
+![alt text](image-165.png)
+
+
+## Cloud Load Balancing - Features
+
+|**Load Balancer**|**Type of Traffic**|**Proxy or pass-through**|**Destination Ports**|
+|--|--|--|--|
+|**External HTTP(S)**|Global, External, HTTP or HTTPS|Proxy|HTTP on 80 or HTTPS on 443|
+|**Internal HTTP(S)**|Regional, Internal, HTTP or HTTPS|Proxy|HTTP on 80 or 8080, HTTPS on 443|
+|**SSL Proxy**|Global, External, TCP with SSL offload|Proxy|A big list|
+|**TCP Proxy**|Global, External, TCP without SSL offload|Proxy|A big list|
+|**External Network TCP/UDP**|Regional, External, TCP or UDP|Pass-through|any|
+|**Internal TCP/UDP**|Regional, internal, TCP or UDP|Pass-through|any|
+
 
 
 ## Load Balancer Scenarios
