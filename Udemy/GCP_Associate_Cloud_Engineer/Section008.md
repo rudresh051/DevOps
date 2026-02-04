@@ -54,7 +54,7 @@ Add the details for frontend, backend and Routing rules
 ![alt text](image-164.png)
 
 ## Cloud Load Balancing - Terminology
-* **Backend** - Gropu of endpoints that receive traffic from a Google Cloud load balancer(example - Instance Groups)
+* **Backend** - Group of endpoints that receive traffic from a Google Cloud load balancer(example - Instance Groups)
   * > Backend is nothing but managed Instance group
   * > You can create backend for each of your microservices.
 * **Frontend** - Specify an IP address, port and protocol. This IP address is the frontend IP for your client request. 
@@ -77,6 +77,10 @@ Add the details for frontend, backend and Routing rules
   * Load Balancer to VM instance - HTTP/TCP
 
 ![alt text](image-165.png)
+
+## Choosing a Load Balancer in GCP
+
+![alt text](image-166.png)
 
 
 ## Cloud Load Balancing - Features
