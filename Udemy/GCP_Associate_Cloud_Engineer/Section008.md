@@ -42,11 +42,31 @@ above is high level view of cloud load balancer
   * SMTP - Email Transfer Protocol
   * and a lot of others
 
+**In summary -** 
+
 ![alt text](image-110.png)
 
 What's happening under the hood will help in understanding what's happening what we are going to talk in the next steps.
 
 ## Creating a Load Balancer in GCP - Demo | Hands-on
+Add the details for frontend, backend and Routing rules  
+
+![alt text](image-164.png)
+
+## Cloud Load Balancing - Terminology
+* **Backend** - Gropu of endpoints that receive traffic from a Google Cloud load balancer(example - Instance Groups)
+  * > Backend is nothing but managed Instance group
+  * > You can create backend for each of your microservices.
+* **Frontend** - Specify an IP address, port and protocol. This IP address is the frontend IP for your client request. 
+  * > If you are using SSL then a certificate is assigned to your cloud load balancer.
+* **Host and path rules**(For HTTP(S) Load Balancing) - Define rules redirecting the traffic to different backends
+  * **Based on path** - in28minutes.com/a vs in28minutes.com/b
+  * **Based on Host** - a.in28minutes.com vs b.in28minutes.com
+  * **Based on HTTP headers**(Authorization header) and methos(POST, GET, etc)
+
+### Load Balancing - SSL/TLS Termination/ Offloading
+> If you are using layer 7, then you're doing SSL termination or SSL offloading.
+> If you are using layer 4, then you're doing TLS termination or TLS offloading.
 
 
 
@@ -55,6 +75,20 @@ What's happening under the hood will help in understanding what's happening what
 ![alt text](image-16.png)
 
 
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+<hr>
+<hr>
 <hr>
 
 ## OR Google Cloud Load Balancer
