@@ -17,3 +17,11 @@
 ## Serverless
 
 ![alt text](image-35.png)
+
+## Shared Responsibility Model
+
+![alt text](image-37.png)
+
+## GCP Managed Services for Compute
+
+![alt text](image-38.png)
