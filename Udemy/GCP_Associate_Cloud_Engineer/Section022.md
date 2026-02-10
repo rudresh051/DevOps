@@ -47,7 +47,26 @@
   * Logs Router - Route different log enteries to different destinations
  
 ## Cloud Logging - Collection
+* Most GCP Managed services automatically send logs to Cloud Logging:
+  * GKE
+  * App Engine
+  * Cloud Run
+* Ingest logs from GCE VMs - 
+  * Install Logging Agent(based on fluentd)
+  * (Recommended)Run Logging Agent on all VM instances
+* Ingest logs from on-premises
+  * (Recommended) Use the BindPlane tool from Blue Medora
+  * Use the Cloud Logging API
 ## Cloud Logging - Audit and Security Logs
+* **Access Transparency Log:** Captures Actions performed by GCP team on your content (NOT supported by all services):
+  * ONLY for organizations with Gold support level & above
+* **Cloud Audit Logs** - *Answers who did what, when and where-*
+  * Admin activity Logs
+  * Data Access Logs
+  * System Event Audit Logs
+  * Policy Denied Audit Logs
+
+
 ## Cloud Logging - Audit Logs
 * Which service?
   * protoPayload.serviceName
@@ -60,13 +79,13 @@
 
 ## Cloud Audit Logs
 
-|Feature|Admin Activity Logs|Data Acess Logs|System Even Logs|Policy Denied Logs|
+|**Feature**|**Admin Activity Logs**|**Data Acess Logs**|**System Event Logs**|**Policy Denied Logs**|
 |-------|-------------------|----------------|---------------|-------------------|
-|Logs for|API calls or otheractions that modify the configuration of resources|Reading configuration of resources|Google Cloud administrative actions|When user or service account is denied access|
-|Default Enabled|yes|No|Yes|Yes|
-|VM Examples|VM creation, patching resources, Change in IAM permissions| Listing resources(vms, images etc)|On host maintenance, Instance preemption, Automatic restart|Security policy violation logs|
-|Cloud Storage|Modiy bucket or object|Modify/Read bucket or object|||
-|Recommended|Logging/logs viewer|Logging/private|Logging/Logs viewer|Logging/Logs|
+|**Logs for**|API calls or otheractions that modify the configuration of resources|Reading configuration of resources|Google Cloud administrative actions|When user or service account is denied access|
+|**Default Enabled**|yes|No|Yes|Yes|
+|**VM Examples**|VM creation, patching resources, Change in IAM permissions| Listing resources(vms, images etc)|On host maintenance, Instance preemption, Automatic restart|Security policy violation logs|
+|**Cloud Storage**|Modiy bucket or object|Modify/Read bucket or object|||
+|**Recommended**|Logging/logs viewer|Logging/private|Logging/Logs viewer|Logging/Logs|
 
 ## Cloud Logging - Controlling & Routing
 * How do you manage your logs?
@@ -120,7 +139,7 @@ Monitoring → “How is my system behaving?”
 Logging     → “What exactly happened inside the system?”
 
 ## Cloud Trace
-* Distributed tracing system for GCP: Collect latency data from:
+* Distributed tracing system for GCP: **Collect latency data** from:
   * Supported Google Cloud Services
   * Instrumented applications (using tracing libraries) using **Cloud Trace API**
 * Find out - 
@@ -135,7 +154,7 @@ Logging     → “What exactly happened inside the system?”
 
 
 ## Cloud Debugger
-* How to debug issues that are happening only in test or production environments?
+* **How to debug issues that are happening only in test or production environments?**
 * **Cloud Debgger** - Capture state of a running application
   * Inspect the state of the application directly in the GCP environment
   * Take snapshots of variables and call stack
@@ -148,7 +167,7 @@ Logging     → “What exactly happened inside the system?”
 
 
 ## Cloud Profiler
-* How do you identify performance bottlenecks in production?
+* **How do you identify performance bottlenecks in production?**
 * **Cloud Profiler** - Statistical, low-overhead profiler
   * Continuously gathers CPU and Memory usage from production systems
   * Connect profiling data with application source code

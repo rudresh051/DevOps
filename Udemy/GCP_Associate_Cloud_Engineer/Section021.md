@@ -578,9 +578,20 @@ If you add a new subnet to on-premises network, then project 1 will not be able 
 
 ## GCP CDN & Cache - Hands-on
 
+* The term CDN stands for **Content Delivery Network**
+
 ![alt text](image-101.png)
 
-* Key Features - 
+* **Key Features** - 
+  * Global Coverage
+  * Cache Control
+  * HTTPS Load Balancing
+  * Anycast IP Addresses
+  * HTTP/2 support
+  * Origin Fetches
+  * Edge Caching
+  * Dynamic Content Acceleration
+  * Real-time Analytics
 
 ![alt text](image-102.png)
 
@@ -597,6 +608,16 @@ If you add a new subnet to on-premises network, then project 1 will not be able 
 **Conclusion -**
 
 ![alt text](image-107.png)
+
+* Hands-on
+
+Enable Cloud CDN
+
+![alt text](image-177.png)
+
+CDN is enabled behind the load balancer
+
+![alt text](image-178.png)
 
 ## Cloud Armor
 * GCP Armor is Google Cloud Platform's comprehensive security offering designed to protect cloud-based assets and workloads from various cyber threats. It provides a multi-layered security approach to safeguard data, applications, and infrastructure hosted on Google cloud
