@@ -1,5 +1,37 @@
 # Exploring Databases in GCP
 
+# Google Cloud SQL
+* It is fully managed relational database service
+* Supports MySQL, PostgresSQL and SQL Server
+* 99.95% uptime SLA
+* Vertical Scalability
+  * > Increasing resources in the same machine
+* Supports both SSD and HDD
+* High Availability
+* Backup and restore
+* Strong encryption
+* Read Replica
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Commands
 
 ```txt
