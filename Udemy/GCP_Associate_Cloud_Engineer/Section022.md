@@ -1,6 +1,7 @@
 # Cloud Operations
 
 ## Cloud Monitoring
+* Basically it is a **set of tools to monitor your infrastructure**
 * To operate cloud applications effectively, you should know - 
   * Is my application healthy?
   * are the users experiencing any issues?
@@ -9,54 +10,65 @@
 * **Cloud Monitoring** - Tools to monitor your infrastructure
   * Measures key aspects of services(Metrics)
   * Create visualizations(Graphs and Dashboard)
-  * Cofigure Alerts(when metrics are NOT healthy)
+  * Cofigure **Alerts**(when metrics are NOT healthy)
     * Define Alerting Policies
       * Condition
+        * > At what condition specific alert has to be raised
       * Notifications - Multiple Channels
       * Documentation
+        * > You can attach the documentation with the alert and what can be done to resolve the issue.
 
 ## Cloud Montitoring - Workspace
+> Why we need workspace? so that to display the workspace
 * You can use cloud monitoring to monitor one or more GCP projects and one or more AWS accounts
 * How do you group all the information from multiple GCP projects or AWS accounts?
 * **Create a Workspace**
-* Workspaces are needed to organize monitoring information
+* **Workspaces are needed to organize monitoring information**
   * A workspaces allows you to see monitoring information from multiple projects
   * Step 1 - Create workspace in a specific project(Host Project)
   * Step 2 - Add other GCP projects(or AWS accounts) to the workspace
 
 ## Cloud Monitoring - Virtual Machines
+> How to create monitoring for virtual machines?
 * **Default metrics monitored** include
   * CPU utilization
   * Some disk traffic metrics
   * Network traffic and
   * Uptime information
+    * > with how much quickly VM is up and running.
 * Install **Cloud Monitoring agent** on the VM to get more disk, CPU, network, and process metrics:
-  * collected-based daemon
-  * Gathers metrics from VM and sends them to Cloud Monitoring
+  * **collectd-based daemon**
+  * > It Gathers metrics from VM and sends them to Cloud Monitoring
 
 ## Cloud Logging
-* Real time log management and analysis tool
+> All the logs from all the actions is centralized and captured in Google cloud logging.
+
+* It Real time log management and analysis tool
 * Allows to store, search, analyze and alert on massive volume of data
 * Exabyte scale, fully managed service
+  * > 2^60 = 1E(Exa) 
   * No server provisioning, patching etc
 * Ingest Log data from any source
-* Key Features - 
-  * Logs Explorer - Search, sort & analyze using flexible queries
-  * Logs Dashboard - Rich visualization
-  * Logs Metrics - Capture metrics from logs(using queries/matching strings)
-  * Logs Router - Route different log enteries to different destinations
+  * > Any kind of logs can be ingested into cloud logging.
+* **Key Features** - 
+  * **Logs Explorer** - Search, sort & analyze using flexible queries
+  * **Logs Dashboard** - Rich visualization
+  * **Logs Metrics** - Capture metrics from logs(using queries/matching strings)
+  * **Logs Router** - Route different log enteries to different destinations
  
 ## Cloud Logging - Collection
+> How to collect logs?
 * Most GCP Managed services automatically send logs to Cloud Logging:
   * GKE
   * App Engine
   * Cloud Run
-* Ingest logs from GCE VMs - 
-  * Install Logging Agent(based on fluentd)
+* Ingest logs from Google compute engine VMs - 
+  * Install **Logging Agent**(based on fluentd)
   * (Recommended)Run Logging Agent on all VM instances
 * Ingest logs from on-premises
   * (Recommended) Use the BindPlane tool from Blue Medora
   * Use the Cloud Logging API
+    * > You can actually call the cloud logging API and send logs to cloud
 ## Cloud Logging - Audit and Security Logs
 * **Access Transparency Log:** Captures Actions performed by GCP team on your content (NOT supported by all services):
   * ONLY for organizations with Gold support level & above
