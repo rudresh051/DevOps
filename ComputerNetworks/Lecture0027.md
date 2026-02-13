@@ -31,3 +31,14 @@
 |Overhead is high(20-60B)|overhead is less(8 Byte)|
 |Keep track of order(sequence)|No order|
 |Protocols - HTTP, FTP, SMTP, POP|Protocols - DNS, SNMP, TFTP, NFS, RIP, BOOTP, DHCP, All real time and multimedia protocols|
+
+Note -  Client server application such as DNS uses the services of UDP because a client need to send a short request to server and to receive a quick response from it. The request and response can each fit in one user datagram. Since only one message is exchanged in each direction.
+
+Note - 
+A client-server application such as SMTP, which is used in electronic mail, cannot use the services of UDP because a user might send a long e-mail message, which
+could include multimedia (images, audio, or video). If the application uses UDP
+and the message does not fit in one user datagram, the message must be split by
+the application into different user datagrams. Here the connectionless service
+may create problems. The user datagrams may arrive and be delivered to the
+receiver application out of order. The receiver application may not be able to 
+reorder the pieces.
