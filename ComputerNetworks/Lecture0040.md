@@ -53,10 +53,24 @@ Flooding is simple computer network Routing Algorithm in which every incoming pa
 * > In GATE till now questions are asked from Distance vectore routing
 * > Questions in GATE have never been asked in Link state Routing. 
 
-## >> Distance Vectore Routing
+## >> Distance Vector Routing
 
 * It is very very important
-* 
+Consider the below graph. A, B,C and D are 4 nodes.
+
+![alt text](image-659.png)
+
+* Step 1 - Prepare the Routing table at every Router Based on the local knowledge
+
+![alt text](image-660.png)
+
+> If node is connected by direct edge then enter the distance value, if no direct edge enter infinity
+
+![alt text](image-661.png)
+
+* Step 2 - 
+
+![alt text](image-662.png)
 
 
 
