@@ -60,7 +60,7 @@ Consider the below graph. A, B,C and D are 4 nodes.
 
 ![alt text](image-659.png)
 
-* Step 1 - Prepare the Routing table at every Router Based on the local knowledge
+* Step 1 - Prepare the Routing > at every Router Based on the local knowledge
 
 ![alt text](image-660.png)
 
