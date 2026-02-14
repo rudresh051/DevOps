@@ -74,6 +74,8 @@ Consider the below graph. A, B,C and D are 4 nodes.
 
 > Basically here we receive distance vectors from the neighbours
 
+![alt text](image-663.png)
+
 * Step 3 -  
 
 
