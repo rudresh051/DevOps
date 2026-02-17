@@ -83,3 +83,28 @@ Frameworks such as **Apache Hadoop (MapReduce/YARN)** and **Apache Spark (DAG + 
 * **Interactive analysis / notebooks:** keep a small cluster / session for data exploration, notebooks connect to Spark.
 * **Streaming:** run Flink or Spark Structured Streaming on a persistent cluster or containerized workloads.
 * **Lift-and-shift migrations:** move on-prem Hadoop/Spark jobs to Dataproc with minimal code changes because Dataproc supports common OSS versions.
+
+=============================================  
+
+## Why do we need Data Governance
+
+* Key Decisions
+  * Data Management
+  * Life Cycle Management
+  * Ownership and Accountabilit
+  * Data Quality Assurance
+  * Data Security
+  * Risk Management
+  * Data Transparency
+
+## Dataplex - Data Mesh in Google Cloud
+
+![alt text](image-61.png)
+
+* For unified visibility of data in different databases - Use Dataplex
+
+![alt text](image-62.png)
+
+## Data - Scenarios
+
+![alt text](image-63.png)
