@@ -17,7 +17,7 @@ Now we need to fit 60 with 15.
 So what scaling factor we need to use.  
 Use x = 4 as scaling factor  
 
-|Header Size|Header Lenght Field|
+|Header Size|Header Length Field|
 |-|-|
 |20B/4 = 5|0101|
 |32B/4=8|1000|

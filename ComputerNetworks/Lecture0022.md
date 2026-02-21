@@ -84,6 +84,7 @@ Offset is working as indexing. Just write in increasing order.
 ![alt text](image-598.png)
 
 how receiver will come to if let's say second fragment is lost.
+
 ![alt text](image-599.png)
 
 from 1st packet receiver can find out second fragment offset value.
