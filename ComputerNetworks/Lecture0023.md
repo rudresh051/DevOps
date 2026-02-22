@@ -1,9 +1,10 @@
 # Computer Networks 22 | TCP Header & Wrap Around Time
 - Below is the TCP Header diagram
 - Packet names at different layers
-  - Application Layer - Message
-  - Transport Layer - 
-    - TL layer attach H1 header
+  - Application Layer data is called - Message
+  - Transport Layer data is called - Segment
+    - TL layer attaches H1 header
+  - Network layer data is called - Datagram
 
 ![alt text](image-625.png)
 
@@ -57,7 +58,7 @@ Use x = 4 as **scaling factor**
 |60B/4=15|1111|
 
 ## Source Port Address(16 bit)
-* This is a **16-bit field** that defines the port number of the application program in the host that is sending the segment
+* This is a **16-bit field** that defines the port number of the application program **in the host that is sending the segment**
 
 ## Destinationn Port Address
 * This is a **16-bit field** that defines the port number of the application Program in the host that is receiving the segment.
@@ -67,43 +68,52 @@ Use x = 4 as **scaling factor**
 
 Port No = 16 bit - Range is 0 to 2^16-1  
 
-* **Well known port number** - 0 to 1023
+* **Well known port number** - from 0 to 1023 are used for well known services
   * Assigned and control by I.A.N.A(Internet assigned number authority)
   * e.g. SMTP uses port number - 25, HTTP - 80, FTP - 20 and 21, DNS - 53
   * Every process will have different port number
-* **Registered Port number** or **Reserved**- 1024 to 49151
-* **Dynamic Port number** - 49152 to 65535. These are freely available
+* **Registered Port number** or **Reserved**- from 1024 to 49151 are registred port number or reserved port number. Neither assigned nor controlled by IANA
+* **Dynamic Port number** - from 49152 to 65535 are dynamic port number. These are freely available
 
 Now let's come to important thing - sequence number.
 
 ## Sequence number
-This is a 32-bit field defines the sequence number of the first data
+This is a **32-bit field** defines the sequence number **of the first data byte**
+* **TCP is a byte stream protocol**
+  * i.e. Every byte is associated with one sequence number
+
+* Also remember IP is a packet stream protocol
 
 ## Acknowledgement
 This is a 32 bit field defines the sequence number of the **next expected byte**. If receiver has successfully received byte number x from other party(sender), it returns x+1 as the acknowledgment number.
 )
 * TCP is a byte stream protocol. That every byte is associated with one sequence number
 
+
+**Example -**  
 Suppose we have a data of 100 byte and header is attached.
 
 
 * If I am sending 100 bytes then we need to use 100 sequence number.
-We have segment and need to send it. 
+We have **segment** and need to send it. 
+* We will write the sequence number as 100? why ? because in the sequence number is sequence number of first byte of data as per definition
 
 * TCP is connection oriented. So receiver will send acknowledgement.
   * After receiving the segment , receiver sends acknowledgement. Now what will be the ACK number?
-  * Here - Next expected databyte number. here till where it has received the segment?
+  * Here - Next expected databyte number. here till where it has received the segment? कहाँ तक रिसीव कर लिया है । 199 तक । अब ये डिमांड 200 की करेगा ।
   * It has received from 100 to 199. So it will send the ACk number as 200
 
 
 ![alt text](image-626.png)
 
-* Question - how receiver will come to know. Header only has first byte sequence number. How receiver will come to know last byte sequence number? so how receiver will come to know last byte sequence number is 199.
+* **Question** - how receiver will come to know. Header only has first byte sequence number. **How receiver will come to know last byte sequence number?** so how receiver will come to know last byte sequence number is 199.
   * We can find out by byte size? and subtract 1 from it.
-  * But do we have any field where data length is present? No.
+  * But do we have any field where data length is present? **No**.
   * If we had total length field also , then we would have found out TCP data. And from there last byte sequence number.
   * so now what?
-  * whose help to take? Now here we take help of network layer. Network layer has total length field.
+  * Whose help to take? **Now here we take help of network layer.** **Network layer has total length field.**
+
+![alt text](image-664.png)
 
 * AL layer sends "message"(packet name is called message here) to Transport layer. Here packet name is called "segment" if we use TCP. TL sends packet to Network layer.
 * NL attach H2 header. Here packet is called datagram.
@@ -114,8 +124,8 @@ TCP says - Initial sequence must not start from 0. take any random number.
 
 Example -  
 
-1st byte seq. No = 100  
-Total length at Network layer = 140B
+suppose 1st byte seq. No = 100  
+and Total length at Network layer = 140 byte
 
 ![alt text](image-627.png)
 
@@ -124,13 +134,16 @@ So datasize at TL will be 100 Byte.
 
 So last byte sequence number = 100+100-1 = 199
 
-Acknowledgment number  = 200
+**Acknowledgment number  = 200**  
 
-* TL segement fit in NL data. Let's take a shortcut
+* Transport layer **segment** network layer के **data** में फिट हो जाता है ।
+* TL segement(data+header) fit in Network Layer data. Let's take a shortcut
 
 * Suppose below we have a network layer. And header is H2. TL segment will fit in NL Data.
 
 ![alt text](image-628.png)
+
+**Data length at TL = Total length(NL) - TCP(Header)- IP(Header)**
 
 ## Question
 Suppose we have HL = 10, and total length is 1000 for IP header.
@@ -141,7 +154,8 @@ what is the data at transport layer?
 
 ![alt text](image-629.png)
 
-Last byte sequence number how to find?
+Last byte sequence number how to find?  
+sequence number is 100. it is nothing but first byte sequence number  
 
 last byte seq no = 100 + 940 -1 = 1039  
 Ack No. = 1040  
@@ -172,7 +186,7 @@ Bandwidth = 1MBps = 10^6 Byte/second
 
 1 second => 10^6 Byte  
 10^6 => 1 second  
-10^6 sequence  => 1 second(10^6 sequence number will get ove in 1 second)  
+10^6 sequence  => 1 second(10^6 sequence number will get over in 1 second)  
 
 1 sequence number = 1/10^6 second
 
