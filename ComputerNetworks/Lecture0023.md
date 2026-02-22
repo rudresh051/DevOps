@@ -261,15 +261,15 @@ minimum no. of bits required in the sequence number field to avoid wrap around w
 
 ![alt text](image-667.png)
 
-1. Minimum sequence number required to avoid wrap around within the lifetime = LT * Bandwidth
-2. Minimum no. of bits required in the seq. no field to avoid wrap around within the lifetime = [log<sub>2</sub>(LT*B)]
-3. Bandwidth must be byte/second
+1. **Minimum sequence number required to avoid wrap around within the lifetime = LT * Bandwidth**
+2. **Minimum no. of bits required in the seq. no field to avoid wrap around within the lifetime** = [log<sub>2</sub>(LT*B)]
+3. **Bandwidth must be byte/second**
 
 ## Question 1
 ![alt text](image-636.png)
 
 shortcut => 
-WAT = Total sequence number/(bandwidth in Byte per second)
+Wrap Around Time = Total sequence number/(bandwidth in Byte per second)
 
 ## Question 2
 ![alt text](image-637.png)
@@ -280,6 +280,10 @@ just apply the formula
 
 ## Question 3
 ![alt text](image-639.png)
+
+make sure to convert the bits/second into byte/second 
+
+**Minimum no. of bits required in the seq. no field to avoid wrap around within the lifetime** = [log<sub>2</sub>(LT*B)]
 
 ![alt text](image-640.png)
 
