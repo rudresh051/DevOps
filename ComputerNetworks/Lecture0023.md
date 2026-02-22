@@ -1,12 +1,44 @@
 # Computer Networks 22 | TCP Header & Wrap Around Time
-
+- Below is the TCP Header diagram
+- Packet names at different layers
+  - Application Layer - Message
+  - Transport Layer - 
+    - TL layer attach H1 header
 
 ![alt text](image-625.png)
 
-* Minimum Header size = 20B + 0 = 20 Byte
-* Maximum Header size = 20B + 40B = 60 Byte
+* **1st row**
+  * Source port is 16 bit
+  * Destination port is 16 bit
+  * Total is 32 bit or **4 Byte**
 
-* Receiver will come to know the header size from Header length
+* **Second row**
+  * Sequence number field is - 32 bit or **4 byte**
+
+* **Third row**
+  * Acknowledgment number is - 32 bit or **4 byte**
+* **4th row**
+  * Header length - 4 bit
+  * Reserved bit - 6 bits
+  * Flag - URG, ACK, PSH, RST, SYN, FIN - 6 bit
+  * Window Size or (Advertisement Window) - 16 bit
+  * So totla is 32 bit or **4 Byte**
+
+* **5th row**
+  * Checksum is 16 bit
+  * Urgent pointer is 16 bit
+  * So total is 32 bit or **4 byte**
+* hence 5 rows size is  5 * 4 byte = **20 byte**
+  * And this 20 byte header is fixed
+* **Options of 0 to 40 byte** is variable or freely available or use according to requirement
+
+* **Minimum Header size = 20B + 0 = 20 Byte**
+* **Maximum Header size = 20B + 40B = 60 Byte**
+* Header size will vary from 20 byte to 60 byte
+  * How receiver will know about header size?
+
+* Receiver will come to know the **header size** from **Header length**
+  * The header size information will be put in header length.
 
 ## Header Length(HL)
 maximum number with 4 bit = 1111 = 15(2^4-1)
@@ -15,27 +47,29 @@ Maximum Header size = 60 Byte
 
 Now we need to fit 60 with 15.  
 So what scaling factor we need to use.  
-Use x = 4 as scaling factor  
+Use x = 4 as **scaling factor**  
 
 |Header Size|Header Length Field|
-|-|-|
+|-----------|-------------------|
 |20B/4 = 5|0101|
 |32B/4=8|1000|
 |40B/4=10|1010|
 |60B/4=15|1111|
 
 ## Source Port Address(16 bit)
-* This is a 16-bit field that defines the port number of the application program in the host that is sending the segment
+* This is a **16-bit field** that defines the port number of the application program in the host that is sending the segment
 
 ## Destinationn Port Address
-* This is a 16-bit field that defines the port number of the application Program in the host that is receiving the segment.
+* This is a **16-bit field** that defines the port number of the application Program in the host that is receiving the segment.
+
+* Port number is assgigned to process in the computer
 
 
 Port No = 16 bit - Range is 0 to 2^16-1  
 
 * **Well known port number** - 0 to 1023
-  * Assigned and control by IANA
-  * e.g. SMTP - 25, HTTP - 80, FTP - 20 and 21, DNS - 53
+  * Assigned and control by I.A.N.A(Internet assigned number authority)
+  * e.g. SMTP uses port number - 25, HTTP - 80, FTP - 20 and 21, DNS - 53
   * Every process will have different port number
 * **Registered Port number** or **Reserved**- 1024 to 49151
 * **Dynamic Port number** - 49152 to 65535. These are freely available
