@@ -209,6 +209,8 @@ So after 4294.96 second sequence number will again start.
 
 ![alt text](image-632.png)
 
+A packet can stay for max of 3 minute on the network. after that it will be discarded ?
+
 WAT - wrap around time  
 LT - Life Time  
 
@@ -216,7 +218,8 @@ doubt - is above concept can be applied to when browser stops responding?
 
 now let's create a problem for above thing.
 
-Example - Support Bandwidth = 1GBps = 10^9 Byte/second.
+**Example **-  
+Support Bandwidth = 1GBps = 10^9 Byte/second.
 
 so above mean  
 
@@ -252,6 +255,7 @@ minimum no. of bits required in the sequence number field to avoid wrap around w
 [log<sub>2</sub>180*10^9] = log<sub>2</sub>(LT*B)  
 38 bit
 
+![alt text](image-666.png)
 
 (10^3 ~2^10) => assumption
 
