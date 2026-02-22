@@ -259,6 +259,8 @@ minimum no. of bits required in the sequence number field to avoid wrap around w
 
 (10^3 ~2^10) => assumption
 
+![alt text](image-667.png)
+
 1. Minimum sequence number required to avoid wrap around within the lifetime = LT * Bandwidth
 2. Minimum no. of bits required in the seq. no field to avoid wrap around within the lifetime = [log<sub>2</sub>(LT*B)]
 3. Bandwidth must be byte/second
