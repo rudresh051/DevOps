@@ -163,30 +163,39 @@ Ack No. = 1040
 let's say we have Sequence number = 32 bit  
 Total sequence number = 2^32  = 2^2 * 2^30 = 4G Sequence number  
 
-TCP is byte stream protocol. every byte is assigned a sequence number. so 4G sequence can assigned to 4G byte.
+TCP is byte stream protocol. every byte is assigned a sequence number. हरेक बाइट को sequence नंबर assign होता है । so 4G sequence can assigned to 4G byte.
+
+above means I can send max of 4GB of data at a time.
+
+but we have a problem, what if data size is 4GB.  
+e.g. you are downloading a movie of greater than 4GB
+
 
 ![alt text](image-630.png)
 
 above is called wrap around.
 
-We select random number.
+sequence number खत्म हो जाने के बाद, reuse करूँगा ।
 
-Don't start from 0  
+We select random number. 
+TCP says, Don't start from 0. Take any random number.  
 
 ![alt text](image-631.png)
 
-## Wrap Around Time - 
-Time taken to wrap around  
+## Wrap Around Time(WAT) - 
+Time taken to wrap around .   
+कितने  समय के बाद में फिर से वहीं random number पर आ जाऊँगा ? इसी को wrap around time कहते हैं । और ये किस पर  depend करेगा । हम कितनी स्पीड से डेटा को सेंड कर रहें हैं ।
 
 It depends on - Bandwidth
 
-let's take an example -  
+* Let's take an example -  
 
 Bandwidth = 1MBps = 10^6 Byte/second
 
 1 second => 10^6 Byte  
 10^6 => 1 second  
-10^6 sequence  => 1 second(10^6 sequence number will get over in 1 second)  
+10^6 sequence  => 1 second(10^6 sequence number will get over in 1 second)
+एक सेकेंड में 10^6 sequence number खत्म हो जाएँगे ।  
 
 1 sequence number = 1/10^6 second
 
@@ -194,6 +203,9 @@ so
 2^32 sequence number = 2^32second/10^6 = 4294.96 second  
 
 So after 4294.96 second sequence number will again start.
+
+![alt text](image-665.png)
+
 
 ![alt text](image-632.png)
 
