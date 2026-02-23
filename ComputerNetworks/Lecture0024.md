@@ -85,6 +85,32 @@ so Ws = 1
 
 मतलब नेटवर्क की कैपेसीटी 1 पैकेट को होल्ड करने की है ।
 
+next time , Wc = 2  
+
+and if acknowlegement comes, Ws = 2
+
+again this time I will double Wc = 4  
+
+if acknowlegement comes, again it will double to 8. Exponentially increase करेंगे ।    
+
+![alt text](image-670.png)
+
+और ये कहाँ तक चलेगा । ये चलेगा Threshold तक  
+
+**Threshold is half of receivers capacity** = 512 capacity  
+
+**After threshold it will be additive.****  
+
+Wc = 1,2,4,8, 16, 32, 64, 128, 512, 513, 514, 515, 516, ... 1024, 1024, 1024 ...  
+
+It won't go beyond 1024 as receiver's capacity is 1024.
+
+Analogy -  
+
+![alt text](image-671.png)
+
+
+
 
 
 
