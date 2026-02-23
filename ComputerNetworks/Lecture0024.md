@@ -101,6 +101,8 @@ if acknowlegement comes, again it will double to 8. Exponentially increase क�
 
 **After threshold it will be additive.****  
 
+Congestion window =
+
 Wc = 1,2,4,8, 16, 32, 64, 128, 512, 513, 514, 515, 516, ... 1024, 1024, 1024 ...  
 
 It won't go beyond 1024 as receiver's capacity is 1024.
@@ -108,6 +110,118 @@ It won't go beyond 1024 as receiver's capacity is 1024.
 Analogy -  
 
 ![alt text](image-671.png)
+
+note - Above is congestion window.  
+
+Sender window will be always
+
+![alt text](image-672.png)
+
+
+## congestion Control Algorithm
+
+![alt text](image-673.png)
+
+### Slow start phase
+
+![alt text](image-674.png)
+
+* After one RTT , congestion window will be double in slow start phase
+* After receiving one acknowledgement, congestion will be increment by +1  
+
+### Congestion Avoidance Phase
+
+![alt text](image-675.png)
+
+**To Avoid congestion** before it happens(Congestion होने से पहले) we must slow down its exponential growth. In congestion Avoidance we use additive increase instead of exponential increase.
+
+* After one RTT the congestion window will be increased by one only
+* If an Ack arrives **Wc = Wc + 1/Wc**
+
+
+4 + 1/4 + 1/4 + 1/4 + 1/4 = 5  
+
+5 + 1/5 + 1/5 + 1/5 + 1/5 + 1/5 = 6  
+
+### Congestion Detection Phase
+
+Congestion can be detected in 2 ways  
+1. Time-out timer
+2. 3 duplicate ACK
+
+* => **Time-out Timer**
+
+**Timeout timer** indicate **severe congestion** condition. In this case the new threshold value is set to half of the current window size and next transmission starts from one segment and Algorithm
+enters in a slow start phase.
+
+example -  
+
+Suppse sender wants to send below 5 packets each of 100 bytes to receiver
+
+![alt text](image-676.png)
+
+sequence number is equal to sequence number of first packet in the segment  
+
+After receving 1st segement, ack will be 200.
+
+but suppose next 4 segement are lost  
+
+Now since TCP connection oriented, every packet have time-out timer 
+
+पैकेट भेजने के बाद time-out timer हो जाए, इसका मतलब congestion है । 
+
+![alt text](image-677.png)
+
+* => **3 Duplicate ACK**
+
+**3 Duplication Ack indicate** **mild congestion** condition. In this case the new threshold value is set to half of the current window size and
+next transmission start from new threshold value and algorithm enters in a congestion avoidance phase.
+
+Consider the below diagram where sender wants to send 5 packets of 100 byte each.  
+
+![alt text](image-678.png)
+
+suppose 2nd is lost. 3rd, 4th, 5th are received.  
+
+Acknowlegement number will not be 400 after receiving 3rd packet. it will send 200 acknowledgement.
+
+Again after receiving 4th packet, it will send 200 acknowledgement
+
+And same for 5th packet, ack number will be 200.  
+
+हर पैकेट का timeout timer है ।
+
+यदि Timeout timer से पहले 3 duplicate acknowledgement आ गया, तो सेंडर फिर से sequence number 200 वाला पैकेट भेज देगा । 
+
+So in TCP, before timeout timer also the retransmission of packet can be done.
+
+now after receiving the 2nd packet, what will be the acknowledgement number?
+
+ACK NUMBER WILL be 600. 3rd, 4th, 5th was already received. **hey but did the ACK number 300, 400, 500 were skipped??** and directly send for 600.
+
+Receiver will receive out of order packet, but it will arrange and then send it to network layer  
+
+**one question** - 3 duplicate acknowledgement how it comes? it comes when one packet was lost and next atleast 3 packets were received.
+तभी 3 duplicate ack आ सकता है 
+
+तीन क्यों - तीन बार 200 आए, अब तो action लेना पड़ेगा । 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
