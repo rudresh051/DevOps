@@ -226,6 +226,32 @@ and new transmission will start from 256, 257, 258, 259, ... 1024, 1024
 
 ट्रैफिक ज़्यादा नहीं है । इसलिए 256 से स्टार्ट करेंगे । 
 
+Example -  
+
+![alt text](image-679.png)
+
+![alt text](image-680.png)
+
+
+Example -  
+suppose we have 3 duplicate condition at 68 here
+
+![alt text](image-681.png)
+
+now suppose at 38 we get timeout timer. then we have to start from 1 and NTH =  19
+
+![alt text](image-682.png)
+
+and suppose again at 20 we ahve 3 duplicate, so NTH = 10, and it will start from 10.
+
+![alt text](image-683.png)
+
+
+
+
+
+
+
 
 
 
