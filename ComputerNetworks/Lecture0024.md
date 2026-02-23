@@ -174,8 +174,8 @@ Now since TCP connection oriented, every packet have time-out timer
 
 * => **3 Duplicate ACK**
 
-**3 Duplication Ack indicate** **mild congestion** condition. In this case the new threshold value is set to half of the current window size and
-next transmission start from new threshold value and algorithm enters in a congestion avoidance phase.
+**3 Duplicate Ack indicate** **mild congestion** condition. In this case the new threshold value is set to half of the current window size and
+next transmission start from new threshold value and algorithm enters in a **congestion avoidance phase.**
 
 Consider the below diagram where sender wants to send 5 packets of 100 byte each.  
 
@@ -246,9 +246,18 @@ and suppose again at 20 we ahve 3 duplicate, so NTH = 10, and it will start from
 
 ![alt text](image-683.png)
 
+## Problem solving on congestion control
+
+1. Question 1  
+
+![alt text](image-684.png)
 
 
+answer - 4th only
 
+2. Question 2  
+
+![alt text](image-685.png)
 
 
 
