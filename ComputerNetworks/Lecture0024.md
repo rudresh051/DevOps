@@ -206,6 +206,31 @@ Receiver will receive out of order packet, but it will arrange and then send it 
 
 तीन क्यों - तीन बार 200 आए, अब तो action लेना पड़ेगा । 
 
+* => **Timeout timer**
+
+Now suppose 512 is Wc and here Timeout timer is processed.
+**then new threshold will be half of current window size**
+
+NTH = 256  
+
+and it will again **start from 1st segment** since it was timeout timer condition
+1, 2, 4, 8, 16, 32, 64, 128, 256, 257, 258, 259, 260, ... 1024, 1024,...
+
+* => 3 duplicate ACK
+
+SUPPOSE you are currently at 512 and after that 3 duplicate Ack is received.
+
+new threshold will be set to half of current window size = 256  
+
+and new transmission will start from 256, 257, 258, 259, ... 1024, 1024  
+
+ट्रैफिक ज़्यादा नहीं है । इसलिए 256 से स्टार्ट करेंगे । 
+
+
+
+
+
+
 
 
 
