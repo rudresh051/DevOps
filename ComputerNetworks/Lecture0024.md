@@ -260,6 +260,29 @@ answer - 4th only
 ![alt text](image-685.png)
 
 
+4 packets were sent and 4 acknowledgement were received. It is RTT. And after a RTT, congestion window will be doubled 
+
+![alt text](image-686.png)
+
+
+3. Question 3
+
+
+![alt text](image-687.png)
+
+First find the number of segments  
+Receiver window size/segment size  
+
+After 11 round trip time, 16 segments will be sent
+
+![alt text](image-688.png)
+
+
+
+
+
+
+
 
 
 
