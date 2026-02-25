@@ -4,7 +4,7 @@
 
 ![alt text](image-58.png)
 
-* Whenever you want to decouple a publisher from a subscriber, consider Pub/Sub
+* Whenever you want to **decouple a publisher from a subscriber**, consider Pub/Sub
 * Pub/Sub is used in - 
   * Microservices Architecture
   * iOT Architectures
