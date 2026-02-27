@@ -81,10 +81,56 @@ Now let's see what happens actually
 
 ![alt text](image-691.png)
 
-Now header length for TL will be of 8 for UDP. > **So, maximum data size will be of 65507 for UDP**
+Now header length for TL will be of 8 for UDP. > **So, maximum data size will be of 65507 byte for UDP**
 
 ![alt text](image-692.png)
 
+* => **Checksum**
+
+UDP Checksum includes three sections - a pseudo header, UDP header, and the data coming from application layers
+
+![alt text](image-693.png)
+
+**UDP Checksum = UDP data + UDP header + IP pseudo header**
+
+IP Pseudo Header will not be sent  
+
+![alt text](image-694.png)
+
+
+1. Question
+
+![alt text](image-695.png)
+
+![alt text](image-696.png)
+
+![alt text](image-698.png)
+
+![alt text](image-697.png)
+
+Packet is moving from clint to server  
+
+**Note** -  
+1. **When destination port number is well known port number** then data is moving from client to server.
+2. **When Source port number is well known port number** then data is moving from server to client
+
+The checksum in UDP is optional  
+
+Note - 
+
+Unlike TCP, the checksum calculation is not mandatory in UDP. No error control or flow control is provided by UDP. Hence UDP depends on IP and ICMP for error reporting.
+
+=> **Optional Inclusion of checksum**  
+The sender of UDP packet can be choose not to calculate the checksum. **In this case the checksum field is filled with all 0s before being sent**
+
+![alt text](image-699.png)
+
+* Question 2  
+
+What value is sent for the checksum in each one of the following hypothetical situations?
+1. The sender decides not to include the checksum.
+2. **The sender decides to include the checksum**, but the value of the sum is all 1s.
+3. The sender decides to include the checksum, but the value of the sum is all 0s.
 
 
 
