@@ -46,6 +46,45 @@ Data may arrive out of order and be temporarily stored by receiving TCP, but TCP
 
 ![alt text](image-689.png)
 
+* => **Source Port Address**
+
+This is a 16 - bit field that defines port number of the application program in the host that is sending the segment.
+* => **Destination Port Address**
+
+This is a 16 - bit field that defines port number of the application program in the host that is receiving the segment.
+
+* => **Total Length**
+
+It is of 16 bit  
+Maximum Number = 2^16-1 = 65535  
+
+Total length = Data + Header
+65535 = Data + 8  
+
+**Max UDP data size = 65535-8 = 65527**  
+
+but above is incorrect practically.
+
+Explanation -  
+
+AL sends message to TL  
+TL sends segment(in case of TCP) OR Datagram(in case of UDP) to Network layer   
+ 
+
+![alt text](image-690.png)
+
+**Network layer can receive maximum data of size 65515 from Transport layer**  
+
+from above diagram, 65535 will not fit in the 65515.
+
+Now let's see what happens actually
+
+![alt text](image-691.png)
+
+Now header length for TL will be of 8 for UDP. > **So, maximum data size will be of 65507 for UDP**
+
+![alt text](image-692.png)
+
 
 
 
