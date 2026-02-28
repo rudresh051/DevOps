@@ -1,11 +1,19 @@
 # Computer Networks 37 | Medium Access Control Part 01 ( Pure Aloha)
+> Question was asked in 2024 and first time I am teaching this topic in YT
+> 
 
-## Topics
-* Pure Aloha
+## Topics to be covered
+* PURE ALOHA
 
+
+but before let's understand few things
 ## Multiple Access Protocols
 
-Lets take a example
+Lets take a example. In the below diagram. IEEE divided data link layer in 2 parts. **LLC(Logical link control) and MAC(Medium access control)**  
+
+We have studied about LLC - Error control, flow control.
+
+In MAC , it is about access control. We will see how and what happens in access layer later
 
 ![alt text](image-641.png)
 
@@ -18,17 +26,30 @@ Lets take a example
 
 ![alt text](image-642.png)
 
-## What is Media Access Protocol?
+Only 1 question from ALOHA. No question from CSMA.
+from CSMA/CD we have 18 question in  GATE.
+
+> I will conver ALOHA, CSMA/CD and TDMA. We will study CSMA/CD in depth
+> I will not cover anything in Control access protocols
+
+## What is Media Access Protocol ?
 Let's understand this first - 
+
+क्या है Media Access Protocol  
 
 ![alt text](image-643.png)
 
-* Source and destination send data between each other which is dedicated in Point to point. No collision in if it is full duplex.
-* Broadcast - We have common channels and many station are connected to it. It is also called shared channel. Basically they can access data.
+> Link are of two types - Point to point and broadcast link
+> In point to point we have source destination with a dedicated link
+
+* **Point to point** - Source and destination send data between each other which is dedicated in Point to point. No problem of collision in if it is full duplex.
+* **Broadcast** - We have common channels and many station are connected to it. It is also called **shared channel**. Basically they can access data.
   * Two stations data can collide at a given time t1 when A and B sends data
-* **Access Control** basically means we have to access this link in sach a way there is no problem of collision. 
+* Access control का मतलब - **Access Control** basically means **we have to access this link in such a way there is no problem of collision.**
+  * Collision की कोई समस्या ना हो ।
+  * We have different protocol for above such that no collision occur
 * We have different way to access such link.
-* Solution - At a time only one station should data?
+* Solution - Idea - At a time only one station should data?
 * What if we make slots of time - 10:05 to 10:10 only A will transfer , 10:10 to 10:15 only B will transfer
 
 ## Random Access Protocols
@@ -95,7 +116,7 @@ So A would have successfully sent the data packet
 
 At second time n = 1 for A, because data packet 2 has collided for first time and for B, n = 2 because it's the same packet which is colliding again.
 
-* Third Time
+* **Third Time**
 
 ![alt text](image-651.png)
 
