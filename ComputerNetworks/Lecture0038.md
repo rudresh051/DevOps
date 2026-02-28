@@ -88,3 +88,31 @@ Maximum throughput of pure aloha = 18.4%
 
 ![alt text](image-732.png)
 
+![alt text](image-733.png)
+
+![alt text](image-734.png)
+
+![alt text](image-735.png)
+
+By question throughput is  Average number of frames transmitted per second  
+so 1000*0.135 = 135  
+
+Solve 2nd and 3rd on your own  
+
+> 2nd part
+
+![alt text](image-736.png)
+
+![alt text](image-737.png)
+
+> 3rd part
+
+![alt text](image-738.png)
+
+![alt text](image-739.png)
+
+
+
+
+
+
