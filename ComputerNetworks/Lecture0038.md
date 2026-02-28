@@ -112,6 +112,191 @@ Solve 2nd and 3rd on your own
 ![alt text](image-739.png)
 
 
+## => Slotted ALOHA
+
+> Why we went from pure aloha to slotted aloha?
+> Let's take the example
+
+* Slotted aloha divides the time of shared channel into discrete intervals called as time slot (time slot = Transmission time For one frame).
+* Any station can transmit its data in any time slot.
+* The only condition is that station must start its transmission from the Beginning of time slot.
+* If the Beginning of the slot is missed, then station has to wait until the beginning of next time slot.
+* A collision may occur if two or more stations try to transmit data at the beginning of the same time slot.
+
+## => Vulnerable time for Slotted ALOHA
+Vulnerable time is the range of time where collision take place.
+
+![alt text](image-740.png)
+
+Collison may happen if any other station tranmit frame in the slotted time
+
+**Vulnerable time for slotted ALOHA = Tf**  
+
+> Collision will occur only in one slot. because frame will be transferred only in the begenning of the slot , not in the middle or any other time
+
+![alt text](image-741.png)
+
+![alt text](image-742.png)
+
+![alt text](image-743.png)
+
+## => Throughput of Slotted ALOHA
+
+![alt text](image-744.png)
+
+> If collision time is halved then throughput will be doubled when we compare with pure aloha 
+
+![alt text](image-745.png)
+
+![alt text](image-746.png)
+
+* => Above screenshot explanation
+
+## 1️⃣ What does “no collision” mean in **Slotted ALOHA**?
+
+In **Slotted ALOHA**, time is divided into equal slots.
+
+* A frame can only start at the **beginning of a slot**
+* If **exactly one station** transmits in a slot → ✅ success
+* If **2 or more stations** transmit in the same slot → ❌ collision
+* If **no one transmits** → idle slot (wasted)
+
+So “no collision” in a slot means:
+
+> Exactly one frame was transmitted in that slot.
+
+---
+
+## 2️⃣ Your doubt:
+
+> If there is no collision, throughput should be 100%
+
+This is the key misunderstanding 👇
+
+You're thinking:
+
+> "If no collision happens at all, then every slot is successful → so throughput = 100%"
+
+That would be true **if every slot had exactly one transmission.**
+
+But in Slotted ALOHA:
+
+* Some slots are idle
+* Some slots have collisions
+* Only some slots are successful
+
+So when the slide says:
+
+> “If there is no collision then we achieve maximum throughput”
+
+It does **not** mean:
+
+> There are zero collisions in the entire system.
+
+It means:
+
+> In that particular slot, if exactly one frame is generated → no collision → that slot contributes to throughput.
+
+---
+
+## 3️⃣ Why throughput is NOT 100% even at maximum
+
+Throughput = probability that a slot has exactly one transmission.
+
+Mathematically:
+
+[
+S = G e^{-G}
+]
+
+Where:
+
+* G = average number of transmission attempts per slot
+* S = successful throughput
+
+Maximum throughput occurs at:
+
+[
+G = 1
+]
+
+Then:
+
+[
+S = 1 \cdot e^{-1} = \frac{1}{e} \approx 0.368
+]
+
+So maximum throughput ≈ **36.8%**
+
+---
+
+## 4️⃣ Why only 36.8%?
+
+Even when we tune the system optimally:
+
+* Some slots are still empty
+* Some slots still have collisions
+* Only ~36.8% slots have exactly one transmission
+
+So the system **cannot** reach 100% because randomness causes unavoidable idle slots and collisions.
+
+---
+
+## 5️⃣ What the slide actually means
+
+The slide says:
+
+> “If one frame is generated in one slot time then there will be no collision. If there is no collision then we will achieve maximum throughput.”
+
+What they are saying is:
+
+* If we adjust traffic so that on average one frame is generated per slot (G = 1)
+* Then the system reaches its theoretical maximum throughput
+* Even though collisions still happen probabilistically
+
+So yes — you're correct to suspect something subtle.
+
+It would be clearer if it said:
+
+> “When the average load is one frame per slot, the system achieves maximum throughput.”
+
+Not:
+
+> “If there is no collision.”
+
+---
+
+## 6️⃣ Short Answer to Your Question
+
+You are **not wrong**, but:
+
+* “No collision” refers to a single slot being successful.
+* It does NOT mean zero collisions overall.
+* Maximum throughput of Slotted ALOHA is 36.8%, not 100%.
+
+
+* Example - 
+
+![alt text](image-747.png)
+
+
+![alt text](image-748.png)
+
+> Part 1 
+
+![alt text](image-749.png)
+
+![alt text](image-750.png)
+
+Next two parts are homework  
+
+
+
+
+
+
+
+
 
 
 
