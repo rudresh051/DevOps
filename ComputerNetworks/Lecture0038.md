@@ -290,7 +290,9 @@ You are **not wrong**, but:
 
 Next two parts are homework  
 
+## => Difference between Pure Aloha and Slotted Aloha
 
+![alt text](image-751.png)
 
 
 
