@@ -62,17 +62,34 @@ Consider the below graph. A, B,C and D are 4 nodes.
 
 * Step 1 - Prepare the Routing > at every Router Based on the local knowledge
 
+> First table(Bottom left one)  
+> Distance between A to A is zero. Next hop is A  
+> Distance of A from B is 2. Next hop is B.  
+> A to C no direct edge. जो पड़ोसी है, उसके बारे में सब जानता हूँ, जो पड़ोसी नहीं है, उसके बारे में मुझे नहीं पता । Next hop infinity. From A to C, I don't know  
+> A to D is 1. and next hop is D
+
 ![alt text](image-660.png)
 
 > If node is connected by direct edge then enter the distance value, if no direct edge enter infinity
 
 ![alt text](image-661.png)
 
+> B to A, B to B, B to C and B to D for table 2(bottom right one)    
+> Third table - C to A, C to B, C to C and C to D  
+> 4th table(Left-top one) - D to A, D to B, D to C and D to D  
+
 * Step 2 - 
+
+> Here we share the information to our neighbour. E.g. A share the info to D and B.  
+
+The Distance in green boxes will be shared
+
+![alt text](image-771.png)
 
 ![alt text](image-662.png)
 
 > Basically here we receive distance vectors from the neighbours
+> A will update it's routing table after receiving distance vectores
 
 ![alt text](image-663.png)
 
