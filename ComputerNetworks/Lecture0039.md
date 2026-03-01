@@ -92,3 +92,43 @@ Let's see the perfect formula
 ![alt text](image-759.png)
 
 ![alt text](image-760.png)
+
+## => Problem Solving on CSMA/CD
+
+* Question 1
+
+![alt text](image-761.png)
+
+Bandwidth = 1Gbps = 10^9 bits/sec  
+d = 1 km
+Frame size = ?  
+
+![alt text](image-762.png)
+
+* Question 2
+
+![alt text](image-763.png)
+
+![alt text](image-764.png)
+
+* Question 3
+
+![alt text](image-765.png)
+
+![alt text](image-766.png)
+
+![alt text](image-767.png)
+
+* Question 4 
+
+![alt text](image-768.png)
+
+
+Ans - 500 bits
+
+* Question 5
+
+![alt text](image-769.png)
+
+
+![alt text](image-770.png)
