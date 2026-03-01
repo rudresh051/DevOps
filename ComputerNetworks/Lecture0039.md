@@ -74,6 +74,10 @@ From above we get a new concept of **"Minimum frame size for detecting the colli
 
 **Transmission delay should be greater than propagation delay**
 
+
+Extreme case - End point collision
+
+
 ![alt text](image-758.png)
 
 from above Transmissin delay should be twice of propagation delay. Here 2Pd is called Round trip time. It's not same as we studied before.
@@ -85,5 +89,6 @@ above formula is not complete
 Let's see the perfect formula  
 
 
+![alt text](image-759.png)
 
-
+![alt text](image-760.png)
