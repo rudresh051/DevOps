@@ -64,3 +64,26 @@ There is no need of acknowledgement if collision is not detected then frame is d
 
 **Once frame is transmitted** **sender does not maintain a copy of that frame** because station is simultaneously sending the frame and detecting the collision, if collision is not detected that means receiver has successfully received the frame.
 
+![alt text](image-756.png)
+
+* JAM signal may come after complete packet is tranferred to the link. And in that case station A will by mistake come to conclude that some other station is transferring the packet. but infact JAM signal came late
+
+From above we get a new concept of **"Minimum frame size for detecting the collision"**
+
+![alt text](image-757.png)
+
+**Transmission delay should be greater than propagation delay**
+
+![alt text](image-758.png)
+
+from above Transmissin delay should be twice of propagation delay. Here 2Pd is called Round trip time. It's not same as we studied before.
+
+Td >=2Pd  
+
+above formula is not complete  
+
+Let's see the perfect formula  
+
+
+
+
