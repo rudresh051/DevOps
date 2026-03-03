@@ -93,8 +93,66 @@ The Distance in green boxes will be shared
 
 ![alt text](image-663.png)
 
+A अपनी Routing Table कैसे बनाएगा ।  
+A has it's own information and has information from neighbour(basically distance vector)  
+
+Take the minimum in above.  
+> Practise the above process else you will forget
+
+Shortcut - AD Rule  
+
+![alt text](image-772.png)
+
+> Practise the above way also
+
+* **Step 2 at "B"**
+
+B receive distance vector from A, C, D
+> B to B distance will be zero
+
+![alt text](image-773.png)
+
+Similary do for "C" and "D"
+
+![alt text](image-774.png)
+
+> The above is not the final routing table
+> If you see the table, C to D was initially 11, and after updating above it is 10  
+> But still if you see graph there is still shorter way - 3+2+1  
+> If graph has 4 node, then it will take 3 steps to make the final routing table 
+> **If n nodes, then n-1 steps**  
+> 1st step or round - One edge involved  
+> 2nd step or round - At most 2 edge involved  
+> 3rd step or round - At most 3 edge involved  
+> (N-1)th steps or round - At most (N-1) edges involved  
+
 * Step 3 -  
 
+
+
+* But in GATE exam you don't have to solve like above  
+
+Just use graph. It's a aptitude question and find the minimum  
+
+![alt text](image-775.png)
+> correction in above image - B to C is 3 in routing table of B  
+
+> Edges which are not included in any routing table  
+> Ans - D to C and D to B  
+
+![alt text](image-776.png)
+
+* Question - After the final routing table, which edges are not included in any routing table
+
+![alt text](image-777.png)
+
+## Problem Solving on Distance Vector Routing(DVR)
+
+* Question 1
+
+From Tanenbaum(Unsolved Problem)
+
+![alt text](image-778.png)
 
 
 
