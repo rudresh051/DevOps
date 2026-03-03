@@ -154,6 +154,50 @@ From Tanenbaum(Unsolved Problem)
 
 ![alt text](image-778.png)
 
+* Don't take the distance from graph as Distance of C from B, D and E are already given
+
+![alt text](image-779.png)
+
+
+* Question 2 - common data questions
+
+![alt text](image-780.png)
+
+
+![alt text](image-781.png)
+
+Hint - Find these
+
+![alt text](image-782.png)
+
+> Part 2  
+
+![alt text](image-783.png)
+
+* Question 3 - Home work
+
+ ![alt text](image-784.png)
+
+ * Question 4 - Home work
+
+![alt text](image-785.png)
+
+Options - 
+
+![alt text](image-786.png)
+
+* Question 5 - Home work
+
+![alt text](image-787.png)
+
+
+> Part 1 - MSQ
+
+![alt text](image-788.png)
+
+## Disadvantage of DVR
+
+* Count to infinity problem
 
 
 
