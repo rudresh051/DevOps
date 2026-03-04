@@ -159,7 +159,7 @@ From Tanenbaum(Unsolved Problem)
 ![alt text](image-779.png)
 
 
-* Question 2 - common data questions
+* **Question 2 - common data questions**
 
 ![alt text](image-780.png)
 
@@ -174,7 +174,23 @@ Hint - Find these
 
 ![alt text](image-783.png)
 
-* Question 3 - Home work
+> Solution -  
+
+![alt text](image-789.png)
+
+![alt text](image-790.png)
+
+![alt text](image-790.png)
+
+from above 6 and 8 distance edges are not used anywhere  
+
+
+
+
+
+
+
+* **Question 3 - Home work**
 
  ![alt text](image-784.png)
 
