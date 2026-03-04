@@ -182,15 +182,24 @@ Hint - Find these
 
 ![alt text](image-790.png)
 
-from above 6 and 8 distance edges are not used anywhere  
+> from above 6 and 8 distance edges are not used anywhere  
+> Option c is the correct answer
 
+After changing the unused links to 2  
 
+![alt text](image-791.png)
 
+Do it yourself 
+
+Answer - Option B i.e. 1
 
 
 
 
 * **Question 3 - Home work**
+  
+NAT - Numerical Answer type  
+
 
  ![alt text](image-784.png)
 
