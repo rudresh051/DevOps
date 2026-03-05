@@ -230,14 +230,47 @@ No need to solve complete routing table.
 
 ![alt text](image-787.png)
 
-
-> Part 1 - MSQ
-
 ![alt text](image-788.png)
+
+Solution - 
+Read the complete question  
+First draw the diagram  
+
+![alt text](image-795.png)
+
+![alt text](image-796.png)
+
+![alt text](image-797.png)
+
+Correct options are B and D  
+
+![alt text](image-798.png)
 
 ## Disadvantage of DVR
 
 * Count to infinity problem
+  * We discuss above in paid course
+
+## => Link State Routing
+
+> No question state asked till now in GATE  
+> Let's see why  
+
+Step 1 -  
+
+![alt text](image-799.png)
+
+Step 2 - Every router flood the link state packet to every other router
+
+हर किसी के पास हर किसी की Information हो जाएगी
+
+And then each router will have complete information of the graph in it's memory  
+
+![alt text](image-800.png)
+
+![alt text](image-801.png)
+
+
 
 
 
