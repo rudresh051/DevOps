@@ -320,6 +320,16 @@ Correct - 1, 2 and 4 only
 
 ![alt text](image-812.png)
 
+![alt text](image-813.png)
+
+![alt text](image-814.png)
+
+![alt text](image-815.png)
+
+A is the correct option
+
+
+
 
 
 
