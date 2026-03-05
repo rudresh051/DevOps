@@ -268,7 +268,35 @@ And then each router will have complete information of the graph in it's memory
 
 ![alt text](image-800.png)
 
+Below is the final routing table of A  
+
 ![alt text](image-801.png)
+
+Dijkstra algorithm will be taught in DSA Class  
+
+
+Now Find at B
+
+![alt text](image-802.png)
+
+apply Dijkstra algorithm at B  
+
+![alt text](image-803.png)
+
+Same thing do for C and D  
+
+## => Difference between DVR(Distance vector routing) and LSR(Link state Routing)
+
+![alt text](image-804.png)
+
+![alt text](image-805.png)
+
+RIP - Routing information protocol  
+OSPF - Open shortest path first  
+
+## => Topic - Routing Information protocol
+
+![alt text](image-806.png)
 
 
 
