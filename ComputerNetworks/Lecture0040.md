@@ -298,6 +298,28 @@ OSPF - Open shortest path first
 
 ![alt text](image-806.png)
 
+* Question 1  
+
+![alt text](image-807.png)
+
+* Question 2
+
+![alt text](image-808.png)
+
+Correct - 1, 2 and 4 only  
+
+* Question 3  
+
+![alt text](image-809.png)
+
+![alt text](image-810.png)
+
+* Question 4  
+
+![alt text](image-811.png)
+
+![alt text](image-812.png)
+
 
 
 
