@@ -201,9 +201,16 @@ Answer - Option B i.e. 1
 NAT - Numerical Answer type  
 
 
- ![alt text](image-784.png)
+![alt text](image-784.png)
 
- * Question 4 - Home work
+Solution - 
+
+![alt text](image-792.png)
+
+Edge A to B and A to E are not used  
+Ans - 2
+
+* **Question 4 - Home work**
 
 ![alt text](image-785.png)
 
@@ -211,7 +218,15 @@ Options -
 
 ![alt text](image-786.png)
 
-* Question 5 - Home work
+Soluton - 
+
+![alt text](image-794.png)
+
+No need to solve complete routing table. 
+
+![alt text](image-793.png)
+
+* **Question 5 - Home work**
 
 ![alt text](image-787.png)
 
