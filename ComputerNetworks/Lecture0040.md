@@ -328,6 +328,10 @@ Correct - 1, 2 and 4 only
 
 A is the correct option
 
+HW  
+
+![alt text](image-816.png)
+
 
 
 
