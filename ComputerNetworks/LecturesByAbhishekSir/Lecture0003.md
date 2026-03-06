@@ -116,6 +116,7 @@ correct answer is C
 ![alt text](image-70.png)
 
 IP is connection less. packets may come in different routes.
+
 ![alt text](image-71.png)
 
 The correct answer is B. Path is reserved in circuit switching. Packet will go from anywhere it finds the path.
