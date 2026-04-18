@@ -83,16 +83,66 @@
   * Traffic analysis
 * Active attacks
   * Four categories
-  * Masquerade
-  * Replay
-  * Modification
-  * Denial of service
+    * Masquerade
+    * Replay
+    * Modification
+    * Denial of service(DOS)
 
 ## Security Services
 * Confidentiality(privacy)
 * Authentication(who created or sent the data)
 * Integrity(has not been altered)
 * Non-repudiation(the order is final)
-* 
+* Access control(prevent misuse of resources)
+* Availability(Permanence, non-erasure)
+  * Denial of Service Attacks
+  * Virus that deletes files
 
+## Role of Security
+* A security infrastructure provides
+
+![alt text](image-31.png)
+
+## Types of Attack
+* Social engineering/phishing
+* Physical break-ins, theft, and curb shopping
+* Password attacks
+* Buffer overflows
+* Command injection
+* Denial of service
+* Exploitation of faulty application logic
+* Snooping
+* Packet manipulation or fabrication
+* Backdoors
+
+## Network Security Outline
+Network security works like this:
+- Determine network security policy
+- Implement network security policy
+- Reconnaissance
+- Vulnerability scanning
+- Penetration testing
+- Post-attack investigation
+
+### Step 1 - Determine Security Policy
+* **A security policy is a full security roadmap**  
+- Usage policy for networks, servers, etc.
+- User training about password sharing, password strength, social engineering,
+privacy, etc.
+- Privacy policy for all maintained data
+- A schedule for updates, audits, etc.
+
+
+* **The network design should reflect this policy**  
+- The placement/protection of database/file servers
+- The location of demilitarized zones (DMZs)
+- The placement and rules of firewalls
+- The deployment of intrusion detection systems (IDSs)
+
+### Step 2 - Implement Security Policy
+
+![alt text](image-32.png)
+
+
+> TCP/IP or OSI layer doesnot talk about security, Security comes additionally. In doing so we should be careful that intermediate devices which gives this packet , should not be any problem like intervention, interference with the standard.
 
